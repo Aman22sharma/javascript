@@ -24,9 +24,9 @@ const getTimezone = async zone => {
 
 const makeDOM = (el, d) => {
   el.innerHTML = `
-    <div><h1>Timezone</h1><p>${d.timezone}</p></div>
-    <div><h1>Daylight Saving Time starts</h1><p>${d.dst_from ? moment(d.dst_from).format('LLLL') : 'Does not exist for this timezone.'}</p></div>
-    <div><h1>Daylight Saving Time ends</h1><p>${d.dst_until ? moment(d.dst_until).format('LLLL') : 'Does not exist for this timezone.'}</p></div>`;
+    <h1>Timezone</h1><p>${d.timezone}</p>
+    <h1>Daylight Saving Time starts</h1><p>${d.dst_from ? moment(d.dst_from).format('LLLL') : 'Does not exist for this timezone.'}</p>
+    <h1>Daylight Saving Time ends</h1><p>${d.dst_until ? moment(d.dst_until).format('LLLL') : 'Does not exist for this timezone.'}</p>`;
 };
 
 const handleTimezone = (url, content) => {
