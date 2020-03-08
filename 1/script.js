@@ -47,7 +47,7 @@ getList(URL)
     selectBox.classList.add('select');
     let select = document.createElement(`select`);
     let content = document.createElement(`main`);
-    for (let i = 0; i <= data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       if (i === 144) {
         html += `<option value=${data[i]} key=${i} selected>${data[i]}</option>`;
         handleTimezone(data[i], content);
