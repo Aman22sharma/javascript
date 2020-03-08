@@ -24,27 +24,12 @@ const getTimezone = async zone => {
 
 const makeDOM = (el, d) => {
   el.innerHTML = `
-    <table>
-    <thead>
-    <th>Time</th>
-    <th>Day of week</th>
-    <th>Day of year</th>
-    <th>Week number</th>
-    <th>Daylight Saving starts from</th>
-    <th>Daylight Saving end on</th>
-    </thead>
-    <tbody>
-    <td>${d.datetime}</td>
-    <td>${moment(d.datetime).format("dddd")}</td>
-    <td>${d.day_of_year}</td>
-    <td>${d.week_number}</td>
-    <td>${d.dst_from}</td>
-    <td>${d.dst_until}</td>
-    </tbody>
-    </table>`;
+    <div><h1>Timezone</h1><p>${d.timezone}</p></div>
+    <div><h1>Daylight Saving Time starts</h1><p>${d.dst_from ? moment(d.dst_from).format('LLLL') : 'Does not exist for this timezone.'}</p></div>
+    <div><h1>Daylight Saving Time ends</h1><p>${d.dst_until ? moment(d.dst_until).format('LLLL') : 'Does not exist for this timezone.'}</p></div>`;
 };
 
-const handleTimezone = url => {
+const handleTimezone = (url, content) => {
   getTimezone(url)
     .then(d => {
       console.log(d);
@@ -58,21 +43,24 @@ const handleTimezone = url => {
 getList(URL)
   .then(data => {
     let html = `<option disabled>Select a timezone</option>`;
+    let selectBox = document.createElement(`div`);
+    selectBox.classList.add('select');
     let select = document.createElement(`select`);
     let content = document.createElement(`main`);
     for (let i = 0; i <= data.length; i++) {
       if (i === 144) {
         html += `<option value=${data[i]} key=${i} selected>${data[i]}</option>`;
-        handleTimezone(data[i]);
+        handleTimezone(data[i], content);
         continue;
       }
       html += `<option value=${data[i]} key=${i}>${data[i]}</option>`;
     }
     select.innerHTML = html;
-    app.appendChild(select);
+    selectBox.appendChild(select);
+    app.appendChild(selectBox);
     app.appendChild(content);
     select.addEventListener("change", e => {
-      handleTimezone(e.target.value);
+      handleTimezone(e.target.value, content);
     });
   })
   .catch(error => {
