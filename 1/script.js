@@ -1,4 +1,4 @@
-const URL = `http://worldtimeapi.org/api/timezone`;
+const URL = `https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/timezone`;
 const app = document.getElementById("app");
 const select = document.querySelector("select");
 
@@ -14,7 +14,7 @@ const getList = async url => {
 
 const getTimezone = async zone => {
   try {
-    let response = await fetch(`http://worldtimeapi.org/api/timezone/${zone}`);
+    let response = await fetch(`https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/timezone/${zone}`);
     let json = await response.json();
     return json;
   } catch (error) {
