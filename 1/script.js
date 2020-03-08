@@ -22,6 +22,39 @@ const getTimezone = async zone => {
   }
 };
 
+const makeDOM = (el, d) => {
+  el.innerHTML = `
+    <table>
+    <thead>
+    <th>Time</th>
+    <th>Day of week</th>
+    <th>Day of year</th>
+    <th>Week number</th>
+    <th>Daylight Saving starts from</th>
+    <th>Daylight Saving end on</th>
+    </thead>
+    <tbody>
+    <td>${d.datetime}</td>
+    <td>${moment(d.datetime).format("dddd")}</td>
+    <td>${d.day_of_year}</td>
+    <td>${d.week_number}</td>
+    <td>${d.dst_from}</td>
+    <td>${d.dst_until}</td>
+    </tbody>
+    </table>`;
+};
+
+const handleTimezone = url => {
+  getTimezone(url)
+    .then(d => {
+      console.log(d);
+      makeDOM(content, d);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+};
+
 getList(URL)
   .then(data => {
     let html = `<option disabled>Select a timezone</option>`;
@@ -30,33 +63,7 @@ getList(URL)
     for (let i = 0; i <= data.length; i++) {
       if (i === 144) {
         html += `<option value=${data[i]} key=${i} selected>${data[i]}</option>`;
-        getTimezone(data[i])
-          .then(d => {
-            console.log('1', d);
-            content.innerHTML = `
-            <table>
-            <thead>
-            <th>Time</th>
-            <th>Day of week</th>
-            <th>Day of year</th>
-            <th>Week number</th>
-            <th>Daylight Saving starts from</th>
-            <th>Daylight Saving end on</th>
-            </thead>
-            <tbody>
-            <td>${d.datetime}</td>
-            <td>${moment(d.datetime).format('dddd')}</td>
-            <td>${d.day_of_year}</td>
-            <td>${d.week_number}</td>
-            <td>${d.dst_from}</td>
-            <td>${d.dst_until}</td>
-            </tbody>
-            </table>
-            `;
-          })
-          .catch(error => {
-            console.log(error);
-          });
+        handleTimezone(data[i]);
         continue;
       }
       html += `<option value=${data[i]} key=${i}>${data[i]}</option>`;
@@ -65,32 +72,7 @@ getList(URL)
     app.appendChild(select);
     app.appendChild(content);
     select.addEventListener("change", e => {
-      getTimezone(e.target.value)
-        .then(d => {
-          console.log(`2`, d);
-          content.innerHTML = `
-            <table>
-            <thead>
-            <th>Time</th>
-            <th>Day of week</th>
-            <th>Day of year</th>
-            <th>Week number</th>
-            <th>Daylight Saving starts from</th>
-            <th>Daylight Saving end on</th>
-            </thead>
-            <tbody>
-            <td>${d.datetime}</td>
-            <td>${moment(d.datetime).format('dddd')}</td>
-            <td>${d.day_of_year}</td>
-            <td>${d.week_number}</td>
-            <td>${d.dst_from}</td>
-            <td>${d.dst_until}</td>
-            </tbody>
-            </table>`;
-        })
-        .catch(error => {
-          console.log(error);
-        });
+      handleTimezone(e.target.value);
     });
   })
   .catch(error => {
