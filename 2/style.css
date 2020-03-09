@@ -60,6 +60,7 @@ button {
   text-align: center;
   line-height: 1;
   color: #f723a4;
+  text-transform: capitalize;
 }
 
 #main {

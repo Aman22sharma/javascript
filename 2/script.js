@@ -50,12 +50,14 @@ form.addEventListener("submit", e => {
   form.reset();
   getList(person)
     .then(data => {
+      console.log(data);
       makeDOM(main, data);
+      heading.innerHTML = `<h1>${person.language} Happy Birthday Songs</h1>`;
     })
     .catch(error => {
       console.log(error);
       let html = ``;
-      heading.innerHTML = `<p>Sorry, Looks like we could not talk to YouTube. <strong>Worry not, we got a video below for you to keep the party going!</strong></p><p><code>${error}</code>.</p>`;
+      heading.innerHTML = `<h1>Sorry, Looks like we could not talk to YouTube. <strong>Worry not, we got a video below for you to keep the party going!</strong></h1><p><code>${error}</code>.</p>`;
       main.innerHTML = `<iframe src="https://www.youtube.com/embed/_z-1fTlSDF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe`;
     });
 });
