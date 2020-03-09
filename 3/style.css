@@ -1,5 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 *,
 *::after,
@@ -43,7 +44,8 @@ select {
 }
 
 .card {
-  background: #4B4B60;
+  position: relative;
+  background: #4b4b60;
   overflow: hidden;
   border-radius: 0.4rem;
   box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.25);
@@ -85,6 +87,10 @@ select {
   font-size: 0.75rem;
 }
 
+.temps .flip:first-child {
+  font-size: 1.75rem;
+}
+
 .t1,
 .t2,
 .t3,
@@ -109,11 +115,11 @@ select {
 }
 .t3 {
   grid-area: s2;
-  background: #18182D;
+  background: #18182d;
 }
 .t4 {
   grid-area: s3;
-  background: #0B0B20;
+  background: #0b0b20;
 }
 .t5 {
   grid-area: s4;

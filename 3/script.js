@@ -3,14 +3,17 @@ const main = document.getElementById("main");
 const country = document.getElementById("country");
 const city = document.getElementById("city");
 const form = document.getElementById("form");
+const flipToggle = document.querySelector(".flipToggle");
+let isToggle = false;
 
 city.style.display = `none`;
+flipToggle.style.display = `none`;
 main.textContent = `You can find how's the weather in your city for next one month? Get the ball rolling by selecting your country and city!`;
 
 const getWeather = async keyword => {
   try {
     let response = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://pro.openweathermap.org/data/2.5/climate/month?q=${keyword}&appid=b1b15e88fa797225412429c1c50c122a1&units=metric`
+      `https://cors-anywhere.herokuapp.com/https://pro.openweathermap.org/data/2.5/climate/month?q=${keyword}&appid=b1b15e88fa797225412429c1c50c122a1`
     );
     let json = await response.json();
     return json;
@@ -50,21 +53,23 @@ const makeDOM = (el, data) => {
       new Date(i.dt * 1000)
     ).format("dddd, LL")}</p><p class="h"><strong>Humidity:</strong> ${
       i.humidity
-    }</p><p class="p"><strong>Pressure:</strong> ${
+    }%</p><p class="p"><strong>Pressure:</strong> ${
       i.pressure
-    }</p><p class="w"><strong>Wind Speed:</strong> ${
+    } hPa</p><p class="w"><strong>Wind Speed:</strong> ${
       i.wind_speed
-    }</p><div class="temps"><p class="t1"><span>Average</span><span>${Math.floor(
+    } m/s, ${Math.floor(
+      i.wind_speed * 1.60934
+    )} km/s</p><div class="temps"><p class="t1"><span>Average</span><span><span class="flip">${Math.floor(
       i.temp.average
-    )}&deg;C</span></p><p class="t2"><span>Average (Max.)</span><span>${Math.floor(
+    )}</span><span>&deg;F</span></span></p><p class="t2"><span>Average (Max.)</span><span><span class="flip">${Math.floor(
       i.temp.average_max
-    )}&deg;C</span></p><p class="t3"><span>Average (Min.)</span><span>${Math.floor(
+    )}</span><span>&deg;F</span></span></p><p class="t3"><span>Average (Min.)</span><span><span class="flip">${Math.floor(
       i.temp.average_min
-    )}&deg;C</span></p><p class="t4"><span>Record (Max.)</span><span>${Math.floor(
+    )}</span><span>&deg;F</span></span></p><p class="t4"><span>Record (Max.)</span><span><span class="flip">${Math.floor(
       i.temp.record_max
-    )}&deg;C</span></p><p class="t5"><span>Record (Min.)</span><span>${Math.floor(
+    )}</span><span>&deg;F</span></span></p><p class="t5"><span>Record (Min.)</span><span><span class="flip">${Math.floor(
       i.temp.record_min
-    )}&deg;C</span></p></div></div>`;
+    )}</span><span>&deg;F</span></span></p></div></div>`;
   });
   container.innerHTML = html;
   el.appendChild(container);
@@ -94,6 +99,7 @@ getCountryList()
 
 country.addEventListener("change", e => {
   city.style.display = `none`;
+  flipToggle.style.display = `none`;
   city.innerHTML = ``;
   let option = document.createElement("option");
   option.setAttribute(`selected`, true);
@@ -125,10 +131,24 @@ form.addEventListener("submit", e => {
   getWeather(e.target[1].value)
     .then(data => {
       main.textContent = ``;
+      console.log(data);
       makeDOM(main, data);
+      flipToggle.style.display = `inline`;
     })
     .catch(error => {
       console.log(error);
       main.textContent = `Sorry, we could not get weather data. Please try again later.`;
     });
+});
+
+flipToggle.addEventListener("click", e => {
+  e.preventDefault();
+  isToggle = !isToggle;
+  document.querySelectorAll(".flip").forEach(value => {
+    console.log(value);
+    value.textContent = isToggle
+      ? Number(value.textContent) - 273
+      : Number(value.textContent) + 273;
+    value.nextElementSibling.textContent = isToggle ? `°C` : `°F`;
+  });
 });
