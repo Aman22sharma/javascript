@@ -131,7 +131,6 @@ form.addEventListener("submit", e => {
   getWeather(e.target[1].value)
     .then(data => {
       main.textContent = ``;
-      console.log(data);
       makeDOM(main, data);
       flipToggle.style.display = `inline`;
     })
@@ -145,7 +144,6 @@ flipToggle.addEventListener("click", e => {
   e.preventDefault();
   isToggle = !isToggle;
   document.querySelectorAll(".flip").forEach(value => {
-    console.log(value);
     value.textContent = isToggle
       ? Number(value.textContent) - 273
       : Number(value.textContent) + 273;
