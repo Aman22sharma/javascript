@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  color: white;
   margin: 8rem 1rem 1rem;
   font-size: 1rem;
   font-family: "Nunito", serif;
@@ -98,23 +99,23 @@ select {
 
 .t1 {
   grid-area: big;
-  background: #ddd;
+  background: #313146;
 }
 .t2 {
   grid-area: s1;
-  background: #ccc;
+  background: #242439;
 }
 .t3 {
   grid-area: s2;
-  background: #bbb;
+  background: #18182D;
 }
 .t4 {
   grid-area: s3;
-  background: #aaa;
+  background: #0B0B20;
 }
 .t5 {
   grid-area: s4;
-  background: #999;
+  background: #000013;
 }
 
 @media screen and (min-width: 40rem) {
