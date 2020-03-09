@@ -23,7 +23,7 @@ const getLangs = async () => {
 const getList = async person => {
   try {
     let response = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://www.gossogleapis.com/youtube/v3/search?part=snippet&maxResults=${person.range}&order=${person.filter}&q=happy%20birthday%20${person.age}%20${person.language}%20&safeSearch=strict&type=video&key=AIzaSyDb8Vdp0O6_IJuAB6Pql1oTHqquvjnZmUU`
+      `https://cors-anywhere.herokuapp.com/https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${person.range}&order=${person.filter}&q=happy%20birthday%20${person.age}%20${person.language}%20&safeSearch=strict&type=video&key=AIzaSyDb8Vdp0O6_IJuAB6Pql1oTHqquvjnZmUU`
     );
     let json = await response.json();
     return json;
