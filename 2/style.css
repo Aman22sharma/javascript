@@ -46,6 +46,11 @@ body {
   grid-area: range;
 }
 
+select,
+button {
+  width: 100%;
+}
+
 button {
   grid-area: button;
 }
