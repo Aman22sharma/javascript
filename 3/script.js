@@ -5,6 +5,7 @@ const city = document.getElementById("city");
 const form = document.getElementById("form");
 
 city.style.display = `none`;
+main.textContent = `You can find how's the weather in your city for next one month? Get the ball rolling by selecting your country and city!`;
 
 const getWeather = async keyword => {
   try {
@@ -101,7 +102,7 @@ country.addEventListener("change", e => {
   city.appendChild(option);
   getCityList()
     .then(d => {
-      main.textContent = ``;
+      main.textContent = `Good job! Let us select your city, press "Go" and we will get you weather information for next month!`;
       let cityList = d.filter(i => i.country === e.target.value);
       cityList
         .sort((a, b) => (a.name > b.name ? 1 : -1))
