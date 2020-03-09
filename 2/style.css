@@ -23,19 +23,35 @@ body {
   right: 0;
   background: #f723a4;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr) 1fr;
+  grid-template-areas: "language age" "sorting range" "button button";
 }
-select {
-  margin: 0 0 1rem;
-  width: 100%;
+
+#language {
+  grid-area: language;
+}
+
+#age {
+  grid-area: age;
+}
+
+#sorting {
+  grid-area: sorting;
+}
+
+#range {
+  grid-area: range;
+}
+
+button {
+  grid-area: button;
 }
 
 #heading {
-  margin: 16rem 1rem 1rem;
+  margin: 10.5rem 1rem 1rem;
   text-align: center;
   line-height: 1;
   color: #f723a4;
@@ -63,12 +79,12 @@ iframe:last-child {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 75rem) {
   #form {
-    flex-direction: row;
-  }
-  select {
-    margin: 0 1rem 0 0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "language age sorting range button";
+    align-items: center;
   }
   #heading {
     margin: 5rem 1rem 1rem;
