@@ -1,6 +1,5 @@
 const app = document.getElementById("app");
 const main = document.getElementById("main");
-const message = document.getElementById("message");
 const country = document.getElementById("country");
 const province = document.getElementById("province");
 const city = document.getElementById("city");
@@ -8,7 +7,9 @@ const form = document.getElementById("form");
 const flipToggle = document.querySelector(".flipToggle");
 let isToggle = false;
 let countryBasket;
+let provinceBasket;
 let selectedCountryCode;
+let selectedProvinceCode;
 
 const getWeather = async keyword => {
   try {
@@ -95,18 +96,22 @@ const makeDOM = (el, data, e) => {
 const handleWeather = e => {
   getWeather(e)
     .then(data => {
+      if(data.cod === "404") {
+        main.textContent = `Sorry, Weather for this location does not exist.`;
+        return;
+      }
       main.textContent = ``;
-      message.textContent = ``;
       makeDOM(main, data, e);
       flipToggle.style.display = `inline`;
     })
     .catch(error => {
+      main.textContent = `Sorry, we could not get weather data. Please try again later.`;
       console.log(error);
-      message.textContent = `Sorry, we could not get weather data. Please try again later.`;
     });
 };
 
 const handleCity = e => {
+  console.log(e)
   city.style.display = `none`;
   flipToggle.style.display = `none`;
   city.innerHTML = ``;
@@ -117,14 +122,13 @@ const handleCity = e => {
   city.appendChild(optionCity);
   getCityList()
     .then(data => {
-      // if (data.filter(i => i.state_code === e).length === 0) {
-      //   message.textContent = `There are no cities listed for this province.`;
-      //   let singleProvince = countryBasket.filter(i => i.code === e);
-      //   console.log(singleProvince)
-      //   handleWeather(singleProvince[0].name);
-      //   return;
-      // }
-      message.textContent = `Good job! Let us select your city, press "Go" and we will get you weather information for next month!`;
+      if (data.filter(i => i.state_code === e && i.country_code === selectedCountryCode).length === 0) {
+        main.textContent = `There are no cities listed for this province.`;
+        let singleProvince = provinceBasket.filter(i => i.state === e && i.code === selectedCountryCode);
+        handleWeather(singleProvince[0].name);
+        return;
+      }
+      main.textContent = `Good job! Let us select your city, press "Go" and we will get you weather information for next month!`;
       let cityList = data.filter(i => i.state_code === e && i.country_code === selectedCountryCode);
       cityList
         .sort((a, b) => (a.name > b.name ? 1 : -1))
@@ -138,7 +142,7 @@ const handleCity = e => {
     })
     .catch(error => {
       console.log(error);
-      message.textContent = `Sorry, we could not get city list data. Please try again later.`;
+      main.textContent = `Sorry, we could not get city list data. Please try again later.`;
     });
 };
 
@@ -149,14 +153,15 @@ const handleProvince = e => {
   province.innerHTML = ``;
   getProvinceList()
     .then(data => {
+      provinceBasket = data.map(i => ({ name: i.name, code: i.country_code, state: i.state_code }));
       if (data.filter(i => i.country_code === e).length === 0) {
-        message.textContent = `There are no province listed for this country.`;
+        main.textContent = `There are no province listed for this country.`;
         let singleCountry = countryBasket.filter(i => i.code === e);
         handleWeather(singleCountry[0].name);
         country.focus();
         return;
       }
-      message.textContent = `Good job! Let us select your province/state!`;
+      main.textContent = `Good job! Let us select your province/state!`;
       let option = document.createElement("option");
       option.setAttribute(`selected`, true);
       option.setAttribute(`disabled`, true);
@@ -175,7 +180,7 @@ const handleProvince = e => {
     })
     .catch(error => {
       console.log(error);
-      message.textContent = `Sorry, we could not get province list data. Please try again later.`;
+      main.textContent = `Sorry, we could not get province list data. Please try again later.`;
     });
 };
 
@@ -183,7 +188,7 @@ const handleCountry = () => {
   city.style.display = `none`;
   province.style.display = `none`;
   flipToggle.style.display = `none`;
-  message.textContent = `You can find how's the weather in your city for next one month? Get the ball rolling by selecting your country!`;
+  main.textContent = `You can find how's the weather in your city for next one month? Get the ball rolling by selecting your country!`;
 
   let option = document.createElement("option");
   option.setAttribute(`selected`, true);
@@ -205,7 +210,7 @@ const handleCountry = () => {
     })
     .catch(error => {
       console.log(error);
-      message.textContent = `Sorry, we could not get country list data, please try again later.`;
+      main.textContent = `Sorry, we could not get country list data, please try again later.`;
     });
 };
 
