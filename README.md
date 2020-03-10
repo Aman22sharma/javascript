@@ -6,3 +6,4 @@
 4. setInterval, setTimeout, clearInterval, clearTimeout (FCC, Beau): **Clone repository to test examples**.
 5. try, catch, finally (FCC, Beau): **Clone repository to test examples**.
 6. Dates (FCC, Beau): **Clone repository to test examples**.
+7. hasOwnProperty, in (FCC, Beau): **Clone repository to test examples**.
