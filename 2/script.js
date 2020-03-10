@@ -4,19 +4,13 @@ const form = document.getElementById("form");
 const heading = document.getElementById("heading");
 const language = document.getElementById("language");
 
-// Languages: https://gist.githubusercontent.com/piraveen/fafd0d984b2236e809d03a0e306c8a4d/raw/eb8020ec3e50e40d1dbd7005eb6ae68fc24537bf/languages.json
-
-main.innerHTML = `<p>Landed at a party and everyone looking at you to get the music going on, we got you covered. Enter the age of your buddy and your preferred language, and we will give you tailored list to play and get you out of trouble!</p>`;
-
 const getLangs = async () => {
   try {
-    let response = await fetch(
-      `./languages.json`
-    );
+    let response = await fetch(`./languages.json`);
     let json = await response.json();
     return json;
   } catch (error) {
-    throw new Error(error);
+    console.log(`Cannot get languages file:`, error);
   }
 };
 
@@ -28,8 +22,18 @@ const getList = async person => {
     let json = await response.json();
     return json;
   } catch (error) {
-    throw new Error(error);
+    console.log(`Cannot get YouTube videos:`, error);
   }
+};
+
+const showMessage = (el, msg) => (el.textContent = msg);
+const setDOM = (el, str) => (el.innerHTML = str);
+
+const makeOptionElement = (el, value, content) => {
+  let option = document.createElement("option");
+  option.setAttribute("value", value);
+  option.textContent = content;
+  el.appendChild(option);
 };
 
 const makeDOM = (el, data) => {
@@ -37,7 +41,7 @@ const makeDOM = (el, data) => {
   data.items.map(v => {
     html += `<iframe src="https://www.youtube.com/embed/${v.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   });
-  el.innerHTML = html;
+  setDOM(el, html);
 };
 
 form.addEventListener("submit", e => {
@@ -50,24 +54,25 @@ form.addEventListener("submit", e => {
   form.reset();
   getList(person)
     .then(data => {
-      console.log(data);
       makeDOM(main, data);
-      heading.innerHTML = `<h1>${person.language} Happy Birthday Songs</h1>`;
+      setDOM(heading, `<h1>${person.language} Happy Birthday Songs</h1>`);
     })
     .catch(error => {
-      console.log(error);
       let html = ``;
-      heading.innerHTML = `<h1>Sorry, Looks like we could not talk to YouTube. <strong>Worry not, we got a video below for you to keep the party going!</strong></h1><p><code>${error}</code>.</p>`;
-      main.innerHTML = `<iframe src="https://www.youtube.com/embed/_z-1fTlSDF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe`;
+      setDOM(heading, `<h1>Sorry, Looks like we could not talk to YouTube. <strong>Worry not, we got a video below for you to keep the party going!</strong></h1><p><code>${error}</code>.</p>`);
+      setDOM(main, `<iframe src="https://www.youtube.com/embed/_z-1fTlSDF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe`);
+      console.log(`Cannot get YouTube videos:`, error, error.stack);
     });
 });
 
 getLangs()
-.then(d => {
-  d.map(i => {
-    let option = document.createElement(`option`)
-    option.setAttribute(`value`, i.toLowerCase());
-    option.textContent = i;
-    language.appendChild(option);
-  })
-});
+  .then(d => d.map(i => makeOptionElement(language, i.toLowerCase(), i)))
+  .catch(error => {
+    showMessage(
+      heading,
+      `<h1>We tried to download languages but failed, please try again.</h1>`
+    );
+    console.log(`Cannot get languages file:`, error, error.stack);
+  });
+
+setDOM(main, `<p>Landed at a party and everyone looking at you to get the music going on, we got you covered. Enter the age of your buddy and your preferred language, and we will give you tailored list to play and get you out of trouble!</p><ol><li>Select your language.</li><li>Select your age.</li><li>Filter videos by your preference.</li><li>How many videos do you need?</li></ol>`);
