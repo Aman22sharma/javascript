@@ -11,3 +11,4 @@
 9. Closures (FCC, Beau): **Clone repository to test examples**.
 10. This (FCC, Beau): **Clone repository to test examples**.
 11. IIFE (FCC, Beau): **Clone repository to test examples**.
+12. Notification (FCC, Beau): **Clone repository to test examples**.
