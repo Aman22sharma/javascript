@@ -9,3 +9,4 @@
 7. hasOwnProperty, in (FCC, Beau): **Clone repository to test examples**.
 8. use strict (FCC, Beau): **Clone repository to test examples**.
 9. Closures (FCC, Beau): **Clone repository to test examples**.
+10. This (FCC, Beau): **Clone repository to test examples**.
