@@ -15,7 +15,7 @@ html {
 body {
   background: #646479;
   color: white;
-  margin: 8.5rem 1rem 1rem;
+  margin: 10rem 1rem 1rem;
   font-size: 1rem;
   font-family: "Nunito", serif;
 }
@@ -32,6 +32,8 @@ body {
   align-content: center;
   padding: 1rem;
   z-index: 2;
+  background: #646479;
+  box-shadow: 0 1rem 1rem rgba(0,0,0,0.25);
 }
 select {
   width: 50%;
@@ -50,6 +52,10 @@ select {
   overflow: hidden;
   border-radius: 0.4rem;
   box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  text-align: center;
 }
 
 .d {

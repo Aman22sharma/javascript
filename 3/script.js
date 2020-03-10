@@ -52,8 +52,10 @@ const getCityList = async () => {
   }
 };
 
-const makeDOM = (el, data) => {
+const makeDOM = (el, data, e) => {
   let container = document.createElement(`div`);
+  let heading = document.createElement(`h1`);
+  heading.textContent = e;
   container.classList.add("container");
   let html = ``;
   data.list.map(i => {
@@ -80,14 +82,16 @@ const makeDOM = (el, data) => {
     )}</span><span>&deg;C</span></span></p></div></div>`;
   });
   container.innerHTML = html;
+  el.appendChild(heading);
   el.appendChild(container);
 };
 
 const handleWeather = e => {
+  console.log(e)
   getWeather(e)
     .then(data => {
       main.textContent = ``;
-      makeDOM(main, data);
+      makeDOM(main, data, e);
       flipToggle.style.display = `inline`;
     })
     .catch(error => {
