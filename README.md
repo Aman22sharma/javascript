@@ -12,3 +12,4 @@
 10. This (FCC, Beau): **Clone repository to test examples**.
 11. IIFE (FCC, Beau): **Clone repository to test examples**.
 12. Notification (FCC, Beau): **Clone repository to test examples**.
+13. Promise (FCC, Beau): **Clone repository to test examples**.
