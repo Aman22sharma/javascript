@@ -5,3 +5,4 @@
 3. One Month Weather Tracker: [View Demo](https://condescending-kalam-7ab617.netlify.com/).
 4. setInterval, setTimeout, clearInterval, clearTimeout (FCC, Beau): **Clone repository to test examples**.
 5. try, catch, finally (FCC, Beau): **Clone repository to test examples**.
+6. Dates (FCC, Beau): **Clone repository to test examples**.
