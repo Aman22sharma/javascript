@@ -84,8 +84,7 @@ const makeDOM = (el, data) => {
 };
 
 const handleWeather = e => {
-  // getWeather(e)
-  getWeather(e.target[2].value)
+  getWeather(e)
     .then(data => {
       main.textContent = ``;
       makeDOM(main, data);
@@ -109,7 +108,7 @@ const handleCity = e => {
   getCityList()
     .then(d => {
       main.textContent = `Good job! Let us select your city, press "Go" and we will get you weather information for next month!`;
-      let cityList = d.filter(i => i.state_code === e.target.value);
+      let cityList = d.filter(i => i.state_code === e);
       cityList
         .sort((a, b) => (a.name > b.name ? 1 : -1))
         .map(i => {
@@ -119,6 +118,7 @@ const handleCity = e => {
           city.appendChild(option);
         });
       city.style.display = `inline`;
+      // handleWeather(e);
     })
     .catch(error => {
       console.log(error);
@@ -127,16 +127,18 @@ const handleCity = e => {
 }
 
 const handleProvince = e => {
+  city.style.display = `none`;
   province.style.display = `none`;
   flipToggle.style.display = `none`;
   province.innerHTML = ``;
   getProvinceList()
   .then(data => {
-    // if(data.filter(i => i.country_code === e.target.value).length === 0) {
-    //   let singleCountry = countryBasket.filter(i => i.code === e.target.value)
-    //   handleWeather(singleCountry[0].name);
-    //   return;
-    // }
+    if(data.filter(i => i.country_code === e).length === 0) {
+      main.textContent = `There are no province listed for this country.`;
+      let singleCountry = countryBasket.filter(i => i.code === e);
+      handleWeather(singleCountry[0].name);
+      return;
+    }
     main.textContent = `Good job! Let us select your province/state!`;
     let option = document.createElement("option");
     option.setAttribute(`selected`, true);
@@ -144,7 +146,7 @@ const handleProvince = e => {
     option.textContent = `Select a province`;
     province.appendChild(option);
     data
-      .filter(i => i.country_code === e.target.value)
+      .filter(i => i.country_code === e)
       .sort((a, b) => (a.name > b.name ? 1 : -1))
       .map(i => {
         let option = document.createElement("option");
@@ -164,7 +166,7 @@ const handleCountry = () => {
   city.style.display = `none`;
   province.style.display = `none`;
   flipToggle.style.display = `none`;
-  main.textContent = `You can find how's the weather in your city for next one month? Get the ball rolling by selecting your country and city!`;
+  main.textContent = `You can find how's the weather in your city for next one month? Get the ball rolling by selecting your country!`;
 
   let option = document.createElement("option");
   option.setAttribute(`selected`, true);
@@ -173,7 +175,8 @@ const handleCountry = () => {
   country.appendChild(option);
 
   getCountryList()
-    .then(data => {
+  .then(data => {
+      countryBasket = data.map(i => ({ name: i.name, code: i.iso2 }));
       data
         .sort((a, b) => (a.name > b.name ? 1 : -1))
         .map(i => {
@@ -201,17 +204,17 @@ const handleToggle = () => {
 
 country.addEventListener("change", e => {
   e.preventDefault();
-  handleProvince(e);
+  handleProvince(e.target.value);
 });
 
 province.addEventListener("change", e => {
   e.preventDefault();
-  handleCity(e);
+  handleCity(e.target.value);
 });
 
-form.addEventListener("submit", e => {
+city.addEventListener("change", e => {
   e.preventDefault();
-  handleWeather(e);
+  handleWeather(e.target.value);
 });
 
 flipToggle.addEventListener("click", e => {
