@@ -1,5 +1,5 @@
 // Selectors
-const URL = `http://worldtimeapi.org/api/timezone`; // HACK = `https://cors-anywhere.herokuapp.com`;
+const URL = `https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/timezone`; // HACK = `https://cors-anywhere.herokuapp.com`;
 const app = document.getElementById("app");
 const select = document.querySelector("select");
 
