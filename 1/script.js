@@ -1,5 +1,6 @@
 // Selectors
-const URL = `https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/timezone`; // HACK = `https://cors-anywhere.herokuapp.com`;
+// const URL = `https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/timezone`; // HACK = `https://cors-anywhere.herokuapp.com`;
+const URL = `http://worldtimeapi.org/api/timezone`; // HACK = `https://cors-anywhere.herokuapp.com`;
 const app = document.getElementById("app");
 const select = document.querySelector("select");
 
@@ -18,8 +19,8 @@ append(app, selectBox);
 append(app, content);
 addCl(selectBox, "select");
 
-// Declare Async Function
-const makeCall = async (url, location) => {
+// Async functions
+const getAllTimezones = async (url, location) => {
   try {
     // Clear select
     newHTML(selectBox, ``);
@@ -52,8 +53,14 @@ const makeCall = async (url, location) => {
     append(selectBox, select);
 
     // Make a new call based on default location
-    let requestLocation = await fetch(`${URL}/${targetLocation}`);
+    let requestLocation = await fetch(`${url}/${targetLocation}`);
     let requestLocationJSON = await requestLocation.json();
+
+    // Check if API returned an error
+    if (requestLocationJSON.hasOwnProperty("error")) {
+      throw new Error(`This location does not exist in the API.`);
+      return;
+    }
     select.addEventListener("change", e => handleChange(e.target.value));
     return requestLocationJSON;
   } catch (err) {
@@ -61,7 +68,23 @@ const makeCall = async (url, location) => {
   }
 };
 
-// Display Errors
+// Get Selected Timezone
+const getCurrentTimezone = async (url, location) => {
+  try {
+    let requestLocation = await fetch(`${url}/${location}`);
+    let requestLocationJSON = await requestLocation.json();
+    // Check if API returned an error
+    if (requestLocationJSON.hasOwnProperty("error")) {
+      throw new Error(`This location does not exist in the API.`);
+      return;
+    }
+    return requestLocationJSON;
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+
+// Display Error
 const handleError = error => {
   newHTML(selectBox, `<p>Sorry!</p></p>`);
   newHTML(
@@ -72,7 +95,6 @@ const handleError = error => {
 
 // Display Numbers
 const handleDisplay = (content, data) => {
-  console.log(content, data)
   newHTML(
     content,
     `
@@ -99,18 +121,12 @@ const handleDisplay = (content, data) => {
 
 // Handle change
 const handleChange = e => {
-  makeCall(URL, e)
+  getCurrentTimezone(URL, e)
     .then(data => handleDisplay(content, data))
-    .catch(error => {
-      handleError(error);
-      console.log(error);
-    });
+    .catch(error => handleError(error));
 };
 
-// Make Call
-makeCall(URL)
+// Handle all timezones
+getAllTimezones(URL)
   .then(data => handleDisplay(content, data))
-  .catch(error => {
-    handleError(error);
-    console.log(error);
-  });
+  .catch(error => handleError(error));
