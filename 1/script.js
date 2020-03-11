@@ -1,70 +1,115 @@
-const URL = `https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/timezone`;
+// Selectors
+const URL = `http://worldtimeapi.org/api/timezone`; // HACK = `https://cors-anywhere.herokuapp.com`;
 const app = document.getElementById("app");
 const select = document.querySelector("select");
 
-const getList = async url => {
+// New Nodes
+const newEl = el => document.createElement(el);
+const addCl = (el, name) => el.classList.add(name);
+const append = (el, child) => el.appendChild(child);
+const newHTML = (el, content) => (el.innerHTML = content);
+const setLSI = (key, val) => localStorage.setItem(key, JSON.stringify(val));
+const getLSI = key => JSON.parse(localStorage.getItem(key));
+
+// Setup DOM
+let selectBox = newEl(`div`);
+let content = newEl(`main`);
+append(app, selectBox);
+append(app, content);
+addCl(selectBox, "select");
+
+// Declare Async Function
+const makeCall = async (url, location) => {
   try {
-    let response = await fetch(url);
-    let json = await response.json();
-    return json;
-  } catch (error) {
-    throw new Error(error);
+    // Clear select
+    newHTML(selectBox, ``);
+
+    // Check Local Storage to avoid extra fetch call for all timezones
+    let getTimezones;
+    if (getLSI(`allTimezones`)) {
+      getTimezones = getLSI(`allTimezones`);
+    } else {
+      let request = await fetch(url);
+      let requestJSON = await request.json();
+      setLSI(`allTimezones`, requestJSON);
+      getTimezones = getLSI(`allTimezones`);
+    }
+
+    // Build select on the fly
+    let html = `<option disabled>Select a timezone</option>`;
+    let targetLocation = !location
+      ? getTimezones[Math.floor(Math.random() * getTimezones.length)]
+      : location;
+    let select = newEl(`select`);
+    for (let i = 0; i < getTimezones.length; i++) {
+      if (getTimezones[i] === targetLocation) {
+        html += `<option value=${getTimezones[i]} key=${i} selected>${getTimezones[i]}</option>`;
+        continue;
+      }
+      html += `<option value=${getTimezones[i]} key=${i}>${getTimezones[i]}</option>`;
+    }
+    newHTML(select, html);
+    append(selectBox, select);
+
+    // Make a new call based on default location
+    let requestLocation = await fetch(`${URL}/${targetLocation}d`);
+    let requestLocationJSON = await requestLocation.json();
+    select.addEventListener("change", e => handleChange(e.target.value));
+    return requestLocationJSON;
+  } catch (err) {
+    throw new Error(err);
   }
 };
 
-const getTimezone = async zone => {
-  try {
-    let response = await fetch(`https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/timezone/${zone}`);
-    let json = await response.json();
-    return json;
-  } catch (error) {
-    throw new Error(error);
-  }
+// Display Errors
+const handleError = error => {
+  newHTML(selectBox, `<p>Sorry!</p></p>`);
+  newHTML(
+    content,
+    `<p><code>${error}</code><br><small>${error.stack}</small></p>`
+  );
 };
 
-const makeDOM = (el, d) => {
-  el.innerHTML = `
-    <h1>Timezone</h1><p>${d.timezone}</p>
-    <h1>Daylight Saving Time starts</h1><p>${d.dst_from ? moment(d.dst_from).format('LLLL') : 'Does not exist for this timezone.'}</p>
-    <h1>Daylight Saving Time ends</h1><p>${d.dst_until ? moment(d.dst_until).format('LLLL') : 'Does not exist for this timezone.'}</p>`;
+// Display Numbers
+const handleDisplay = (content, data) => {
+  newHTML(
+    content,
+    `
+      <h1>Timezone</h1><p>${data.timezone}</p>
+      <h1>Daylight Saving Time starts</h1>
+      <p>
+        ${
+          data.dst_from
+            ? moment(data.dst_from).format("LLLL")
+            : "Does not exist for this timezone."
+        }
+      </p>
+      <h1>Daylight Saving Time ends</h1>
+      <p>
+        ${
+          data.dst_until
+            ? moment(data.dst_until).format("LLLL")
+            : "Does not exist for this timezone."
+        }
+      </p>
+    `
+  );
 };
 
-const handleTimezone = (url, content) => {
-  getTimezone(url)
-    .then(d => {
-      console.log(d);
-      makeDOM(content, d);
-    })
+// Handle change
+const handleChange = e => {
+  makeCall(URL, e)
+    .then(data => handleDisplay(content, data))
     .catch(error => {
+      handleError(error);
       console.log(error);
     });
 };
 
-getList(URL)
-  .then(data => {
-    let html = `<option disabled>Select a timezone</option>`;
-    let selectBox = document.createElement(`div`);
-    selectBox.classList.add('select');
-    let select = document.createElement(`select`);
-    let content = document.createElement(`main`);
-    for (let i = 0; i < data.length; i++) {
-      if (i === 144) {
-        html += `<option value=${data[i]} key=${i} selected>${data[i]}</option>`;
-        handleTimezone(data[i], content);
-        continue;
-      }
-      html += `<option value=${data[i]} key=${i}>${data[i]}</option>`;
-    }
-    select.innerHTML = html;
-    selectBox.appendChild(select);
-    app.appendChild(selectBox);
-    app.appendChild(content);
-    select.addEventListener("change", e => {
-      handleTimezone(e.target.value, content);
-    });
-  })
+// Make Call
+makeCall(URL)
+  .then(data => handleDisplay(content, data))
   .catch(error => {
-    let html = ``;
+    handleError(error);
     console.log(error);
-    app.innerHTML = `<p>Sorry, there was a data failure.</p><p><code>${error}</code>.</p>`;
   });
