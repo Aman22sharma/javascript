@@ -52,7 +52,7 @@ const makeCall = async (url, location) => {
     append(selectBox, select);
 
     // Make a new call based on default location
-    let requestLocation = await fetch(`${URL}/${targetLocation}d`);
+    let requestLocation = await fetch(`${URL}/${targetLocation}`);
     let requestLocationJSON = await requestLocation.json();
     select.addEventListener("change", e => handleChange(e.target.value));
     return requestLocationJSON;
@@ -72,6 +72,7 @@ const handleError = error => {
 
 // Display Numbers
 const handleDisplay = (content, data) => {
+  console.log(content, data)
   newHTML(
     content,
     `
