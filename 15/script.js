@@ -1,9 +1,11 @@
 let name = prompt("What is your name?");
-name !== null && name.length !== 0 && name.trim() !== "" && print(name);
+name !== null && name.length !== 0 && name.trim() !== "" ? print(`<h1>${name}</h1>`) : print(`<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Windows_XP_logo.svg/200px-Windows_XP_logo.svg.png" alt="Windows">`);
+
+console.log('name :', name);
 
 function print(name) {
-  document.getElementById(`app`).innerHTML = `<h1>${name}</h1>`;
-  const text = document.querySelector("h1");
+  document.getElementById(`app`).innerHTML = `<div id="hook">${name}</div>`;
+  const text = document.querySelector("#hook");
   let x = 0,
     y = 0,
     reverseX = false,
