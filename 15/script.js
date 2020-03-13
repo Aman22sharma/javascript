@@ -24,5 +24,6 @@ function print(name) {
       ? y--
       : y++;
     text.style.transform = `translate(${x}px, ${y}px)`;
+    text.style.background = `transparent`;
   }, 25);
 }

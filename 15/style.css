@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+#app {
   overflow: hidden;
   min-height: 100vh;
   height: 100%;
@@ -24,9 +24,10 @@ html {
 h1 {
   margin: 0;
   color: #00f;
-  line-height: 1;
+  line-height: .8;
+  letter-spacing: -1.4px;
   font-size: 4rem;
   font-weight: 100;
   display: inline-block;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Arial", sans-serif;
 }
