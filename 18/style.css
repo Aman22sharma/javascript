@@ -1,0 +1,62 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #eee;
+  --black: #100e17;
+  --black-light: #3f3e45;
+}
+
+* {
+  transition: all 1s ease;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: var(--white);
+  background: var(--black);
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+input {
+  margin: 0;
+  border: 0;
+  height: 4rem;
+  padding: 0 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  font-size: 2rem;
+  border-radius: .5rem;
+  color: var(--white);
+  background: var(--black-light);
+}
+
+input:focus {
+  outline: 0;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.container {
+  padding: 1rem;
+  font-size: 2rem;
+  word-break: break-all;
+}
