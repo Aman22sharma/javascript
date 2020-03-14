@@ -17,3 +17,4 @@
 15. Windows XP Screensaver: [View Demo](https://youthful-goodall-03c376.netlify.com/).
 16. Basic Web Crawler: [View Demo](https://suspicious-khorana-0bb294.netlify.com/).
 17. Checkout page: [View Demo](https://flamboyant-dijkstra-aa95bd.netlify.com/).
+18. Editable Text page: [View Demo](https://gracious-allen-7e5b5b.netlify.com/).
