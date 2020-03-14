@@ -2,7 +2,7 @@ let app = document.getElementById("app");
 
 async function crawler() {
   try {
-    let req = await fetch(`https://www.freecodecamp.org/news/`, {
+    let req = await fetch(`https://cors-anywhere.herokuapp.com/https://www.freecodecamp.org/news/`, {
       mode: "cors"
     });
     let text = await req.text();
