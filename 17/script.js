@@ -1,5 +1,7 @@
 const app = document.getElementById("app");
-const search = document.querySelector("#search");
+const search = document.getElementById("search");
+const total = document.getElementById("total");
+const totalCount = document.getElementById("totalCount");
 
 async function getData() {
   try {
@@ -29,12 +31,14 @@ function handleDelete(e, index) {
 }
 
 function showData() {
-  let html = ``;
+  let html = ``, bill = 0;
   const bucket = getLSI("item") ? getLSI("item") : [];
   bucket && bucket.length !== 0
-    ? (app.classList.add(`d-block`), blankCart.classList.add(`d-none`))
-    : (app.classList.remove(`d-none`), blankCart.classList.remove(`d-none`));
+    ? (app.classList.add(`d-block`), blankCart.classList.add(`d-none`), total.classList.add(`d-block`))
+    : (app.classList.remove(`d-none`), blankCart.classList.remove(`d-none`), total.classList.add(`d-none`), total.classList.remove(`d-block`));
   bucket.forEach(function(element) {
+    let price = Number(element.price.substr(1, element.price.length - 1));
+    bill += price;
     html += `
       <div class="col col-12 col-sm-6 col-md-4">
         <div class="card overflow-hidden mb-3">
@@ -51,6 +55,7 @@ function showData() {
         </div>
       </div>`;
   });
+  totalCount.textContent = `$${bill.toFixed(2)}`;
   app.querySelector(".row").innerHTML = html;
   const remove = document.querySelectorAll("#remove");
   remove.forEach(function(element, index) {
