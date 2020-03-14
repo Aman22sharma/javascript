@@ -36,7 +36,7 @@ function handleData(doc) {
       value.map(function(i) {
         return (html += `<div class="developer"><img src=${
           i.attributes[1].value.includes("gravatar.com")
-            ? `https://${i.attributes[1].value}`
+            ? `https:${i.attributes[1].value}`
             : `https://freecodecamp.org${i.attributes[1].value}`
         }></div>`);
       });
