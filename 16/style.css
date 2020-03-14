@@ -1,0 +1,47 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+header {
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: var(--white);
+  background: var(--black);
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: row dense;
+}
+
+.developer {
+	width: 100%;
+}
