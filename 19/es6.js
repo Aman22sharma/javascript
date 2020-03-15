@@ -41,6 +41,9 @@ class Display {
     });
   }
   cap() {
+    if (admin.get("books") == null) {
+      return;
+    }
     if (admin.get("books").length >= 5) {
       document.getElementById("cap").classList.add("active");
     } else {
