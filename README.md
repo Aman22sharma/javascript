@@ -18,6 +18,6 @@
 16. Basic Web Crawler: [View Demo](https://suspicious-khorana-0bb294.netlify.com/).
 17. Checkout page: [View Demo](https://flamboyant-dijkstra-aa95bd.netlify.com/).
 18. Editable Text page: [View Demo](https://gracious-allen-7e5b5b.netlify.com/).
-19. Local Library page using Object Prototypes: [View Demo](https://zen-villani-3ec863.netlify.com/).
+19. Local Library page using Object Prototypes: [View Demo](https://zealous-fermi-eea423.netlify.com/).
 20. AJAX: **Clone repository to test examples**.
 21. News: [View Demo](https://stoic-mestorf-9c7513.netlify.com/).
