@@ -25,7 +25,7 @@ class News {
     async function handleGet() {
       try {
         let req = await fetch(
-          `http://newsapi.org/v2/top-headlines?country=${code}&apiKey=63f86003bea64ef3bae5fca878aeb719`
+          `https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?country=${code}&apiKey=63f86003bea64ef3bae5fca878aeb719`
         );
         let json = await req.json();
         return json;
