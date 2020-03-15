@@ -25,25 +25,12 @@ Admin.prototype.validate = function(book) {
 };
 
 Display.prototype.add = function(book) {
-  function handleDelete() {
-    let deleteButtons = document.querySelectorAll("#delete");
-    deleteButtons.forEach(function(element) {
-      element.addEventListener("click", function(btn) {
-        const id = btn.target.parentElement.parentElement.dataset.id;
-        const allBooks = admin.get("books");
-        allBooks.forEach(function(i, idx, obj) {
-          if (i.id === Number(id)) {
-            obj.splice(idx, 1);
-          }
-        });
-        admin.put("books", allBooks);
-        display.add(admin.get("books"));
-        display.cap();
-      });
-    });
-  }
   let html = ``;
   let app = document.getElementById("app");
+  if(book.length===0) {
+    app.innerHTML = `No books listed.`;
+    return;
+  }
   book.forEach(function(element) {
     html += `
       <tr data-id=${element.id}>
@@ -55,7 +42,25 @@ Display.prototype.add = function(book) {
     `;
   });
   app.innerHTML = html;
-  handleDelete();
+};
+
+Display.prototype.delete = function() {
+  let deleteButtons = document.querySelectorAll("#delete");
+  deleteButtons.forEach(function(element) {
+    element.addEventListener("click", function(btn) {
+      const id = btn.target.parentElement.parentElement.dataset.id;
+      const allBooks = admin.get("books");
+      allBooks.forEach(function(i, idx, obj) {
+        if (i.id === Number(id)) {
+          obj.splice(idx, 1);
+        }
+      });
+      admin.put("books", allBooks);
+      display.add(admin.get("books"));
+      display.delete();
+      display.cap();
+    });
+  });
 };
 
 Display.prototype.cap = function() {
@@ -77,10 +82,9 @@ Display.prototype.show = function(type) {
 let admin = new Admin();
 let display = new Display();
 
-if (admin.get("books") && admin.get("books").length !== 0) {
-  display.add(admin.get("books"));
-  display.cap();
-}
+display.add(admin.get("books"));
+display.cap();
+display.delete();
 
 let libraryForm = document.querySelector("#libraryForm");
 libraryForm.addEventListener("submit", function(e) {
@@ -101,6 +105,7 @@ libraryForm.addEventListener("submit", function(e) {
     admin.put("books", cart);
     display.add(admin.get("books"));
     display.clear();
+    display.delete();
     display.show("Your book has been added successfully.");
     display.cap();
   } else {
