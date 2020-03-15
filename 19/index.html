@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>My Library</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      href="https://image.flaticon.com/icons/svg/541/541509.svg"
+      type="image/svg"
+    />
+  </head>
+
+  <body>
+    <h1>Welcome to your local library</h1>
+    <form id="libraryForm">
+      <div>
+        <input id="bookName" type="text" placeholder="Enter book name" />
+        <input id="authorName" type="text" placeholder="Enter author name" />
+      </div>
+      <div>
+        <label for="fiction">
+          <input type="radio" name="type" id="fiction" value="fiction" />
+          Fiction
+        </label>
+        <label for="nonfiction">
+          <input type="radio" name="type" id="nonfiction" value="nonfiction" />
+          Non Fiction
+        </label>
+        <label for="technology">
+          <input type="radio" name="type" id="technology" value="technology"
+        /></label>
+        Technology
+      </div>
+      <button>+ Add</button>
+    </form>
+    <div id="cap">
+      <table>
+        <thead>
+          <tr>
+            <th>Book</th>
+            <th>Author</th>
+            <th>Type</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="app"></tbody>
+      </table>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
