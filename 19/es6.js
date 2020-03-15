@@ -6,6 +6,10 @@ class Display {
       app.innerHTML = `No books listed.`;
       return;
     }
+    if (book.length === 0) {
+      app.innerHTML = `No books listed.`;
+      return;
+    }
     book.forEach(function(element) {
       html += `
         <tr data-id=${element.id}>
@@ -80,8 +84,8 @@ let admin = new Admin();
 let display = new Display();
 
 display.add(admin.get("books"));
-// display.cap();
-// display.delete();
+display.cap();
+display.delete();
 
 let libraryForm = document.querySelector("#libraryForm");
 libraryForm.addEventListener("submit", function(e) {
