@@ -50,7 +50,7 @@ class News {
     data.articles.forEach(function(element) {
       html += `<div class="card">
                 <a class="card__link" href="${element.url}" target="_blank">
-                  <img class="card__thumb" src="${element.urlToImage}" alt="${
+                  <img class="card__thumb" src="${element.urlToImage || 'https://placekitten.com/400/400'}" alt="${
         element.title
       }">
                 </a>
