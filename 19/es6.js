@@ -2,7 +2,7 @@ class Display {
   add(book) {
     let html = ``;
     let app = document.getElementById("app");
-    if (book.length === 0) {
+    if (book == null) {
       app.innerHTML = `No books listed.`;
       return;
     }
@@ -80,8 +80,8 @@ let admin = new Admin();
 let display = new Display();
 
 display.add(admin.get("books"));
-display.cap();
-display.delete();
+// display.cap();
+// display.delete();
 
 let libraryForm = document.querySelector("#libraryForm");
 libraryForm.addEventListener("submit", function(e) {
