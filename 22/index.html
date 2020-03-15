@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Regular Expression</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/541/541509.svg" type="image/svg" />
+</head>
+
+<body>
+  <div id="success">SUCCESS!</div>
+  <div id="failed">FAILED!</div>
+  <form id="form">
+    <div class="group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required placeholder="John" />
+      <div class="error">Username must be 10 letters at the least and should not start with a number.</div>
+    </div>
+    <div class="group">
+      <label for="email">Email Address:</label>
+      <input type="text" id="email" required placeholder="test@test.com" />
+      <div class="error">Email address must be valid.</div>
+    </div>
+    <div class="group">
+      <label for="phone">Enter phone number:</label>
+      <input type="text" id="phone" required placeholder="1234567890" />
+      <div class="error">Phone number must be 10 letters at the least.</div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <script src="./script.js"></script>
+</body>
+
+</html>

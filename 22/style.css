@@ -1,0 +1,85 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #eee;
+  --black: #100e17;
+  --black-light: #3f3e45;
+}
+
+* {
+  transition: all 1s ease;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: var(--white);
+  background: var(--black);
+  font-size: 1rem;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+label {
+  margin: 0 0 .25rem;
+}
+
+input {
+  margin: 0 0 1rem;
+}
+
+.error {
+  color: green;
+  display: none;
+  margin: 0 0 1rem;
+}
+
+.has-error {
+  display: block;
+  color: red;
+}
+
+#success,
+#failed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(255,255,255,0.5);
+}
+
+#success {
+  color: green;
+}
+
+#failed {
+  color: red;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
