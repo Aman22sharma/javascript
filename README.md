@@ -11,6 +11,7 @@
 7. Checkout page: [View Demo](https://flamboyant-dijkstra-aa95bd.netlify.com/).
 8. Editable Text page: [View Demo](https://gracious-allen-7e5b5b.netlify.com/).
 9. Local Library page using Object Prototypes: [View Demo](https://zealous-fermi-eea423.netlify.com/).
+10. Regular Expressions: [View Demo](https://elegant-bhabha-611b3b.netlify.com/).
 
 ## Concepts (Practice)
 
