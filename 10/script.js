@@ -122,3 +122,17 @@ console.log(items.next().value);
 console.log(items.next().value);
 console.log(items.next().value);
 console.log(items.next().value);
+
+// Generators
+
+function* makeNum() {
+	let i = 0;
+	while(true) {
+		yield i++;
+	}
+}
+const gen = makeNum();
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
