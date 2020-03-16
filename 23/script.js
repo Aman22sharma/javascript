@@ -18,14 +18,21 @@ const handleSet = e => {
   const userTime = Date.parse(time.value && time.value);
   const now = Date.now();
   let alarmTime = userTime - now;
-  if (alarmTime >= 0) {
+  if (alarmTime > 0) {
     setInterval(() => {
-      alarmTime -= 1000;
-      counter.textContent = (alarmTime / 1000).toFixed();
+      if (alarmTime < 1000) {
+        counter.textContent = `Wake up`;
+        return;
+      } else {
+        alarmTime -= 1000;
+        counter.textContent = (alarmTime / 1000).toFixed();
+      }
     }, 1000);
     setTimeout(() => {
       beep();
     }, alarmTime);
+  } else {
+    alert(`Enter a time in future!`);
   }
 };
 
