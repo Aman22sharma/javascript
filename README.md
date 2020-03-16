@@ -24,6 +24,6 @@
 7. This (FCC, Beau): **Clone repository to test examples**.
 8. IIFE (FCC, Beau): **Clone repository to test examples**.
 9. Notification (FCC, Beau): **Clone repository to test examples**.
-10. Promise, Classes, Object Literals, Object Prototype, Prototype Inheritance (FCC, Beau): **Clone repository to test examples**.
+10. Iterators, Promise, Classes, Object Literals, Object Prototype, Prototype Inheritance (FCC, Beau): **Clone repository to test examples**.
 11. JSON (FCC, Beau): **Clone repository to test examples**.
 12. AJAX: **Clone repository to test examples**.

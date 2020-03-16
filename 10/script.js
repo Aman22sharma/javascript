@@ -94,3 +94,31 @@ function doService() {
 car.doService = doService;
 
 car.doService();
+
+// Iterators
+
+function ite(arr) {
+  let count = 0;
+  return {
+    next: function() {
+      if (count < arr.length) {
+        return {
+          value: arr[count++],
+          done: false
+        };
+      } else {
+        return {
+          done: true
+        };
+      }
+    }
+  };
+}
+const arr = [1, 2, 3, 4, 5];
+const items = ite(arr);
+console.log(items.next().value);
+console.log(items.next().value);
+console.log(items.next().value);
+console.log(items.next().value);
+console.log(items.next().value);
+console.log(items.next().value);
