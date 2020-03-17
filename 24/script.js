@@ -1,6 +1,6 @@
 async function user() {
   try {
-    const req = await fetch(`https://randomuser.me/api/`);
+    const req = await fetch(`https://cors-anywhere.herokuapp.com/https://randomuser.me/api/`);
     const json = await req.json();
     return json;
   } catch (err) {
