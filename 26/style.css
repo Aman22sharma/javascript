@@ -1,0 +1,29 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #eee;
+  --black: #100e17;
+  --black-light: #3f3e45;
+}
+
+* {
+  transition: all 1s ease;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: var(--white);
+  background: var(--black);
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+

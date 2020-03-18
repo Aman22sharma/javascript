@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Firebase</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/541/541509.svg" type="image/svg" />
+</head>
+
+<body>
+  <form>
+    <input type="text" placeholder="Enter a message">
+    <button>Send</button>
+  </form>
+  <div id="app"></div>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyBRQVgSWKfraP_E7RNg5E8fDhY1YkziDPs",
+      authDomain: "tiffin-f0b79.firebaseapp.com",
+      databaseURL: "https://tiffin-f0b79.firebaseio.com",
+      projectId: "tiffin-f0b79",
+      storageBucket: "tiffin-f0b79.appspot.com",
+      messagingSenderId: "207171153567",
+      appId: "1:207171153567:web:3145478b6c1dd9373e3caa",
+      measurementId: "G-P3TCDP745M"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
