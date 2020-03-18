@@ -6,7 +6,10 @@ const rootRef = database.ref("/messages");
 document.forms[0].addEventListener("submit", e => {
   e.preventDefault();
   const inputValue = e.target[0].value;
-  if (!inputValue || inputValue.trim() === "") return;
+  if (!inputValue || inputValue.trim() === "") {
+    alert(`Please enter a message to send!`);
+    return;
+  }
   const autoId = rootRef.push().key;
   rootRef
     .child(autoId)
