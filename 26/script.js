@@ -15,6 +15,7 @@ document.forms[0].addEventListener("submit", e => {
     .child(autoId)
     .set({
       message: inputValue
+      // likes: 0
     })
     .then(() => {
       alert(`Message added!`);
@@ -24,11 +25,22 @@ document.forms[0].addEventListener("submit", e => {
 });
 
 const handleData = data => {
-  let para = document.createElement("p");
   data.forEach(i => {
-    para.textContent = i.val();
-    app.appendChild(para);
+    console.log(i);
+    let card = document.createElement("div");
+    let like = document.createElement("button");
+    let para = document.createElement("p");
+    para.textContent = `${i.val()}`;
+    // para.textContent = `${i.val()}, Likes: ${likes}`;
+    like.textContent = "Like";
+    card.appendChild(para);
+    card.appendChild(like);
+    app.appendChild(card);
   });
 };
+
+const handleLike = () => {
+
+}
 
 rootRef.on("child_added", handleData);
