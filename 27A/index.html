@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Startup</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <h1>Welcome to fakeBook!</h1>
+  <div id="app">
+    <form id="loginForm">
+      <div>
+        <label for="email">Enter your Email Address:</label>
+        <input type="email" placeholder="Enter Email" id="email" />
+      </div>
+      <div>
+        <label for="password">Enter your Password:</label>
+        <input type="password" placeholder="Enter Password" id="password" />
+      </div>
+      <div>
+        <p>
+          Do not have an account with fakeBook? Get one here:
+          <a href="./sign-up.html">Sign Up</a>.
+        </p>
+      </div>
+      <div>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+  <script>
+    let firebaseConfig = {
+      apiKey: "AIzaSyDj7H4ryjrFYhcUyr43rvlg71y45-U48OE",
+      authDomain: "testing-3f1e1.firebaseapp.com",
+      databaseURL: "https://testing-3f1e1.firebaseio.com",
+      projectId: "testing-3f1e1",
+      storageBucket: "testing-3f1e1.appspot.com",
+      messagingSenderId: "759240881021",
+      appId: "1:759240881021:web:3282f2cb036fdc478a1214",
+      measurementId: "G-YBG70MMC3Z"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
