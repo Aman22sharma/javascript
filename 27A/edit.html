@@ -4,18 +4,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Profile</title>
+  <title>Edit</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <h1>Welcome!</h1>
-  <p>We are glad you joined fakeBook family!</p>
-  <p id="status"></p>
-  <p>Welcome User</p>
-  <img src="https://placekitten.com/300/300">
-  <p><a href="./edit.html">Edit Profile</a></p>
-  <button id="signOutButton">Sign out</button>
+  <div id="app">
+    <section class="container edit-container">
+      <fieldset>
+        <div>
+          <img src="https://placekitten.com/300/300">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div>
+          <label for="displayName">Display Name</label>
+          <input type="text" id="displayName" name="displayName">
+        </div>
+        <div>
+          <label for="photo">URL of Picture</label>
+          <input type="url" id="photo">
+        </div>
+        <button id="back">Back</button>
+        <button id="edit">Edit</button>
+        <button id="delete">Delete</button>
+      </fieldset>
+  </div>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
@@ -34,7 +54,7 @@
     firebase.analytics();
   </script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
-  <script src="./profile.js"></script>
+  <script src="./edit.js"></script>
 </body>
 
 </html>
