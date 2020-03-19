@@ -14,7 +14,11 @@
 10. Regular Expressions: [View Demo](https://elegant-bhabha-611b3b.netlify.com/).
 11. Iterators in JS: [View Demo](https://pedantic-mestorf-0ff7f0.netlify.com/).
 12. Wall Clock: [View Demo](https://silly-payne-64d476.netlify.com/).
-13. Firebase Intro: [View Demo](https://reverent-golick-50bf0e.netlify.com/).
+
+## Firebase
+
+1. Firebase Intro: [View Demo](https://reverent-golick-50bf0e.netlify.com/).
+2. Firebase Sign Up: [View Demo](https://angry-mcclintock-c3e2db.netlify.com/).
 
 ## Concepts (Practice)
 
