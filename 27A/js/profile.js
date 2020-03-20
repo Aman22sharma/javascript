@@ -172,6 +172,7 @@ const handleCRUD = user => {
   };
   const makeYourHumans = () => {
     dbRef.orderByKey().on("value", snapshot => {
+      console.log(snapshot.val());
       if (snapshot.val() == null) {
         yourHumans.innerHTML = `Please add some humans!`;
       } else {
@@ -199,7 +200,11 @@ const handleCRUD = user => {
                     `;
           }
         });
-        yourHumans.innerHTML = html;
+        if (html.trim() === "") {
+          yourHumans.innerHTML = `You do not have any human listed under your account. Please add one!`;
+        } else {
+          yourHumans.innerHTML = html;
+        }
       }
     });
   };
