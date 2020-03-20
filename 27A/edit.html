@@ -12,7 +12,11 @@
 <body>
   <div class="container">
     <h1>Hey Human, Edit your Profile here!</h1>
-    <a href="./">Go to Home</a>
+    <div class="buttons">
+      <a class="input" href="#" id="back">Back</a>
+      <a class="input" href="#" id="edit">Edit</a>
+      <a class="input" href="#" id="delete">Delete</a>
+    </div>
     <div>
       <label for="displayName">Display Name</label>
       <input class="input" type="text" id="displayName" name="displayName">
@@ -21,9 +25,6 @@
       <label for="photo">URL of Picture</label>
       <input class="input" type="url" id="photo">
     </div>
-    <button id="back">Back</button>
-    <button id="edit">Edit</button>
-    <button id="delete">Delete</button>
   </div>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
