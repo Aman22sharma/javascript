@@ -39,6 +39,10 @@
         <label for="message">Message:</label>
         <input type="text" class="input" placeholder="Enter Message" id="message">
       </div>
+      <div>
+        <label for="picture">Picture:</label>
+        <input type="text" class="input" placeholder="Add Picture URL" id="picture">
+      </div>
       <button id="add" class="input">Add</button>
     </form>
     <form id="updateForm">
@@ -57,14 +61,26 @@
         <input type="text" class="input" placeholder="Enter Phone Number" id="updatePhone">
       </div>
       <div>
-        <label for="updateMessge">Message:</label>
+        <label for="updateMessage">Message:</label>
         <input type="text" class="input" placeholder="Enter Message" id="updateMessage">
+      </div>
+      <div>
+        <label for="updatePicture">Picture:</label>
+        <input type="text" class="input" placeholder="Add Picture URL" id="updatePicture">
       </div>
       <div class="buttons">
         <button id="update" class="input">Update</button>
         <button id="delete" class="input">Delete</button>
       </div>
     </form>
+    <div id="yourHumansContainer">
+      <h2>Your Humans:</h2>
+      <div id="yourHumans" class="yourHumans"></div>
+    </div>
+    <div id="allHumansContainer">
+      <h2>All Humans:</h2>
+      <div id="allHumans" class="allHumans"></div>
+    </div>
   </div>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>

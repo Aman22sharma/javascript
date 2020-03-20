@@ -21,7 +21,7 @@ auth.onAuthStateChanged(user => {
   if (user) {
     handleCRUD(user);
     if (user.displayName && user.photoURL) {
-      content.innerHTML = `<div class="user"><h1 class="user__name">Welcome ${user.displayName}</h1><div class="user__thumbnail"><img src=${user.photoURL}></div>`;
+      content.innerHTML = `<div class="user"><h1 class="user__name">Welcome ${user.displayName}!</h1><div class="user__thumbnail"><img src=${user.photoURL}></div>`;
     } else {
       content.innerHTML = `<div class="user"><h1 class="user__name">Welcome to Humans!</h1><p>Please check your email to verify your account. Do not forget to add your name and profile picture in Edit section.</p>`;
     }
@@ -47,10 +47,14 @@ const handleCRUD = user => {
   const message = document.getElementById("message");
   const name = document.getElementById("name");
   const age = document.getElementById("age");
+  const picture = document.getElementById("picture");
   const updatePhone = document.getElementById("updatePhone");
   const updateMessage = document.getElementById("updateMessage");
   const updateName = document.getElementById("updateName");
   const updateAge = document.getElementById("updateAge");
+  const updatePicture = document.getElementById("updatePicture");
+  const yourHumans = document.getElementById("yourHumans");
+  const allHumans = document.getElementById("allHumans");
   const database = firebase.database();
   const dbRef = database.ref("/humans");
   const makeUpdateDropdown = () => {
@@ -74,6 +78,7 @@ const handleCRUD = user => {
             updateAge.value = i.val().age;
             updateMessage.value = i.val().message;
             updatePhone.value = i.val().phoneNumber;
+            updatePicture.value = i.val().picture;
           }
         });
       });
@@ -91,6 +96,13 @@ const handleCRUD = user => {
       addForm.classList.add("hidden");
     });
   };
+  const clearAddForm = () => {
+    name.value = "";
+    age.value = "";
+    message.value = "";
+    phone.value = "";
+    picture.value = "";
+  };
   const handleAddData = (name, age, phone, message) => {
     const autoId = dbRef.push().key;
     dbRef
@@ -100,11 +112,13 @@ const handleCRUD = user => {
         age: age.value.trim(),
         phoneNumber: phone.value.trim(),
         message: message.value.trim(),
+        picture: picture.value.trim(),
         creationDate: new Date(),
         author: user.email
       })
       .then(() => {
         alert(`Human has been added!`);
+        clearAddForm();
         window.location.reload();
       })
       .catch(err => {
@@ -112,29 +126,103 @@ const handleCRUD = user => {
       });
   };
   const clearUpdateForm = () => {
-    alert('Human has been changed.');
+    alert("Human has been changed.");
     updateDropdown.selectedIndex = 0;
-    updateName.value = '';
-    updateAge.value = '';
-    updateMessage.value = '';
-    updatePhone.value = '';
+    updateName.value = "";
+    updateAge.value = "";
+    updateMessage.value = "";
+    updatePhone.value = "";
+    updatePicture.value = "";
     makeUpdateDropdown();
   };
-  const handleUpdateData = (name, age, phone, message) => {
+  const handleUpdateData = (name, age, phone, message, picture) => {
     const newData = {
       name: name.value.trim(),
       age: age.value.trim(),
       phoneNumber: phone.value.trim(),
       message: message.value.trim(),
+      picture: picture.value.trim(),
       creationDate: new Date(),
       author: user.email
     };
     const updates = {};
     updates[`/humans/${selectedId}`] = newData;
-    database.ref().update(updates).then(clearUpdateForm).catch(error => alert(error.message));
+    database
+      .ref()
+      .update(updates)
+      .then(clearUpdateForm)
+      .catch(error => alert(error.message));
   };
-  const handleDeleteData = (id) => {
-    dbRef.child(id).remove().then(clearUpdateForm).catch(error => alert(error.message));
+  const handleDeleteData = id => {
+    dbRef
+      .child(id)
+      .remove()
+      .then(clearUpdateForm)
+      .catch(error => alert(error.message));
+  };
+  const makeYourHumans = () => {
+    dbRef.orderByKey().on("value", snapshot => {
+      if (snapshot.val() == null) {
+        yourHumans.innerHTML = `Please add some humans!`;
+      } else {
+        let html = ``;
+        snapshot.forEach(human => {
+          if (human.val().author === user.email) {
+            html += `
+                      <div class="human">
+                        <div class="human__thumbnail"><img src="${
+                          human.val().picture
+                        }" alt="Image of ${human.val().name}"></div>
+                        <div class="human__name"><span><i class="fa fa-user"></i></span> ${
+                          human.val().name
+                        }</div>
+                        <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
+                          human.val().age
+                        }</div>
+                        <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
+                          human.val().phoneNumber
+                        }</div>
+                        <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
+                          human.val().message
+                        }</div>
+                      </div>
+                    `;
+          }
+        });
+        yourHumans.innerHTML = html;
+      }
+    });
+  };
+  const makeAllHumans = () => {
+    dbRef.orderByKey().on("value", snapshot => {
+      if (snapshot.val() == null) {
+        allHumans.innerHTML = `Our world has no humans listed right now!`;
+      } else {
+        let html = ``;
+        snapshot.forEach(human => {
+          html += `
+                    <div class="human">
+                      <div class="human__thumbnail"><img src="${
+                        human.val().picture
+                      }" alt="Image of ${human.val().name}"></div>
+                      <div class="human__name"><span><i class="fa fa-user"></i></span> ${
+                        human.val().name
+                      }</div>
+                      <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
+                        human.val().age
+                      }</div>
+                      <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
+                        human.val().phoneNumber
+                      }</div>
+                      <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
+                        human.val().message
+                      }</div>
+                    </div>
+                  `;
+        });
+        allHumans.innerHTML = html;
+      }
+    });
   };
   addButton.addEventListener("click", e => {
     e.preventDefault();
@@ -147,11 +235,15 @@ const handleCRUD = user => {
       name.value &&
       name.value.trim() !== "" &&
       age.value &&
-      age.value.trim() !== ""
+      age.value.trim() !== "" &&
+      picture.value &&
+      picture.value.trim() !== ""
     ) {
-      handleAddData(name, age, phone, message);
+      handleAddData(name, age, phone, message, picture);
     } else {
-      alert("Please add Name, Age, Phone Number and a Message.");
+      alert(
+        "Please add Name, Age, Phone Number, Picture and a Message for your human."
+      );
     }
   });
   updateButton.addEventListener("click", e => {
@@ -164,9 +256,17 @@ const handleCRUD = user => {
       updateName.value &&
       updateName.value.trim() !== "" &&
       updateAge.value &&
-      updateAge.value.trim() !== ""
+      updateAge.value.trim() !== "" &&
+      updatePicture.value &&
+      updatePicture.value.trim() !== ""
     ) {
-      handleUpdateData(updateName, updateAge, updatePhone, updateMessage);
+      handleUpdateData(
+        updateName,
+        updateAge,
+        updatePhone,
+        updateMessage,
+        updatePicture
+      );
     } else {
       alert("Please select a Human.");
     }
@@ -181,7 +281,9 @@ const handleCRUD = user => {
       updateName.value &&
       updateName.value.trim() !== "" &&
       updateAge.value &&
-      updateAge.value.trim() !== ""
+      updateAge.value.trim() !== "" &&
+      updatePicture.value &&
+      updatePicture.value.trim() !== ""
     ) {
       handleDeleteData(selectedId);
     } else {
@@ -190,4 +292,6 @@ const handleCRUD = user => {
   });
   handleToggle();
   makeUpdateDropdown();
+  makeYourHumans();
+  makeAllHumans();
 };
