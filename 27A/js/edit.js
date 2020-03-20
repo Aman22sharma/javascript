@@ -73,8 +73,10 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
   }
 };
 
-const createCredential = () => {
+const createCredential = (user) => {
   const password = prompt("Confirm Password:");
+  const email = user.email;
+  console.log(email);
   const credential = firebase.auth.EmailAuthProvider.credential(
     email,
     password

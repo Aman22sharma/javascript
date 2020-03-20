@@ -19,7 +19,11 @@ signOutButton.addEventListener("click", e => {
 
 auth.onAuthStateChanged(user => {
   if (user) {
-    content.innerHTML = `<div class="user"><h1 class="user__name">Welcome ${user.displayName}</h1><div class="user__thumbnail"><img src=${user.photoURL}></div>`;
+    if (user.displayName && user.photoURL) {
+      content.innerHTML = `<div class="user"><h1 class="user__name">Welcome ${user.displayName}</h1><div class="user__thumbnail"><img src=${user.photoURL}></div>`;
+    } else {
+      content.innerHTML = `<div class="user"><h1 class="user__name">Welcome to Humans!</h1><p>Please check your email to verify your account. Do not forget to add your name and profile picture in Edit section.</p>`;
+    }
     if (user.emailVerified) {
       status.innerHTML = `<p class="status__text status__text--success">Your account has been verified.</p>`;
     } else {
