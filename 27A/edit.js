@@ -1,14 +1,21 @@
 const editButton = document.getElementById("edit");
 const backButton = document.getElementById("back");
+const deleteButton = document.getElementById("delete");
 const displayName = document.getElementById("displayName");
 const photo = document.getElementById("photo");
+const emailField = document.getElementById("email");
+const passwordField = document.getElementById("password");
 const email = document.getElementById("email").value;
 const password = document.getElementById("password").value;
 const auth = firebase.auth();
 auth.onAuthStateChanged(user => {
   console.log(user);
-  displayName.innerHTML = user.displayName;
-  photo.setAttribute("src", user.photoURL);
+  photo.value = '';
+  displayName.value = '';
+  emailField.value = '';
+  passwordField.value = '';
+  // displayName.innerHTML = user.displayName;
+  // photo.setAttribute("src", user.photoURL);
 });
 const handleDelete = () => {
   const user = auth.currentUser;
