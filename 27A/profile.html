@@ -17,6 +17,54 @@
       <a class="input" href="./edit.html">Edit Profile</a>
       <a class="input" id="signOutButton">Sign out</a>
     </div>
+    <h2>Add a Human!</h2>
+    <div class="buttons">
+      <a href="#" id="addToggle" class="input">Add Humans</a>
+      <a href="#" id="updateToggle" class="input">Edit/Delete Humans</a>
+    </div>
+    <form id="addForm">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" class="input" placeholder="Enter Name" id="name">
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="text" class="input" placeholder="Enter age" id="age">
+      </div>
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input type="text" class="input" placeholder="Enter Phone Number" id="phone">
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <input type="text" class="input" placeholder="Enter Message" id="message">
+      </div>
+      <button id="add" class="input">Add</button>
+    </form>
+    <form id="updateForm">
+      <select class="select" name="updateDropdown" id="updateDropdown">
+      </select>
+      <div>
+        <label for="updateName">Name:</label>
+        <input type="text" class="input" placeholder="Enter Name" id="updateName">
+      </div>
+      <div>
+        <label for="updateAge">Age:</label>
+        <input type="text" class="input" placeholder="Enter age" id="updateAge">
+      </div>
+      <div>
+        <label for="updatePhone">Phone Number:</label>
+        <input type="text" class="input" placeholder="Enter Phone Number" id="updatePhone">
+      </div>
+      <div>
+        <label for="updateMessge">Message:</label>
+        <input type="text" class="input" placeholder="Enter Message" id="updateMessage">
+      </div>
+      <div class="buttons">
+        <button id="update" class="input">Update</button>
+        <button id="delete" class="input">Delete</button>
+      </div>
+    </form>
   </div>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>

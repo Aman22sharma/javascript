@@ -41,6 +41,10 @@ a {
   color: var(--yellow);
 }
 
+.hidden {
+  display: none;
+}
+
 .user__name {
   margin: 0 0 .5rem;
   padding: 0;
