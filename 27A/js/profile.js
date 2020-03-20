@@ -197,6 +197,8 @@ const handleCRUD = user => {
                         }</div>
                       </div>
                     `;
+          } else {
+            html += `You do not have any humans listed under your account. Please add one!`
           }
         });
         yourHumans.innerHTML = html;
