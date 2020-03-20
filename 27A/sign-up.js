@@ -1,8 +1,7 @@
-const auth = firebase.auth();
-
-auth.useDeviceLanguage();
-
 const signUpForm = document.getElementById("signUpForm");
+
+const auth = firebase.auth();
+auth.useDeviceLanguage();
 
 const sendVerificationEmail = () => {
   auth.currentUser
@@ -29,3 +28,10 @@ signUpForm.addEventListener("submit", e => {
       console.error(error);
     });
 });
+
+window.addEventListener("load", () => {
+  document.querySelectorAll("input").forEach(i => {
+    i.value = "";
+  });
+});
+

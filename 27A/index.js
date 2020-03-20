@@ -1,7 +1,5 @@
 const auth = firebase.auth();
-
 const loginForm = document.getElementById("loginForm");
-const googleButton = document.getElementById("googleButton");
 
 loginForm.addEventListener("submit", e => {
   e.preventDefault();
@@ -12,17 +10,14 @@ loginForm.addEventListener("submit", e => {
     .then(() => {
       window.location.assign("./profile.html");
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+      alert(error.message);
+      console.error(error);
+    });
 });
 
-googleButton.addEventListener("click", e => {
-  e.preventDefault();
-  const googleProvider = new firebase.auth.GoogleAuthProvider();
-  auth
-    // .signInWithRedirect(googleProvider)
-    .signInWithPopup(googleProvider)
-    .then(() => {
-      window.location.assign("./profile.html");
-    })
-    .catch(error => console.error(error));
+window.addEventListener("load", () => {
+  document.querySelectorAll("input").forEach(i => {
+    i.value = "";
+  });
 });
