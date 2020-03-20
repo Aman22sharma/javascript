@@ -11,21 +11,28 @@
 
 <body>
   <div class="container">
-    <h1>Hey Human, Edit your Profile here!</h1>
-    <div class="buttons">
-      <a class="input" href="#" id="back">Back</a>
-      <a class="input" href="#" id="edit">Edit</a>
-      <a class="input" href="#" id="delete">Delete</a>
+    <h1>Changes are necessary!</h1>
+    <div id="currentDetails" class="currentUser">
+      <p id="currentName"></p>
+      <img id="currentPicture">
     </div>
     <div>
-      <label for="displayName">Display Name</label>
+      <label for="displayName">New Name:</label>
       <input class="input" type="text" id="displayName" name="displayName">
     </div>
     <div>
-      <label for="photo">URL of Picture</label>
+      <label for="photo">New Picture URL:</label>
       <input class="input" type="url" id="photo">
     </div>
+    <div class="buttons">
+      <a class="input" href="#" id="back"><i class="fa fa-arrow-left"></i> Back</a>
+      <a class="input" href="#" id="edit"><i class="fa fa-pencil"></i> Save</a>
+      <a class="input" href="#" id="delete"><i class="fa fa-close"></i> Delete</a>
+    </div>
   </div>
+  <footer>
+    <p>&copy; Humans!</p>
+  </footer>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>

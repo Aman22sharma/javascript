@@ -3,9 +3,13 @@ const backButton = document.getElementById("back");
 const deleteButton = document.getElementById("delete");
 const displayName = document.getElementById("displayName");
 const photo = document.getElementById("photo");
+const currentName = document.getElementById("currentName");
+const currentPicture = document.getElementById("currentPicture");
 
 const auth = firebase.auth();
 auth.onAuthStateChanged(user => {
+  currentName.textContent = user.displayName;
+  currentPicture.setAttribute("src", user.photoURL);
   photo.value = user.photoURL;
   displayName.value = user.displayName;
 });
@@ -73,7 +77,7 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
   }
 };
 
-const createCredential = (user) => {
+const createCredential = user => {
   const password = prompt("Confirm Password:");
   const email = user.email;
   console.log(email);

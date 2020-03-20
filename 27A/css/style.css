@@ -15,7 +15,7 @@
   --black-light: #3f3e45;
   --yellow: #e0c879;
   --font: "Nunito", sans-serif;
-  --water: rgba(255,255,255,.1);
+  --water: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -42,12 +42,28 @@ a {
   color: var(--yellow);
 }
 
+a.input {
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
 
+.currentUser {
+  margin: 0 0 1rem;
+}
+
+.currentUser p {
+  margin: 0 0 .25rem;
+}
+
+.currentUser img {
+  border-radius: .5rem;
+}
+
 .user__name {
-  margin: 0 0 .5rem;
+  margin-bottom: 0.5rem;
   padding: 0;
   text-transform: capitalize;
 }
@@ -68,7 +84,7 @@ a {
 }
 
 .buttons .input {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .status__text {
@@ -90,15 +106,51 @@ a {
   margin: 0 0 1rem;
 }
 
+.human__thumbnail {
+  margin: 0 auto 1rem;
+}
+
 .human__thumbnail img {
-  border-radius: .5rem;
+  width: 100%;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.human__name,
+.human__age,
+.human__message,
+.human__phone {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+
+.human__name span,
+.human__age span,
+.human__message span,
+.human__phone span {
+  font-size: 0.75rem;
+  min-width: 0.5rem;
+  max-width: 0.5rem;
+  margin: 0 0.75rem 0 0;
 }
 
 .yourHumans,
 .allHumans {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: var(--black-light);
 }
 
 @media screen and (min-width: 30rem) {
@@ -116,6 +168,10 @@ a {
   .container {
     max-width: 40rem;
   }
+  .yourHumans,
+  .allHumans {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (min-width: 60rem) {
   .container {
@@ -124,6 +180,10 @@ a {
 }
 @media screen and (min-width: 70rem) {
   .container {
-    max-width: 40rem;
+    max-width: 60rem;
+  }
+  .yourHumans,
+  .allHumans {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

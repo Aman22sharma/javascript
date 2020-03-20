@@ -11,16 +11,22 @@
 
 <body>
   <div class="container">
-    <div id="status"></div>
-    <div id="content"></div>
-    <div class="buttons">
-      <a class="input" href="./edit.html">Edit Profile</a>
-      <a class="input" id="signOutButton">Sign out</a>
+    <div id="userTitle"></div>
+    <p>Add your own humans and explore humans from around the world!</p>
+    <p>If you want to log out or edit your profile information, press the Settings button below.</p>
+    <button id="settingsButton" class="input"><i class="fa fa-cog"></i> Settings</button>
+    <div id="settings" class="hidden">
+      <div id="status"></div>
+      <div id="content"></div>
+      <div class="buttons">
+        <a class="input" href="./edit.html">Edit Profile</a>
+        <a class="input" id="signOutButton">Sign out</a>
+      </div>
     </div>
     <h2>Add a Human!</h2>
     <div class="buttons">
-      <a href="#" id="addToggle" class="input">Add Humans</a>
-      <a href="#" id="updateToggle" class="input">Edit/Delete Humans</a>
+      <a href="#" id="addToggle" class="input"><i class="fa fa-user-plus"></i> Add Humans</a>
+      <a href="#" id="updateToggle" class="input"><i class="fa fa-user-times"></i> Edit/Delete Humans</a>
     </div>
     <form id="addForm">
       <div>
@@ -82,6 +88,9 @@
       <div id="allHumans" class="allHumans"></div>
     </div>
   </div>
+  <footer>
+    <p>&copy; Humans!</p>
+  </footer>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
