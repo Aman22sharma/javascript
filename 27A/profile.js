@@ -10,7 +10,10 @@ signOutButton.addEventListener("click", e => {
     .then(() => {
       window.location.assign("./");
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+      alert(error.message);
+      console.error(error);
+    });
 });
 
 auth.onAuthStateChanged(user => {

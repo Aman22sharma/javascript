@@ -2,6 +2,13 @@ const signUpForm = document.getElementById("signUpForm");
 
 const auth = firebase.auth();
 auth.useDeviceLanguage();
+let state = 0;
+
+auth.onAuthStateChanged(user => {
+  if (user && state === 0) {
+    window.location.assign("./profile.html");
+  }
+});
 
 const sendVerificationEmail = () => {
   auth.currentUser
@@ -10,6 +17,7 @@ const sendVerificationEmail = () => {
       window.location.assign("./profile.html");
     })
     .catch(error => {
+      alert(error.message);
       console.log(error);
     });
 };
@@ -21,6 +29,7 @@ signUpForm.addEventListener("submit", e => {
   auth
     .createUserWithEmailAndPassword(emailField, passwordField)
     .then(() => {
+      state = 1;
       sendVerificationEmail();
     })
     .catch(error => {
@@ -34,4 +43,3 @@ window.addEventListener("load", () => {
     i.value = "";
   });
 });
-
