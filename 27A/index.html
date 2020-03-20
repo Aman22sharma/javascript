@@ -4,21 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Startup</title>
-  <link rel="stylesheet" href="./style.css" />
+  <title>Welcome | Humans</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/541/541509.svg" type="image/svg">
 </head>
 
 <body>
-  <h1>Welcome to fakeBook!</h1>
-  <div id="app">
+  <div class="container">
+    <h1>Welcome to Humans Inc.</h1>
     <form id="loginForm">
       <div>
         <label for="email">Enter your Email Address:</label>
-        <input type="email" placeholder="Enter Email" id="email" />
+        <input class="input" type="email" placeholder="Enter Email" id="email" />
       </div>
       <div>
         <label for="password">Enter your Password:</label>
-        <input type="password" placeholder="Enter Password" id="password" />
+        <input class="input" type="password" placeholder="Enter Password" id="password" />
       </div>
       <div>
         <button type="submit">Login</button>
@@ -27,15 +28,11 @@
       <hr>
       <div>
         <p>
-          Do not have an account with fakeBook? Get one here:
+          Do not have an account with Humans? Get one here:
           <a href="./sign-up.html">Sign Up</a>.
         </p>
       </div>
     </form>
-    <!-- <hr>
-    <div>
-      <button id="googleButton">Sign up with Google</button>
-    </div> -->
   </div>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
@@ -55,7 +52,7 @@
     firebase.analytics();
   </script>
   <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
-  <script src="./index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

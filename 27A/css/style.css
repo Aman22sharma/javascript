@@ -1,0 +1,68 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/formbase@12.0.1/dist/formbase.min.css");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #eee;
+  --black: #100e17;
+  --black-light: #3f3e45;
+  --yellow: #e0c879;
+  --font: "Nunito", sans-serif;
+}
+
+* {
+  transition: all 1s ease;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: var(--white);
+  background: var(--black);
+  font: 1rem var(--font);
+}
+
+.container {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+@media screen and (min-width: 30rem) {
+  .container {
+    max-width: 20rem;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 40rem) {
+  .container {
+    max-width: 30rem;
+  }
+}
+@media screen and (min-width: 50rem) {
+  .container {
+    max-width: 40rem;
+  }
+}
+@media screen and (min-width: 60rem) {
+  .container {
+    max-width: 50rem;
+  }
+}
+@media screen and (min-width: 70rem) {
+  .container {
+    max-width: 40rem;
+  }
+}
