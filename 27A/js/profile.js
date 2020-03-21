@@ -282,18 +282,20 @@ const handleLoading = user => {
                         <div class="human__thumbnail"><img src="${
                           human.val().picture
                         }" alt="Image of ${human.val().name}"></div>
-                        <div class="human__name"><span><i class="fa fa-user"></i></span> ${
-                          human.val().name
-                        }</div>
-                        <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
-                          human.val().age
-                        }</div>
-                        <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
-                          human.val().phoneNumber
-                        }</div>
-                        <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
-                          human.val().message
-                        }</div>
+                        <div>
+                          <div class="human__name"><span><i class="fa fa-user"></i></span> ${
+                            human.val().name
+                          }</div>
+                          <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
+                            human.val().age
+                          }</div>
+                          <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
+                            human.val().phoneNumber
+                          }</div>
+                          <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
+                            human.val().message
+                          }</div>
+                        </div>
                       </div>
                     `;
           }
