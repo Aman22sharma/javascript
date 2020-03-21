@@ -55,7 +55,7 @@ const makeAllHumans = () => {
             html += `
                     <div class="human">
                       <div class="human__thumbnail"><img src="${
-                        data === 404
+                        data === 404 || !data
                           ? `https://placekitten.com/${getRandomNumber(
                               400,
                               500
