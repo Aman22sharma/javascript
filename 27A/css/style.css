@@ -53,6 +53,7 @@ h2 {
   height: 2.5rem;
   padding: 0 0.6rem;
   line-height: 1;
+  border-radius: .4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,6 +80,13 @@ h1 {
   line-height: 1;
 }
 
+.banner {
+  width: 100%;
+  border-radius: .5rem;
+  display: block;
+  margin: 0 0 1rem;
+}
+
 .currentUser {
   margin: 0 0 1rem;
   width: 100%;
@@ -101,6 +109,7 @@ h1 {
 
 .user__thumbnail {
   background: var(--water);
+  margin: 0 0 1rem;
 }
 
 .user__thumbnail img {
@@ -111,6 +120,7 @@ h1 {
 
 .buttons {
   display: grid;
+  grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
 }
 
