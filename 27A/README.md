@@ -13,6 +13,7 @@ Features:
 - Ability to add human only when email is verified.
 - Disable Add/Update button if email is not verified.
 - Add icons in all inputs.
+- Show placeholder image when user submitted photo URL is broken.
 
 ### 1.0.0
 
