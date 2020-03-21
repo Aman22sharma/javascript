@@ -51,18 +51,50 @@ a {
 
 h2 {
   line-height: 1;
-  margin: 1.5rem 0 .75rem;
+  margin: 1.5rem 0 0.75rem;
 }
 
-.input {
+input.input {
   height: 2.5rem;
   padding: 0 0.6rem;
   line-height: 1;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+a.input,
+button.input {
+  height: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto auto;
+  word-break: break-all;
+  align-content: space-between;
+}
+a.input .fa,
+button.input .fa {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+@media screen and (min-width: 60rem) {
+  a.input,
+  button.input {
+    grid-template-columns: auto auto;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    align-content: inherit;
+  }
+  a.input .fa,
+  button.input .fa {
+    font-size: 1rem;
+    margin: 0;
+  }
 }
 
 .input[disabled] {
@@ -71,10 +103,6 @@ h2 {
   box-shadow: none;
   cursor: not-allowed;
   color: var(--grey);
-}
-
-.input .fa {
-  margin: 0 0.5rem 0 0;
 }
 
 .hidden {
@@ -87,7 +115,7 @@ h1 {
 
 .banner {
   width: 100%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   display: block;
   margin: 1rem 0;
 }
@@ -221,7 +249,7 @@ h1 {
 }
 
 .navigation__logo__text {
-  margin: 0 0 0 .5rem;
+  margin: 0 0 0 0.5rem;
 }
 
 .navigation__logo__thumbnail {
@@ -242,7 +270,7 @@ h1 {
 }
 
 .stack__text {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .stack__list {
@@ -252,7 +280,7 @@ h1 {
 .stack__list img {
   display: block;
   max-height: 2rem;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
 
 .footer {
