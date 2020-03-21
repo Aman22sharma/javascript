@@ -6,13 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>Welcome | Humans</title>
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="icon" href="https://image.flaticon.com/icons/svg/541/541509.svg" type="image/svg">
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/1256/1256650.svg" type="image/svg" />
 </head>
 
 <body>
-  <div class="container">
-    <h1>Welcome to Humans Inc.</h1>
-    <img class="banner" src="https://media0.giphy.com/media/21KVtCYu1wGgkiWaKJ/giphy.gif" alt="Image of humans">
+  <nav class="navigation">
+    <div class="container">
+      <div class="navigation__wrap">
+        <a class="navigation__logo" href="./">
+          <img class="navigation__logo__thumbnail" src="https://image.flaticon.com/icons/svg/1256/1256650.svg"
+            alt="Image of the logo" />
+          <div class="navigation__logo__text">
+            Humans
+          </div>
+        </a>
+        <ul>
+          <li>
+            <a target="_blank" href="https://github.com/tpkahlon/javascript100/tree/master/27A">Source</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container container--full-height">
+    <img class="banner" src="https://media0.giphy.com/media/21KVtCYu1wGgkiWaKJ/giphy.gif" alt="Image of humans" />
     <form id="loginForm">
       <div>
         <label for="email">Enter your Email Address:</label>
@@ -25,7 +42,9 @@
       <div class="buttons">
         <a class="input" href="#" id="forgotPassword"><i class="fa fa-key"></i> Forgot Password?</a>
         <a class="input" href="./sign-up.html"><i class="fa fa-address-card-o"></i> Sign Up</a>
-        <button type="submit" class="input"><i class="fa fa-address-book-o"></i> Login</button>
+        <button type="submit" class="input">
+          <i class="fa fa-address-book-o"></i> Login
+        </button>
       </div>
     </form>
     <h2>Our Lovely Humans</h2>

@@ -36,6 +36,11 @@ body {
 .container {
   width: 100%;
   padding: 0 1rem;
+}
+
+.container--full-height {
+  width: 100%;
+  padding: 0 1rem;
   min-height: 100vh;
 }
 
@@ -84,7 +89,7 @@ h1 {
   width: 100%;
   border-radius: .5rem;
   display: block;
-  margin: 0 0 1rem;
+  margin: 1rem 0;
 }
 
 .currentUser {
@@ -198,6 +203,42 @@ h1 {
 
 .allHumans {
   padding-bottom: 1rem;
+}
+
+.navigation {
+  padding: 1rem 0;
+  background: var(--water);
+}
+
+.navigation__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__logo__text {
+  margin: 0 0 0 .5rem;
+}
+
+.navigation__logo__thumbnail {
+  display: block;
+  max-width: 2rem;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation ul {
+  list-style-type: none;
 }
 
 footer {
