@@ -76,6 +76,8 @@ h1 {
 
 .currentUser {
   margin: 0 0 1rem;
+  width: 100%;
+  max-width: 10rem;
 }
 
 .currentUser p {
