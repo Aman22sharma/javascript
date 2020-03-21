@@ -74,6 +74,7 @@ button.input {
   grid-auto-rows: auto auto;
   word-break: break-all;
   align-content: space-between;
+  justify-content: flex-start;
 }
 a.input .fa,
 button.input .fa {
