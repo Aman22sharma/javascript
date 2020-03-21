@@ -44,40 +44,41 @@ const handleForgotPassword = () => {
 };
 
 const makeAllHumans = () => {
+  let html = ``;
+  const handleData = (data, human) => {
+    html += `
+      <div class="human">
+        <div class="human__thumbnail"><img src="${
+          data === 404 || !data
+            ? `https://placekitten.com/${getRandomNumber(
+                400,
+                500
+              )}/400`
+            : human.val().picture
+        }" alt="Image of ${human.val().name}"></div>
+        <div class="human__name"><span><i class="fa fa-user"></i></span> ${
+          human.val().name
+        }</div>
+        <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
+          human.val().age
+        }</div>
+        <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
+          human.val().phoneNumber
+        }</div>
+        <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
+          human.val().message
+        }</div>
+      </div>
+    `;
+    allHumans.innerHTML = html;
+  }
   dbRef.orderByKey().on("value", snapshot => {
     if (snapshot.val() == null) {
       allHumans.innerHTML = `Our world has no humans listed right now!`;
     } else {
-      let html = ``;
       snapshot.forEach(human => {
         checkImage(human)
-          .then(data => {
-            html += `
-                    <div class="human">
-                      <div class="human__thumbnail"><img src="${
-                        data === 404 || !data
-                          ? `https://placekitten.com/${getRandomNumber(
-                              400,
-                              500
-                            )}/400`
-                          : human.val().picture
-                      }" alt="Image of ${human.val().name}"></div>
-                      <div class="human__name"><span><i class="fa fa-user"></i></span> ${
-                        human.val().name
-                      }</div>
-                      <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
-                        human.val().age
-                      }</div>
-                      <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
-                        human.val().phoneNumber
-                      }</div>
-                      <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
-                        human.val().message
-                      }</div>
-                    </div>
-                  `;
-            allHumans.innerHTML = html;
-          })
+          .then(data => handleData(data, human))
           .catch(err => console.log(err));
       });
     }
