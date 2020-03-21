@@ -241,13 +241,33 @@ h1 {
   list-style-type: none;
 }
 
-footer {
+.stack__text {
+  margin-bottom: .5rem;
+}
+
+.stack__list {
   display: flex;
+}
+
+.stack__list img {
+  display: block;
+  max-height: 2rem;
+  margin: 0 .5rem;
+}
+
+.footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
   padding: 1rem;
   background: var(--black-light);
+}
+
+.footer__text {
+  font-style: italic;
 }
 
 @media screen and (min-width: 30rem) {

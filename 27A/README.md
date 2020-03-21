@@ -14,6 +14,7 @@ Features:
 - Disable Add/Update button if email is not verified.
 - Add icons in all inputs.
 - Show placeholder image when user submitted photo URL is broken.
+- Add basic navigation, footer and random User photo API for broken image URLs.
 
 ### 1.0.0
 
