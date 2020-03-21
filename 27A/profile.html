@@ -31,23 +31,23 @@
     <form id="addForm">
       <div>
         <label for="name">Name:</label>
-        <input type="text" class="input" placeholder="Enter Name" id="name">
+        <input type="text" class="input" placeholder="Enter Name" id="name"required>
       </div>
       <div>
         <label for="age">Age:</label>
-        <input type="text" class="input" placeholder="Enter age" id="age">
+        <input type="number" class="input" placeholder="Enter age" id="age"required>
       </div>
       <div>
         <label for="phone">Phone Number:</label>
-        <input type="text" class="input" placeholder="Enter Phone Number" id="phone">
+        <input type="tel" class="input" placeholder="Enter Phone Number" id="phone"required>
       </div>
       <div>
         <label for="message">Message:</label>
-        <input type="text" class="input" placeholder="Enter Message" id="message">
+        <input type="text" class="input" placeholder="Enter Message" id="message"required>
       </div>
       <div>
         <label for="picture">Picture:</label>
-        <input type="text" class="input" placeholder="Add Picture URL" id="picture">
+        <input type="url" class="input" placeholder="Add Picture URL" id="picture"required>
       </div>
       <button id="add" class="input">Add</button>
     </form>
@@ -56,26 +56,26 @@
       </select>
       <div>
         <label for="updateName">Name:</label>
-        <input type="text" class="input" placeholder="Enter Name" id="updateName">
+        <input type="text" class="input" placeholder="Enter Name" id="updateName"required>
       </div>
       <div>
         <label for="updateAge">Age:</label>
-        <input type="text" class="input" placeholder="Enter age" id="updateAge">
+        <input type="number" class="input" placeholder="Enter age" id="updateAge" required>
       </div>
       <div>
         <label for="updatePhone">Phone Number:</label>
-        <input type="text" class="input" placeholder="Enter Phone Number" id="updatePhone">
+        <input type="tel" class="input" placeholder="Enter Phone Number" id="updatePhone" required>
       </div>
       <div>
         <label for="updateMessage">Message:</label>
-        <input type="text" class="input" placeholder="Enter Message" id="updateMessage">
+        <input type="text" class="input" placeholder="Enter Message" id="updateMessage" required>
       </div>
       <div>
         <label for="updatePicture">Picture:</label>
-        <input type="text" class="input" placeholder="Add Picture URL" id="updatePicture">
+        <input type="url" class="input" placeholder="Add Picture URL" id="updatePicture" required>
       </div>
       <div class="buttons">
-        <button id="update" class="input">Update</button>
+        <button id="update" class="input" type="submit">Update</button>
         <button id="delete" class="input">Delete</button>
       </div>
     </form>

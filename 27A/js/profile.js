@@ -50,6 +50,7 @@ const handleCRUD = user => {
   let selectedId;
   const addButton = document.getElementById("add");
   const updateButton = document.getElementById("update");
+  const updateForm = document.getElementById("updateForm");
   const deleteButton = document.getElementById("delete");
   const addForm = document.getElementById("addForm");
   const updateDropdown = document.getElementById("updateDropdown");
@@ -72,7 +73,8 @@ const handleCRUD = user => {
     updateDropdown.innerHTML = `<option selected disabled>Select a Human</option>`;
     dbRef.orderByKey().on("value", snapshot => {
       snapshot.forEach(i => {
-        if (i.val().hasOwnProperty("author")) {
+        if (i.val().author === user.email) {
+        // if (i.val().hasOwnProperty("author")) {
           let option = document.createElement("option");
           option.textContent = `${i.key}: ${i.val().name}`;
           option.setAttribute("value", i.key);
@@ -261,7 +263,8 @@ const handleCRUD = user => {
       );
     }
   });
-  updateButton.addEventListener("click", e => {
+  updateForm.addEventListener("submit", e => {
+  // updateButton.addEventListener("click", e => {
     e.preventDefault();
     if (
       updatePhone.value &&
