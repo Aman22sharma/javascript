@@ -7,6 +7,22 @@ auth.useDeviceLanguage();
 const database = firebase.database();
 const dbRef = database.ref("/humans");
 
+const checkImage = async human => {
+  try {
+    let req = await fetch(human.val().picture);
+    let status = await req.status;
+    return status;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const getRandomNumber = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
 auth.onAuthStateChanged(user => {
   if (user) {
     window.location.assign("./profile.html");
@@ -34,27 +50,36 @@ const makeAllHumans = () => {
     } else {
       let html = ``;
       snapshot.forEach(human => {
-        html += `
-                  <div class="human">
-                    <div class="human__thumbnail"><img src="${
-                      human.val().picture
-                    }" alt="Image of ${human.val().name}"></div>
-                    <div class="human__name"><span><i class="fa fa-user"></i></span> ${
-                      human.val().name
-                    }</div>
-                    <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
-                      human.val().age
-                    }</div>
-                    <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
-                      human.val().phoneNumber
-                    }</div>
-                    <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
-                      human.val().message
-                    }</div>
-                  </div>
-                `;
+        checkImage(human)
+          .then(data => {
+            html += `
+                    <div class="human">
+                      <div class="human__thumbnail"><img src="${
+                        data === 404
+                          ? `https://placekitten.com/${getRandomNumber(
+                              400,
+                              500
+                            )}/400`
+                          : human.val().picture
+                      }" alt="Image of ${human.val().name}"></div>
+                      <div class="human__name"><span><i class="fa fa-user"></i></span> ${
+                        human.val().name
+                      }</div>
+                      <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
+                        human.val().age
+                      }</div>
+                      <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
+                        human.val().phoneNumber
+                      }</div>
+                      <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
+                        human.val().message
+                      }</div>
+                    </div>
+                  `;
+            allHumans.innerHTML = html;
+          })
+          .catch(err => console.log(err));
       });
-      allHumans.innerHTML = html;
     }
   });
 };

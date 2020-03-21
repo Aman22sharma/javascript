@@ -7,6 +7,22 @@ const signOutButton = document.getElementById("signOutButton");
 
 const auth = firebase.auth();
 
+const checkImage = async human => {
+  try {
+    let req = await fetch(human.val().picture);
+    let status = await req.status;
+    return status;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const getRandomNumber = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
 signOutButton.addEventListener("click", e => {
   e.preventDefault();
   auth
@@ -277,10 +293,17 @@ const handleLoading = user => {
         let html = ``;
         snapshot.forEach(human => {
           if (human.val().author === user.email) {
-            html += `
+            checkImage(human)
+              .then(data => {
+                html += `
                       <div class="human">
                         <div class="human__thumbnail"><img src="${
-                          human.val().picture
+                          data === 404
+                            ? `https://placekitten.com/${getRandomNumber(
+                                400,
+                                500
+                              )}/400`
+                            : human.val().picture
                         }" alt="Image of ${human.val().name}"></div>
                         <div>
                           <div class="human__name"><span><i class="fa fa-user"></i></span> ${
@@ -298,12 +321,13 @@ const handleLoading = user => {
                         </div>
                       </div>
                     `;
+                yourHumans.innerHTML = html;
+              })
+              .catch(err => console.log(err));
           }
         });
         if (html.trim() === "") {
           yourHumans.innerHTML = `You do not have any human listed under your account. Please add one! Make sure to verify your account before adding a human.`;
-        } else {
-          yourHumans.innerHTML = html;
         }
       }
     });
@@ -315,10 +339,17 @@ const handleLoading = user => {
       } else {
         let html = ``;
         snapshot.forEach(human => {
-          html += `
+          checkImage(human)
+            .then(data => {
+              html += `
                     <div class="human">
                       <div class="human__thumbnail"><img src="${
-                        human.val().picture
+                        data === 404
+                          ? `https://placekitten.com/${getRandomNumber(
+                              400,
+                              500
+                            )}/400`
+                          : human.val().picture
                       }" alt="Image of ${human.val().name}"></div>
                       <div class="human__name"><span><i class="fa fa-user"></i></span> ${
                         human.val().name
@@ -334,8 +365,10 @@ const handleLoading = user => {
                       }</div>
                     </div>
                   `;
+              allHumans.innerHTML = html;
+            })
+            .catch(err => console.log(err));
         });
-        allHumans.innerHTML = html;
       }
     });
   };
