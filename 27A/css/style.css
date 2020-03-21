@@ -14,6 +14,7 @@
   --black: #100e17;
   --black-light: #3f3e45;
   --yellow: #e0c879;
+  --grey: #c8c8c8;
   --font: "Nunito", sans-serif;
   --water: rgba(255, 255, 255, 0.1);
 }
@@ -45,7 +46,7 @@ a {
 
 .input {
   height: 2.5rem;
-  padding: 0 .6rem;
+  padding: 0 0.6rem;
   line-height: 1;
   display: flex;
   justify-content: center;
@@ -53,8 +54,16 @@ a {
   align-content: center;
 }
 
+.input[disabled] {
+  border-color: var(--grey);
+  background-color: var(--white);
+  box-shadow: none;
+  cursor: not-allowed;
+  color: var(--grey);
+}
+
 .input .fa {
-  margin: 0 .5rem 0 0;
+  margin: 0 0.5rem 0 0;
 }
 
 .hidden {
@@ -70,11 +79,11 @@ h1 {
 }
 
 .currentUser p {
-  margin: 0 0 .25rem;
+  margin: 0 0 0.25rem;
 }
 
 .currentUser img {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .user__name {

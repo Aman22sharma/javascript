@@ -22,7 +22,7 @@ signOutButton.addEventListener("click", e => {
 
 auth.onAuthStateChanged(user => {
   if (user) {
-    handleCRUD(user);
+    handleLoading(user);
     if (user.displayName && user.photoURL) {
       userTitle.innerHTML = `<h1 class="user__name">Welcome ${user.displayName}!</h1>`;
       content.innerHTML = `<div class="user"><div class="user__thumbnail"><img src=${user.photoURL}></div>`;
@@ -31,6 +31,7 @@ auth.onAuthStateChanged(user => {
       content.innerHTML = `<div class="user"><p>Please check your email to verify your account. Do not forget to add your name and profile picture in Edit section.</p>`;
     }
     if (user.emailVerified) {
+      handleCRUD(user);
       status.innerHTML = `<p class="status__text status__text--success">Your account has been verified.</p>`;
     } else {
       status.innerHTML = `<p class="status__text status__text--warning">Your account needs to be verified. Please check your inbox.</p></div>`;
@@ -49,10 +50,11 @@ settingsButton.addEventListener("click", e => {
 const handleCRUD = user => {
   let selectedId;
   const addButton = document.getElementById("add");
-  const updateButton = document.getElementById("update");
+  // const updateButton = document.getElementById("update");
+  const addForm = document.getElementById("addForm");
   const updateForm = document.getElementById("updateForm");
   const deleteButton = document.getElementById("delete");
-  const addForm = document.getElementById("addForm");
+  // const addForm = document.getElementById("addForm");
   const updateDropdown = document.getElementById("updateDropdown");
   const phone = document.getElementById("phone");
   const message = document.getElementById("message");
@@ -64,8 +66,8 @@ const handleCRUD = user => {
   const updateName = document.getElementById("updateName");
   const updateAge = document.getElementById("updateAge");
   const updatePicture = document.getElementById("updatePicture");
-  const yourHumans = document.getElementById("yourHumans");
-  const allHumans = document.getElementById("allHumans");
+  // const yourHumans = document.getElementById("yourHumans");
+  // const allHumans = document.getElementById("allHumans");
   const database = firebase.database();
   const dbRef = database.ref("/humans");
   const makeUpdateDropdown = () => {
@@ -74,7 +76,7 @@ const handleCRUD = user => {
     dbRef.orderByKey().on("value", snapshot => {
       snapshot.forEach(i => {
         if (i.val().author === user.email) {
-        // if (i.val().hasOwnProperty("author")) {
+          // if (i.val().hasOwnProperty("author")) {
           let option = document.createElement("option");
           option.textContent = `${i.key}: ${i.val().name}`;
           option.setAttribute("value", i.key);
@@ -94,18 +96,6 @@ const handleCRUD = user => {
           }
         });
       });
-    });
-  };
-  const handleToggle = () => {
-    addForm.classList.add(`hidden`);
-    updateForm.classList.add(`hidden`);
-    addToggle.addEventListener("click", e => {
-      addForm.classList.toggle("hidden");
-      updateForm.classList.add("hidden");
-    });
-    updateToggle.addEventListener("click", e => {
-      updateForm.classList.toggle("hidden");
-      addForm.classList.add("hidden");
     });
   };
   const clearAddForm = () => {
@@ -172,78 +162,11 @@ const handleCRUD = user => {
       .then(clearUpdateForm)
       .catch(error => alert(error.message));
   };
-  const makeYourHumans = () => {
-    dbRef.orderByKey().on("value", snapshot => {
-      console.log(snapshot.val());
-      if (snapshot.val() == null) {
-        yourHumans.innerHTML = `Please add some humans!`;
-      } else {
-        let html = ``;
-        snapshot.forEach(human => {
-          if (human.val().author === user.email) {
-            html += `
-                      <div class="human">
-                        <div class="human__thumbnail"><img src="${
-                          human.val().picture
-                        }" alt="Image of ${human.val().name}"></div>
-                        <div class="human__name"><span><i class="fa fa-user"></i></span> ${
-                          human.val().name
-                        }</div>
-                        <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
-                          human.val().age
-                        }</div>
-                        <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
-                          human.val().phoneNumber
-                        }</div>
-                        <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
-                          human.val().message
-                        }</div>
-                      </div>
-                    `;
-          }
-        });
-        if (html.trim() === "") {
-          yourHumans.innerHTML = `You do not have any human listed under your account. Please add one!`;
-        } else {
-          yourHumans.innerHTML = html;
-        }
-      }
-    });
-  };
-  const makeAllHumans = () => {
-    dbRef.orderByKey().on("value", snapshot => {
-      if (snapshot.val() == null) {
-        allHumans.innerHTML = `Our world has no humans listed right now!`;
-      } else {
-        let html = ``;
-        snapshot.forEach(human => {
-          html += `
-                    <div class="human">
-                      <div class="human__thumbnail"><img src="${
-                        human.val().picture
-                      }" alt="Image of ${human.val().name}"></div>
-                      <div class="human__name"><span><i class="fa fa-user"></i></span> ${
-                        human.val().name
-                      }</div>
-                      <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
-                        human.val().age
-                      }</div>
-                      <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
-                        human.val().phoneNumber
-                      }</div>
-                      <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
-                        human.val().message
-                      }</div>
-                    </div>
-                  `;
-        });
-        allHumans.innerHTML = html;
-      }
-    });
-  };
   addButton.addEventListener("click", e => {
-    e.preventDefault();
     addForm.style.display = `block`;
+  });
+  addForm.addEventListener("submit", e => {
+    e.preventDefault();
     if (
       phone.value &&
       phone.value.trim() !== "" &&
@@ -264,7 +187,7 @@ const handleCRUD = user => {
     }
   });
   updateForm.addEventListener("submit", e => {
-  // updateButton.addEventListener("click", e => {
+    // updateButton.addEventListener("click", e => {
     e.preventDefault();
     if (
       updatePhone.value &&
@@ -308,8 +231,113 @@ const handleCRUD = user => {
       alert("Please select a Human.");
     }
   });
-  handleToggle();
+  // handleToggle();
   makeUpdateDropdown();
+  // makeYourHumans();
+  // makeAllHumans();
+};
+
+const handleLoading = user => {
+  const addToggle = document.getElementById("addToggle");
+  const updateToggle = document.getElementById("updateToggle");
+  const yourHumans = document.getElementById("yourHumans");
+  const allHumans = document.getElementById("allHumans");
+  const database = firebase.database();
+  const dbRef = database.ref("/humans");
+  const handleToggle = () => {
+    addForm.classList.add(`hidden`);
+    updateForm.classList.add(`hidden`);
+    if (user.emailVerified) {
+      addToggle.setAttribute("disabled", false);
+      updateToggle.setAttribute("disabled", false);
+      // updateToggle.classList.remove("disabled");
+    } else {
+      addToggle.setAttribute("disabled", true);
+      updateToggle.setAttribute("disabled", true);
+      // updateToggle.classList.add("disabled");
+    }
+    addToggle.addEventListener("click", e => {
+      if (!e.target.getAttribute("disabled")) {
+        addForm.classList.toggle("hidden");
+        updateForm.classList.add("hidden");
+      }
+    });
+    updateToggle.addEventListener("click", e => {
+      if (!e.target.getAttribute("disabled")) {
+        updateForm.classList.toggle("hidden");
+        addForm.classList.add("hidden");
+      }
+    });
+  };
+  const makeYourHumans = () => {
+    dbRef.orderByKey().on("value", snapshot => {
+      if (snapshot.val() == null) {
+        yourHumans.innerHTML = `Please add some humans!`;
+      } else {
+        let html = ``;
+        snapshot.forEach(human => {
+          if (human.val().author === user.email) {
+            html += `
+                      <div class="human">
+                        <div class="human__thumbnail"><img src="${
+                          human.val().picture
+                        }" alt="Image of ${human.val().name}"></div>
+                        <div class="human__name"><span><i class="fa fa-user"></i></span> ${
+                          human.val().name
+                        }</div>
+                        <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
+                          human.val().age
+                        }</div>
+                        <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
+                          human.val().phoneNumber
+                        }</div>
+                        <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
+                          human.val().message
+                        }</div>
+                      </div>
+                    `;
+          }
+        });
+        if (html.trim() === "") {
+          yourHumans.innerHTML = `You do not have any human listed under your account. Please add one! Make sure to verify your account before adding a human.`;
+        } else {
+          yourHumans.innerHTML = html;
+        }
+      }
+    });
+  };
+  const makeAllHumans = () => {
+    dbRef.orderByKey().on("value", snapshot => {
+      if (snapshot.val() == null) {
+        allHumans.innerHTML = `Our world has no humans listed right now!`;
+      } else {
+        let html = ``;
+        snapshot.forEach(human => {
+          html += `
+                    <div class="human">
+                      <div class="human__thumbnail"><img src="${
+                        human.val().picture
+                      }" alt="Image of ${human.val().name}"></div>
+                      <div class="human__name"><span><i class="fa fa-user"></i></span> ${
+                        human.val().name
+                      }</div>
+                      <div class="human__age"><span><i class="fa fa-heart"></i></span> ${
+                        human.val().age
+                      }</div>
+                      <div class="human__phone"><span><i class="fa fa-phone"></i></span> ${
+                        human.val().phoneNumber
+                      }</div>
+                      <div class="human__message"><span><i class="fa fa-comment"></i></span> ${
+                        human.val().message
+                      }</div>
+                    </div>
+                  `;
+        });
+        allHumans.innerHTML = html;
+      }
+    });
+  };
+  handleToggle();
   makeYourHumans();
   makeAllHumans();
 };

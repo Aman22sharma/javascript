@@ -8,8 +8,8 @@ const currentPicture = document.getElementById("currentPicture");
 
 const auth = firebase.auth();
 auth.onAuthStateChanged(user => {
-  currentName.textContent = user.displayName;
-  currentPicture.setAttribute("src", user.photoURL);
+  currentName.textContent = user.displayName || 'Hello, Unknown Human!';
+  currentPicture.setAttribute("src", user.photoURL || 'https://placekitten.com/100/100');
   photo.value = user.photoURL;
   displayName.value = user.displayName;
 });
