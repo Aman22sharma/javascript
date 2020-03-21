@@ -248,8 +248,8 @@ const handleLoading = user => {
     addForm.classList.add(`hidden`);
     updateForm.classList.add(`hidden`);
     if (user.emailVerified) {
-      addToggle.setAttribute("disabled", false);
-      updateToggle.setAttribute("disabled", false);
+      addToggle.removeAttribute("disabled");
+      updateToggle.removeAttribute("disabled");
       // updateToggle.classList.remove("disabled");
     } else {
       addToggle.setAttribute("disabled", true);
