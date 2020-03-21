@@ -50,10 +50,10 @@ const makeAllHumans = () => {
       <div class="human">
         <div class="human__thumbnail"><img src="${
           data === 404 || !data
-            ? `https://placekitten.com/${getRandomNumber(
-                400,
-                500
-              )}/400`
+            ? `https://api.adorable.io/avatars/285/${getRandomNumber(
+                1,
+                5000
+              )}`
             : human.val().picture
         }" alt="Image of ${human.val().name}"></div>
         <div class="human__name"><span><i class="fa fa-user"></i></span> ${
