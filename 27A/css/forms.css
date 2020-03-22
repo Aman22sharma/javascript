@@ -19,6 +19,7 @@ button.input {
   justify-content: space-between;
   word-break: break-all;
   text-align: left;
+  border-radius: .4rem;
 }
 a.input .fa,
 button.input .fa {
@@ -49,7 +50,13 @@ button.input .fa {
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
 }
-
 .buttons .input {
   margin-right: 0.5rem;
+}
+@media screen and (min-width: 60rem) {
+  .buttons {
+    grid-gap: 0;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
 }

@@ -70,7 +70,6 @@ h2 {
   width: 100%;
   border-radius: 0.5rem;
   display: block;
-  margin: 1rem 0;
 }
 
 .footer {
@@ -86,6 +85,14 @@ h2 {
 
 .footer__text {
   font-style: italic;
+}
+
+.jumbotron {
+  margin: 2rem 0 0;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
 }
 
 @media screen and (min-width: 30rem) {
@@ -107,6 +114,11 @@ h2 {
 @media screen and (min-width: 60rem) {
   .container {
     max-width: 50rem;
+  }
+  .jumbotron {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
 }
 @media screen and (min-width: 70rem) {
