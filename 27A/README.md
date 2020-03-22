@@ -2,6 +2,10 @@
 
 Humans Inc. is my first project to learn and understand connectivity of front-end languages with a back-end system. I am learning Firebase, it's features and ways to use them with pure JavaScript.
 
+## Demo
+
+* [View Demo](https://angry-mcclintock-c3e2db.netlify.com/)
+
 ## Versions
 
 ### 1.0.1
