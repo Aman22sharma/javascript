@@ -32,19 +32,19 @@
     <div id="userTitle"></div>
     <p>Add your own humans and explore humans from around the world!</p>
     <p>If you want to log out or edit your profile information, press the Settings button below.</p>
-    <button id="settingsButton" class="input"><i class="fa fa-cog"></i> Settings</button>
+    <button id="settingsButton" class="input"><i class="fa fa-cog"></i><span>Settings</span></button>
     <div id="settings">
       <div id="status"></div>
       <div id="content"></div>
       <div class="buttons">
-        <a class="input" href="./edit.html"><i class="fa fa-pencil"></i> Edit Profile</a>
-        <a class="input" id="signOutButton"><i class="fa fa-sign-out"></i> Sign out</a>
+        <a class="input" href="./edit.html"><i class="fa fa-pencil"></i><span>Edit Profile</span></a>
+        <a class="input" id="signOutButton"><i class="fa fa-sign-out"></i><span>Sign out</span></a>
       </div>
     </div>
     <h2>Add a Human!</h2>
     <div class="buttons">
-      <a href="#" id="addToggle" class="input"><i class="fa fa-user-plus"></i> Add Humans</a>
-      <a href="#" id="updateToggle" class="input"><i class="fa fa-user-times"></i> Edit/Delete Humans</a>
+      <a href="#" id="addToggle" class="input"><i class="fa fa-user-plus"></i><span>Add Humans</span></a>
+      <a href="#" id="updateToggle" class="input"><i class="fa fa-user-times"></i><span>Edit/Delete Humans</span></a>
     </div>
     <form id="addForm">
       <div>
@@ -67,7 +67,7 @@
         <label for="picture">Picture:</label>
         <input type="url" class="input" placeholder="Add Picture URL" id="picture" required>
       </div>
-      <button id="add" class="input"><i class="fa fa-user-plus"></i> Add</button>
+      <button id="add" class="input"><i class="fa fa-user-plus"></i><span>Add</span></button>
     </form>
     <form id="updateForm">
       <select class="select" name="updateDropdown" id="updateDropdown">
@@ -93,8 +93,8 @@
         <input type="url" class="input" placeholder="Add Picture URL" id="updatePicture" required>
       </div>
       <div class="buttons">
-        <button id="update" class="input" type="submit"><i class="fa fa-user-plus"></i> Update</button>
-        <button id="delete" class="input"><i class="fa fa-user-times"></i> Delete</button>
+        <button id="update" class="input" type="submit"><i class="fa fa-user-plus"></i><span>Update</span></button>
+        <button id="delete" class="input"><i class="fa fa-user-times"></i><span>Delete</span></button>
       </div>
     </form>
     <div id="yourHumansContainer">
