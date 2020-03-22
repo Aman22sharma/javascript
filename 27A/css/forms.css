@@ -54,7 +54,7 @@ button.input .fa {
   margin-right: 0.5rem;
 }
 @media screen and (min-width: 60rem) {
-  .buttons {
+  .buttons.buttons--home {
     grid-gap: 0;
     grid-template-columns: auto;
     grid-template-rows: auto;
