@@ -1,0 +1,55 @@
+input.input {
+  height: 2.5rem;
+  padding: 0 0.6rem;
+  line-height: 1;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+a.input,
+button.input {
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  word-break: break-all;
+  text-align: left;
+}
+a.input .fa,
+button.input .fa {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+@media screen and (min-width: 60rem) {
+  a.input,
+  button.input {
+    flex-direction: row;
+  }
+  a.input .fa,
+  button.input .fa {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.input[disabled] {
+  border-color: var(--grey);
+  background-color: var(--white);
+  box-shadow: none;
+  cursor: not-allowed;
+  color: var(--grey);
+}
+.buttons {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+}
+
+.buttons .input {
+  margin-right: 0.5rem;
+}

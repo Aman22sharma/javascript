@@ -1,0 +1,45 @@
+.currentUser {
+  margin: 0 0 1rem;
+  width: 100%;
+  max-width: 10rem;
+}
+
+.currentUser p {
+  margin: 0 0 0.25rem;
+}
+
+.currentUser img {
+  border-radius: 0.5rem;
+}
+
+.user__name {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.user__thumbnail {
+  background: var(--water);
+  margin: 0 0 1rem;
+}
+
+.user__thumbnail img {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.status__text {
+  padding: 1rem;
+  margin: 0 0 1rem;
+  text-align: center;
+  background: var(--water);
+}
+
+.status__text--success {
+  color: green;
+}
+
+.status__text--warning {
+  color: red;
+}
