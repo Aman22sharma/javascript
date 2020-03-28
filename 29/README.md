@@ -1,13 +1,5 @@
-# Happy Birthday Song Tracker
+# COVID Cases Tracker
 
-## Concepts
+## Pending Features
 
-- Fetch
-- DOM
-- Async, Await
-- YouTube API
-- Form Filtering
-
-## Fixes
-
-Small project, no bug fixes necessary excluding cross browser or ES6 polyfills.
+- Ability to react at each country statistics
