@@ -1,0 +1,145 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+:root {
+  --confirmed: #3a7660;
+  --recovered: #3c45aa;
+  --deaths: #bf3912;
+  --primary: #7a58cb;
+  --secondary: #0a0a23;
+  --white: #ddd;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Nunito", serif;
+  color: var(--white);
+  background: var(--secondary);
+  min-height: 100vh;
+  margin-top: 8rem;
+}
+
+header,
+main {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+header {
+  grid-template-columns: 1fr;
+}
+
+main {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+.total {
+  font-size: 1.75rem;
+  text-transform: capitalize;
+}
+
+.country span:last-of-type {
+  font-weight: bold;
+}
+
+.country__name {
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.total .cases,
+.country__confirmed {
+  color: var(--confirmed);
+}
+
+.total .recovered,
+.country__recovered {
+  color: var(--recovered);
+}
+
+.total .deaths,
+.country__deaths {
+  color: var(--deaths);
+}
+
+.country__deaths,
+.country__recovered,
+.country__confirmed,
+.country__date {
+  margin: 0.5rem 0 0;
+}
+
+.country__deaths span:last-of-type,
+.country__recovered span:last-of-type,
+.country__confirmed span:last-of-type {
+  font-size: 1.25rem;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button.confirmed {
+  background: var(--confirmed);
+}
+
+button.deaths {
+  background: var(--deaths);
+}
+
+button.recovered {
+  background: var(--recovered);
+}
+
+button.name {
+  background: var(--primary);
+}
+
+@media screen and (min-width: 60rem) {
+  header,
+  main {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .buttons {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  body {
+    margin-top: 5rem;
+  }
+}
