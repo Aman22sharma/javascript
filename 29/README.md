@@ -1,5 +1,5 @@
-# COVID Cases Tracker
+# COVID Cases Reaction Tracker
 
-## Pending Features
+## Add your reactions
 
-- Ability to react at each country statistics
+Built with love.
