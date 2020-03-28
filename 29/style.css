@@ -3,9 +3,10 @@
 
 :root {
   --confirmed: #3a7660;
-  --recovered: #3c45aa;
+  --recovered: #1999c1;
   --deaths: #bf3912;
   --primary: #7a58cb;
+  --primary-light: #1d1929;
   --secondary: #0a0a23;
   --white: #ddd;
 }
@@ -41,7 +42,7 @@ header {
 }
 
 main {
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -60,12 +61,19 @@ main {
   text-transform: capitalize;
 }
 
+.country {
+  border: .25rem solid var(--primary);
+  border-radius: .75rem;
+  padding: 1rem;
+  background: var(--primary-light);
+}
+
 .country span:last-of-type {
   font-weight: bold;
 }
 
 .country__name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--primary);
 }
 
@@ -132,7 +140,8 @@ button.name {
   margin: 1rem 0 0;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
 }
 
 .emojis > div {
@@ -157,6 +166,7 @@ button.name {
 .emojis img {
   width: 100%;
   height: 100%;
+  max-height: 2rem;
 }
 
 .emojis p {
@@ -165,6 +175,18 @@ button.name {
   word-break: break-all;
 }
 
+@media screen and (min-width: 30rem) {
+  .emojis {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+  }
+}
+@media screen and (min-width: 40rem) {
+  .emojis {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+  }
+}
 @media screen and (min-width: 60rem) {
   header,
   main {
@@ -177,7 +199,18 @@ button.name {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .emojis {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+  }
+
   body {
     margin-top: 5rem;
+  }
+}
+@media screen and (min-width: 70rem) {
+  .emojis {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
   }
 }
