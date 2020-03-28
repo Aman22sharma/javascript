@@ -43,7 +43,7 @@ header {
 
 main {
   grid-gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .buttons {
@@ -140,8 +140,8 @@ button.name {
   margin: 1rem 0 0;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
 }
 
 .emojis > div {
@@ -176,6 +176,9 @@ button.name {
 }
 
 @media screen and (min-width: 30rem) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .emojis {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
