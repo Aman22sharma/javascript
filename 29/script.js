@@ -32,6 +32,7 @@ const handleForm = () => {
     ).reverse();
     document.querySelector("main").remove();
     handleBody(sortedCountryList);
+    handleEmojis();
   });
   recoveredButton.addEventListener("click", e => {
     e.preventDefault();
@@ -42,6 +43,7 @@ const handleForm = () => {
     ).reverse();
     document.querySelector("main").remove();
     handleBody(sortedCountryList);
+    handleEmojis();
   });
   deathsButton.addEventListener("click", e => {
     e.preventDefault();
@@ -52,16 +54,15 @@ const handleForm = () => {
     ).reverse();
     document.querySelector("main").remove();
     handleBody(sortedCountryList);
+    handleEmojis();
   });
   nameButton.addEventListener("click", e => {
     e.preventDefault();
     let newData = _.clone(data);
-    const sortedCountryList = _.orderBy(
-      newData.country,
-      i => i.name
-    );
+    const sortedCountryList = _.orderBy(newData.country, i => i.name);
     document.querySelector("main").remove();
     handleBody(sortedCountryList);
+    handleEmojis();
   });
 };
 
@@ -90,8 +91,13 @@ const handleBody = data => {
   let html = ``;
   for (let key in data) {
     const latestFigure = data[key];
+    let url = latestFigure.name
+      .split(" ")
+      .join("-")
+      .toLowerCase()
+      .replace(/[,{1,}|({1,}|){1,}|*{1,}|'{1,}]/g, "");
     html += `
-    <div class="country">
+    <div class="country" data-country="${url}">
       <div class="country__name">
         <span>${latestFigure.name}</span>
       </div>
@@ -121,6 +127,7 @@ const handleBody = data => {
 const handleData = data => {
   handleHead(data.total);
   handleBody(data.country);
+  handleEmojis();
 };
 
 const getData = async () => {
@@ -147,6 +154,176 @@ const getData = async () => {
   } catch (err) {
     console.log(err);
   }
+};
+
+const handleEmojis = () => {
+  document.querySelectorAll(".country").forEach(place => {
+    let originalCounter;
+    let newPostKey = place.dataset.country;
+    let countRef = firebase.database().ref(newPostKey);
+    let box = document.createElement("div");
+    box.classList.add("emojis");
+    // CRY
+    let cryingBox = document.createElement("div");
+    let cryingButton = document.createElement("a");
+    let cryingCounter = document.createElement("p");
+    cryingBox.classList.add("crying");
+    cryingButton.classList.add("happy__button");
+    cryingCounter.classList.add("happy__count");
+    cryingButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187150.svg" alt="Crying">`;
+    cryingButton.setAttribute("href", "#");
+    cryingBox.appendChild(cryingButton);
+    cryingBox.appendChild(cryingCounter);
+    // ANGRY
+    let angryBox = document.createElement("div");
+    let angryButton = document.createElement("a");
+    let angryCounter = document.createElement("p");
+    angryBox.classList.add("angry");
+    angryButton.classList.add("angry__button");
+    angryCounter.classList.add("angry__count");
+    angryButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187140.svg" alt="Angry">`;
+    angryButton.setAttribute("href", "#");
+    angryBox.appendChild(angryButton);
+    angryBox.appendChild(angryCounter);
+    // SICK
+    let sickBox = document.createElement("div");
+    let sickButton = document.createElement("a");
+    let sickCounter = document.createElement("p");
+    sickBox.classList.add("sick");
+    sickButton.classList.add("sick__button");
+    sickCounter.classList.add("sick__count");
+    sickButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187165.svg" alt="Sick">`;
+    sickButton.setAttribute("href", "#");
+    sickBox.appendChild(sickButton);
+    sickBox.appendChild(sickCounter);
+    // NINJA
+    let ninjaBox = document.createElement("div");
+    let ninjaButton = document.createElement("a");
+    let ninjaCounter = document.createElement("p");
+    ninjaBox.classList.add("ninja");
+    ninjaButton.classList.add("ninja__button");
+    ninjaCounter.classList.add("ninja__count");
+    ninjaButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187164.svg" alt="Ninja">`;
+    ninjaButton.setAttribute("href", "#");
+    ninjaBox.appendChild(ninjaButton);
+    ninjaBox.appendChild(ninjaCounter);
+    // BORED
+    let boredBox = document.createElement("div");
+    let boredButton = document.createElement("a");
+    let boredCounter = document.createElement("p");
+    boredBox.classList.add("bored");
+    boredButton.classList.add("bored__button");
+    boredCounter.classList.add("bored__count");
+    boredButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187157.svg" alt="Bored">`;
+    boredButton.setAttribute("href", "#");
+    boredBox.appendChild(boredButton);
+    boredBox.appendChild(boredCounter);
+    // FINISHED EMOJIS DOM
+    box.appendChild(cryingBox);
+    box.appendChild(angryBox);
+    box.appendChild(sickBox);
+    box.appendChild(ninjaBox);
+    box.appendChild(boredBox);
+    place.appendChild(box);
+    place.querySelectorAll(".emojis a").forEach(item => {
+      item.addEventListener("click", e => {
+        e.preventDefault();
+        let currentButton = e.currentTarget.parentElement;
+        let selectedCountry =
+          e.currentTarget.parentElement.parentElement.parentElement.dataset
+            .country;
+        handleClick(currentButton, selectedCountry);
+      });
+    });
+    countRef.on("child_added", data => {
+      if (data.key === "crying") {
+        cryingCounter.textContent = data.val();
+      }
+      if (data.key === "angry") {
+        angryCounter.textContent = data.val();
+      }
+      if (data.key === "sick") {
+        sickCounter.textContent = data.val();
+      }
+      if (data.key === "ninja") {
+        ninjaCounter.textContent = data.val();
+      }
+      if (data.key === "bored") {
+        boredCounter.textContent = data.val();
+      }
+    });
+    countRef.on("child_changed", data => {
+      if (data.key === "crying") {
+        cryingCounter.textContent = data.val();
+      }
+      if (data.key === "angry") {
+        angryCounter.textContent = data.val();
+      }
+      if (data.key === "sick") {
+        sickCounter.textContent = data.val();
+      }
+      if (data.key === "ninja") {
+        ninjaCounter.textContent = data.val();
+      }
+      if (data.key === "bored") {
+        boredCounter.textContent = data.val();
+      }
+    });
+    countRef
+      .once("value")
+      .then(snapshot => {
+        originalCounter = snapshot.val()
+          ? snapshot.val()
+          : { crying: 0, angry: 0, sick: 0, ninja: 0, bored: 0 };
+        cryingCounter.textContent = originalCounter.crying;
+        angryCounter.textContent = originalCounter.angry;
+        sickCounter.textContent = originalCounter.sick;
+        ninjaCounter.textContent = originalCounter.ninja;
+        boredCounter.textContent = originalCounter.bored;
+      })
+      .catch(err => alert(err.message));
+    const handleClick = (currentButton, selectedCountry) => {
+      let postData;
+      if (currentButton.classList.contains("crying")) {
+        postData = {
+          ...originalCounter,
+          crying: ++originalCounter.crying
+        };
+      }
+      if (currentButton.classList.contains("angry")) {
+        postData = {
+          ...originalCounter,
+          angry: ++originalCounter.angry
+        };
+      }
+      if (currentButton.classList.contains("sick")) {
+        postData = {
+          ...originalCounter,
+          sick: ++originalCounter.sick
+        };
+      }
+      if (currentButton.classList.contains("ninja")) {
+        postData = {
+          ...originalCounter,
+          ninja: ++originalCounter.ninja
+        };
+      }
+      if (currentButton.classList.contains("bored")) {
+        postData = {
+          ...originalCounter,
+          bored: ++originalCounter.bored
+        };
+      }
+      firebase
+        .database()
+        .ref(selectedCountry)
+        .set(postData, error => {
+          if (error) {
+            alert(error.message);
+          }
+        });
+    };
+  });
 };
 
 getData()

@@ -41,6 +41,7 @@ header {
 }
 
 main {
+  grid-gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -125,6 +126,43 @@ button.recovered {
 
 button.name {
   background: var(--primary);
+}
+
+.emojis {
+  margin: 1rem 0 0;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.emojis > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.emojis a {
+  display: block;
+  align-self: stretch;
+  margin: 0 0 0.5rem;
+}
+
+.emojis img:hover,
+.emojis img:focus {
+  box-shadow: 0 0 2rem 1rem rgba(255, 255, 255, 0.25);
+}
+
+.emojis img {
+  width: 100%;
+  height: 100%;
+}
+
+.emojis p {
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
 }
 
 @media screen and (min-width: 60rem) {
