@@ -2,15 +2,15 @@
 
 ## Vanilla
 
-- Project 1: Angular: *Download repository locally*
+- Project 1: Angular: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://elegant-mccarthy-ef40e6.netlify.com/#!/)
 - Project 2: Basic Fetch API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/basic-fetch-api)
 - Project 3: Calculator: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/calculator)
-- Project 4: CWC19 Team Directory: *Download repository locally*
+- Project 4: CWC19 Team Directory: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://upbeat-golick-be5f11.netlify.com/#!/)
 - Project 5: Dinky: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/dinky)
 - Project 6: YouTube Channel API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/jaanmahal-vlogs)
 - Project 7: News Fetch API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/news-fetch-api)
 - Project 8: Random Text Generator!: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/random-text-generator)
-- Project 9: Blog: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/satrangi)
+- Project 9: Blog: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://quirky-benz-c762ef.netlify.com/)
 - Project 10: Radio Stations: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/toronto-stations)
 - Project 11: Check Unicode of a String: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/check-unicode)
 - Project 12: Program Structure: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/program-structure)
