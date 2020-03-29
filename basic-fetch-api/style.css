@@ -1,0 +1,37 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+.container {
+  margin: auto;
+  padding: 2rem;
+  max-width: 960px;
+  background: #eee;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 2rem;
+}
+
+section {
+  margin: 0 0 2rem;
+}
+
+section img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  height: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  word-wrap: break-word;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functions</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/2626/2626061.svg" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="container my-3">
+      <div class="row">
+        <div class="col col-12">
+          <a id="t" href="#a" tabindex="-1" role="presentation" class="text-decoration-none">
+            <h2 class="mb-0">Find minimum number</h2>
+          </a>
+          <hr />
+          <div class="form-group">
+            <label for="input-minimum" class="label">Enter number separated by comma:</label>
+            <input id="input-minimum" class="form-control" type="text" placeholder="Enter number e.g. 2,4,1" />
+          </div>
+          <hr />
+          <div class="form-group">
+            <button id="btn-minimum" class="btn btn-primary">
+              Find Minimum Number
+            </button>
+          </div>
+          <h1 class="m-0 p-3 jumbotron" id="minimum"></h1>
+          <hr>
+          <a id="b" href="#a" tabindex="-1" role="presentation" class="text-decoration-none">
+            <h2 class="mb-0">Find even/odd number</h2>
+          </a>
+          <hr />
+          <div class="form-group">
+            <label for="input-checkType" class="label">Enter a number:</label>
+            <input id="input-checkType" class="form-control" type="text" placeholder="Enter a number" />
+            <small id="input-checkType" class="form-text text-muted">Trying a negative number works, see code.</small>
+          </div>
+          <hr />
+          <div class="form-group">
+            <button id="btn-checkType" class="btn btn-primary">
+              Find its type
+            </button>
+          </div>
+          <h1 class="m-0 p-3 jumbotron" id="checkType"></h1>
+          <hr>
+          <a id="c" href="#a" tabindex="-1" role="presentation" class="text-decoration-none">
+            <h2 class="mb-0">Bean counting</h2>
+          </a>
+          <hr />
+          <div class="form-group">
+            <label for="input-beanCount" class="label">Enter sentence and letter separated by comma:</label>
+            <input id="input-beanCount" class="form-control" type="text" placeholder="Enter sentence and letter e.g. hello,h" />
+          </div>
+          <hr />
+          <div class="form-group">
+            <button id="btn-beanCount" class="btn btn-primary">
+              Check count
+            </button>
+          </div>
+          <h1 class="m-0 p-3 jumbotron" id="beanCount"></h1>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12">
+            <p class="m-0 text-white py-3">
+              Other topics covered in Chapter 3 include functions, function declaration, function values, arrow functions, lexical scope, closure, recursion, function side effects etc.
+              <a href="https://eloquentjavascript.net/03_functions.html" target="_blank"
+                class="text-decoration-none text-info">Check here</>
+                for more info.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

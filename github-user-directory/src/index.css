@@ -1,0 +1,38 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+:root {
+	--color-primary-dark: #5bc0eb;
+	--color-primary-medium: #4fa6cc;
+	--color-primary-light: #4a9cbf;
+	--color-secondary: #1d3557;
+	--color-tertiary: #e63946;
+}
+
+* {
+	transition: all .4s ease;
+  border-radius: 0 !important;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	color: white;
+	font-family: 'Nunito', sans-serif;
+	background: var(--color-primary-medium);
+}
+
+.navigation {
+	position: sticky;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	width: 100%;
+	background: var(--color-primary-dark);
+	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,141 @@
+const Data = [
+  {
+    'id': 1,
+    'name': 'Guru Nanak',
+    'dob': '15 April 1469',
+    'doe': '22 September 1539',
+    'timeline': '1469 - 1538',
+    'age': 69,
+    'father': 'Mehta Kalu',
+    'mother': 'Mata Tripta',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Sikh_Gurus_with_Bhai_Bala_and_Bhai_Mardana.jpg/440px-Sikh_Gurus_with_Bhai_Bala_and_Bhai_Mardana.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Nanak'
+  },
+  {
+    'id': 2,
+    'name': 'Guru Angad',
+    'dob': '31 March 1504',
+    'doe': '29 March 1552',
+    'doc': '7 September 1539',
+    'timeline': '1504 - 1552',
+    'age': 48,
+    'father': 'Baba Pheru',
+    'mother': 'Mata Ramo',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/9/93/Guru_Angad_Devi_from_a_painting_at_Baoli_Sahib-Goindwal.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Angad'
+  },
+  {
+    'id': 3,
+    'name': 'Guru Amar Das',
+    'dob': '5 May 1479',
+    'doe': '1 September 1574',
+    'doc': '26 March 1552',
+    'timeline': '1479 - 1574',
+    'age': 95,
+    'father': 'Tej Bhan Bhalla',
+    'mother': 'Bakht Kaur',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/1/1a/Amardas-Goindwal.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Amar_Das'
+  },
+  {
+    'id': 4,
+    'name': 'Guru Ram Das',
+    'dob': '24 September 1534',
+    'doe': '1 September 1581',
+    'doc': '1 September 1574',
+    'timeline': '1534 - 1581',
+    'age': 46,
+    'father': 'Baba Hari Das',
+    'mother': 'Mata Daya Vati',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Guru_Ram_Das.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Ram_Das'
+  },
+  {
+    'id': 5,
+    'name': 'Guru Arjan',
+    'dob': '15 April 1563',
+    'doe': '30 May 1606',
+    'doc': '1 September 1581',
+    'timeline': '1563 - 1606',
+    'age': 43,
+    'father': 'Ram Das',
+    'mother': 'Mata Bhani',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Carved_portrait_of_Guru_Arjan_at_Amritsar.jpg/440px-Carved_portrait_of_Guru_Arjan_at_Amritsar.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Arjan'
+  },
+  {
+    'id': 6,
+    'name': 'Guru Har Gobind',
+    'dob': '19 June 1595',
+    'doe': '28 February 1644',
+    'doc': '25 May 1606',
+    'timeline': '1595 - 1644',
+    'age': 48,
+    'father': 'Arjun Dev',
+    'mother': 'Mata Ganga',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/9/92/Guru_Hargobind%2C_The_sixth_Guru_of_Sikhism.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Hargobind'
+  },
+  {
+    'id': 7,
+    'name': 'Guru Har Rai',
+    'dob': '16 January 1630',
+    'doe': '6 October 1661',
+    'doc': '3 March 1644',
+    'timeline': '1630 - 1661',
+    'age': 31,
+    'father': 'Baba Gurditta',
+    'mother': 'Mata Nihal Kaur',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Guru_Har_Rai.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Har_Rai'
+  },
+  {
+    'id': 8,
+    'name': 'Guru Har Krishan',
+    'dob': '7 July 1656',
+    'doe': '30 March 1664',
+    'doc': '6 October 1661',
+    'timeline': '1656 - 1663',
+    'age': 7,
+    'father': 'Hari Rai',
+    'mother': 'Mata Krishan Kaur',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Sri_Guru_Har_Krishan_Ji_Gurudwara_Pothi_Mala.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Har_Krishan'
+  },
+  {
+    'id': 9,
+    'name': 'Guru Tegh Bahadur',
+    'dob': '1 April 1621',
+    'doe': '11 November 1675',
+    'doc': '20 March 1665',
+    'timeline': '1621 - 1675',
+    'age': 54,
+    'father': 'Hari Gobind',
+    'mother': 'Mata Nanki',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Guru_Teg_bahadur_ji.jpg/440px-Guru_Teg_bahadur_ji.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Tegh_Bahadur'
+  },
+  {
+    'id': 10,
+    'name': 'Guru Gobind Singh',
+    'dob': '22 December 1666',
+    'doe': '7 October 1708',
+    'doc': '11 November 1675',
+    'timeline': '1666 - 1708',
+    'age': 41,
+    'father': 'Teg Bahadur',
+    'mother': 'Mata Gujri',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Guru_Gobind_Singh.jpg/440px-Guru_Gobind_Singh.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Gobind_Singh'
+  },
+  {
+    'id': 11,
+    'name': 'Guru Granth Sahib',
+    'doc': '7 October 1708',
+    'timeline': '1708 - Present',
+    'thumbnail': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sri_Guru_Granth_Sahib_Nishan.jpg/440px-Sri_Guru_Granth_Sahib_Nishan.jpg',
+    'reference': 'https://en.wikipedia.org/wiki/Guru_Granth_Sahib'
+  }
+]
+
+export default Data

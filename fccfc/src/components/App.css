@@ -1,0 +1,15 @@
+.site {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto inherit 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
+  color: var(--black);
+  background: var(--white);
+  min-height: 100vh;
+  height: 100%;
+}

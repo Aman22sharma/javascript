@@ -1,0 +1,392 @@
+[
+  {
+    "name": "Global News Radio 640 Toronto",
+    "url": "http://corus.leanstream.co/CFMJAM-MP3?tunein",
+    "website": "http://www.640toronto.com/",
+    "summary": "Canada's #1 station for talk radio - Talk Radio AM640 reaches more listeners than any other commercial talk radio station in Canada and is home to Toronto’s best lineup of talk radio personalities headlined by Matt Gurney and Supriya Dwivedi in the morning and John Oakley in the afternoon."
+  },
+  {
+    "name": "Q107",
+    "url": "http://corus.leanstream.co/CILQFM-MP3?tunein",
+    "website": "http://www.q107.com/",
+    "summary": "Toronto's Rock Q107 (CILQ-FM) is a radio station, broadcasting at 107.1 FM in Toronto, Ontario."
+  },
+  {
+    "name": "102.1 The Edge",
+    "url": "http://corus.leanstream.co/CFNYFM-MP3?tunein",
+    "website": "http://www.edge.ca/",
+    "summary": "EDGE 102 (CFNY FM) is a modern rock radio station based in Toronto, Ontario Canada."
+  },
+  {
+    "name": "CTV Toronto",
+    "url": "https://16843.live.streamtheworld.com:443/TV_CTV_NEWSAAC_SC?gender=null&companionAds=true&dist=iheart&init_id=8169&aw_0_1st.playerid=iHeartRadioWebPlayer&uid=1582596846796&clientType=web&profileid=1327251411&host=webapp.CA&pname=OrganicWeb&fb_broadcast=0&terminalid=163&at=0&birthYear=null&modTime=1582596849327&aw_0_1st.skey=1582596849&devicename=web-desktop&playedFrom=60&age=null&territory=CA&stationid=7798",
+    "website": "http://toronto.ctv.ca/",
+    "summary": "When it comes to news gathering, nobody can touch us."
+  },
+  {
+    "name": "Hits 93 Toronto",
+    "url": "https://www.radioking.com/play/hits-93-toronto/114409",
+    "website": "https://hits93toronto.com/",
+    "summary": "Hits 93 Toronto is Canada’s Most Followed Radio Station on Twitter, and the leader when it comes to Internet radio."
+  },
+  {
+    "name": "Trinity Radio Toronto",
+    "url": "https://node-07.zeno.fm/stws3c8h9gwtv?rj-ttl=5&rj-token=AAABa4TKIsJbP5FTYJDEoS8aYd_zmFsYke99-rhS5in3A62OAa-_BA",
+    "website": "http://trinityradio.ca/",
+    "summary": "We're Life Changing Radio. We're Trinity Media."
+  },
+  {
+    "name": "Toronto Global Radio - EDM",
+    "url": "http://london-dedicated.myautodj.com:8120/stream",
+    "website": "http://www.torontoglobalradio.com/",
+    "summary": "Toronto Global Radio broadcasts quality streams from Toronto, Canada. This EDM Channel features new EDM music."
+  },
+  {
+    "name": "Toronto Global Radio - Trance",
+    "url": "http://london-dedicated.myautodj.com:8126/stream",
+    "website": "http://www.torontoglobalradio.com/",
+    "summary": "Toronto Global Radio broadcasts quality streams from Toronto, Canada. This Trance Channel features new and classic Trance music."
+  },
+  {
+    "name": "Toronto Global Radio - Euro and Freestyle",
+    "url": "http://london-dedicated.myautodj.com:8070/stream",
+    "website": "http://www.torontoglobalradio.com/",
+    "summary": "Toronto Global Radio broadcasts quality streams from Toronto, Canada. This Euro and Freestyle channel features classic Euro and Freestyle music."
+  },
+  {
+    "name": "Voz De Restauracion Toronto",
+    "url": "http://streaming.radio.co/sfc9fd60a2/listen",
+    "website": "http://www.radiorestauracion.ca/",
+    "summary": "Omos una radio que restaura la vida del hombre. Transmitiendo desde la ciudad de Toronto, Canada para todo el mundo."
+  },
+  {
+    "name": "Toronto Global Radio - House Channel 1",
+    "url": "http://london-dedicated.myautodj.com:8138/stream",
+    "website": "http://www.torontoglobalradio.com/",
+    "summary": "Toronto Global Radio broadcasts quality streams from Toronto to the world for the Electronic Dance Music community."
+  },
+  {
+    "name": "Toronto Global Radio - Latino",
+    "url": "http://london-dedicated.myautodj.com:8084/stream",
+    "website": "http://www.torontoglobalradio.com/",
+    "summary": "Toronto Global Radio presenta el canal Latino de musica tropical. Esta emisora presenta musica nueva y classica."
+  },
+  {
+    "name": "Toronto Global Radio - Top Hits",
+    "url": "http://london-dedicated.myautodj.com:8309/stream",
+    "website": "http://www.torontoglobalradio.com/",
+    "summary": "Toronto Global Radio broadcasts quality streams from Toronto, Canada. This Top Hits Channel features top dance chart toppers."
+  },
+  {
+    "name": "Toronto Global Radio - Reggaeton",
+    "url": "http://london-dedicated.myautodj.com:8186/stream",
+    "website": "http://www.torontoglobalradio.com/",
+    "summary": "Toronto Global Radio presenta el canal de Reggaeton. Esta emisora presenta musica nueva y classica."
+  },
+  {
+    "name": "CBC Music Toronto",
+    "url": "ttp://cbcmp3.ic.llnwd.net/stream/cbcmp3_cbc_r2_tor",
+    "website": "http://www.cbc.ca/",
+    "summary": "CBC News is Canada's publicly owned news and information service."
+  },
+  {
+    "name": "Flow 93.5",
+    "url": "http://newcap.leanstream.co/CFXJFM-MP3?args=tunein_01",
+    "website": "https://flow935.com/",
+    "summary": "93-5 The Move: Toronto’s Hits. Toronto’s Throwbacks."
+  },
+  {
+    "name": "Sportsnet 590 The FAN",
+    "url": "https://rogers-hls.leanstream.co/rogers/tor590.stream/icy?environment=tunein",
+    "website": "http://www.sportsnet.ca/590/",
+    "summary": "Sportsnet 590 The FAN is Canada's leading all-sports radio station. Sportsnet 590 The FAN is The Home of Bob McCown and the Toronto Blue Jays, and Official Broadcaster for The Toronto Maple Leafs, Toronto Raptors, Toronto FC and the Buffalo Bills."
+  },
+  {
+    "name": "ICI Musique Toronto",
+    "url": "http://cbcmp3.ic.llnwd.net/stream/cbcmp3_M-7OTOR0_TOR",
+    "website": "https://www.icimusique.ca/",
+    "summary": "ICI Musique, la destination musicale de Radio-Canada propose une programmation de qualité axée sur divers genres musicaux. Grâce à sa radio, son site web et son application, ICI Musique est le meilleur vecteur d’émotion entre le public et la musique canadienne. Ardent défenseur et promoteur de la musique francophone canadienne, ICI MUSIQUE met aussi de l’avant les musiques spécialisées telles que la musique classique, le jazz et les musiques du monde. ICI Musique promeut et soutient les grands événements musicaux et artistiques, essentiels à la vitalité culturelle et artistique du Canada."
+  },
+  {
+    "name": "Radio Regent",
+    "url": "https://streamer.radio.co/se3e1e3815/listen",
+    "website": "http://www.radioregent.com/",
+    "summary": "Radio Regent broadcasts live music, spoken word and talk. Broadcasting live from Toronto, Ontario. Radio Regent is a service of the Regent Park Focus Youth Arts Centre."
+  },
+  {
+    "name": "ICI Radio-Canada Première - Toronto",
+    "url": "http://cbcmp3.ic.llnwd.net/stream/cbcmp3_P-2OTOR0_TOR",
+    "website": "https://ici.radio-canada.ca/premiere",
+    "summary": "D’un océan à l’autre, ICI RADIO-CANADA PREMIÈRE est le réseau de radio de langue française sans publicité du Canada. Elle offre aux auditeurs une programmation diversifiée où l’information, la culture et les enjeux de société occupent l’avant-scène. Engagée dans son milieu, tout en étant ouverte sur le monde, ICI Radio-Canada Première se veut à la fois audacieuse, curieuse, humaine et en proximité avec ses auditoires."
+  },
+  {
+    "name": "Radio Humber",
+    "url": "http://live.leanstream.co/CKHCFM-MP3",
+    "website": "http://radio.humber.ca/",
+    "summary": "Radio Humber 96.9fm broadcasts live from the campus of Humber Institute of Technology and Advanced Learning in Toronto Canada and features the talent of student in the School of Media Studies & Information Technology.Radio Humber is Canada's first All Canadian radio station. Our mandate is to train broadcasters and journalists."
+  },
+  {
+    "name": "Indie 88",
+    "url": "http://cob-ais.leanstream.co/CINDFM-MP3?args=tunein_01",
+    "website": "http://indie88.com/",
+    "summary": "Indie88 (CIND-FM) is Toronto’s New Alternative. Launched on August 3rd, 2013, as Canada’s first indie music station, Indie88 provides a platform for emerging artists while paying homage to the classics that inspired them. Indie88 is where new music belongs."
+  },
+  {
+    "name": "99.9 Virgin Radio",
+    "url": "http://17013.live.streamtheworld.com/CKFMFMAAC_SC",
+    "website": "http://www.iheartradio.ca/virginradio/toronto",
+    "summary": "99.9 Virgin Radio is Toronto's #1 source for Hit Music. Virgin Radio listeners are active, fashionable and early adopters of the latest trends. They're affluent and willing to take risks. Plugged in to the power of 'now' and the thrill of the 'latest'; they are socially networked and totally aware. To compliment their busy lives, 99.9 Virgin Radio entertains them with compelling personalities, great music and big promotions. Listening to 99.9 Virgin Radio delivers the non-stop HIT music they crave and keeps them in the know on what's happening."
+  },
+  {
+    "name": "Classical FM",
+    "url": "https://prod-34-82-236-16.wostreaming.net/mzmedia-cfmzfmmp3-ibc2?session-id=d258b1183ee28eac8ed51aae3d512c97&source=TuneIn",
+    "website": "http://www.classicalfm.ca/",
+    "summary": "The New Classical FM, home of Toronto’s Classical Favourites, started its life more than a quarter of a century ago as a humble classical music station in beautiful Cobourg Ontario (still broadcasting as Classical 103.1 FM). On August 30th, 2014 we expanded our signal across the Georgian Triangle with Classical 102.9 FM, while maintaining our flagship signal here in Toronto at 96.3 FM. - We are English Canada’s only all classical music radio stations. - We are Mozart & Movie Music. Bach & Bernstein. Opera & Crossover. - We are a new attitude for one of the oldest art forms in Western Civilization. - Programmed by Paul Thomas who popularizes classical music to make it more accessible to the public at large. We offer listeners the greatest music of all time plus up-to-the minute news, weather, traffic, ZoomerReports and arts reports. All this, plus uniquely intimate and interactive “Live From the Concert Lobby” performances which have featured such luminaries as piano virtuosi Lang Lang and Yundi; opera stars Ben Heppner and Measha Brueggergosman; popular crossovers singers such as Katharine Jenkins and Josh Groban; and super groups like The Tenors, Il Volo and the Tafelmusik Baroque Orchestra."
+  },
+  {
+    "name": "CHIN-919",
+    "url": "http://ice24.securenetsystems.net/CHINFM1",
+    "website": "http://www.chinradio.com/",
+    "summary": "CHIN AM 1540 is the first multicultural/multilingual radio station to be established in Ontario. CHIN AM started broadcasting on June 6, 1966, followed a year later by CHIN FM 100.7 in 1967. CHIN is the pioneer in multicultural radio broadcasting and has led the way for similar broadcast operations to be established in other communities."
+  },
+  {
+    "name": "House Nation Toronto",
+    "url": "https://streamer.radio.co/s831074b4e/listen",
+    "website": "http://housenationtoronto.com/",
+    "summary": "Offering the best in techno music, deep house, tech house, and house music."
+  },
+  {
+    "name": "Sankofa Radio Toronto",
+    "url": "http://184.149.33.60:8000/livestream",
+    "website": "http://sankofaradiotoronto.com/",
+    "summary": "A variety of music and talk shows."
+  },
+  {
+    "name": "Radio Melodia Toronto",
+    "url": "http://cast.streams.ovh:9086/live",
+    "website": "http://cast.streams.ovh:9086/live",
+    "summary": "No information available."
+  },
+  {
+    "name": "BM Radio",
+    "url": "http://192.99.34.205:8133/;",
+    "website": "http://www.bmradio.ca/",
+    "summary": "Beautiful Music From Toronto."
+  },
+  {
+    "name": "Radio Seda-ye Iran Toronto",
+    "url": "http://50.7.70.66:8759/;",
+    "website": "admin@radiosit.com",
+    "summary": "Radio Iran is an important part of it's listener's every day life. It is a community radio with Loyal Listener."
+  },
+  {
+    "name": "La Mega de Toronto",
+    "url": "http://streaming3.globalhostla.com:9190/stream",
+    "website": "http://lamegadetoronto.com/",
+    "summary": "En Streaming High Definition, Tu Música en Inglés y Español."
+  },
+  {
+    "name": "WDCX Radio",
+    "url": "http://17643.live.streamtheworld.com/WDCXFM_SC?DIST=TuneIn&TGT=TuneIn&maxServers=2&ua=RadioTime&ttag=RadioTime",
+    "website": "http://www.wdcxfm.com/",
+    "summary": "Serving Buffalo, Toronto, Rochester and beyond since 1963."
+  },
+  {
+    "name": "SBE Radio",
+    "url": "http://tostream.vouscast.com:8024/stream;.mp3",
+    "website": "http://www.sbemusic.com/",
+    "summary": "The Kompa/zouk and urban radio live in Toronto."
+  },
+  {
+    "name": "Island Breeze",
+    "url": "http://128.100.197.46/;",
+    "website": "http://www.islandbreezefm.com/",
+    "summary": "Toronto's Caribbean Station."
+  },
+  {
+    "name": "Radio Guanacan",
+    "url": "http://94.23.6.53:8470/stream",
+    "website": "radioguanacan@gmail.com",
+    "summary": "Programación en vivo las 24 horas, emitiendo desde Toronto Canadá."
+  },
+  {
+    "name": "Zona 105 Radio",
+    "url": "http://server2.ejeserver.com:8076/live",
+    "website": "http://www.zona105.com/",
+    "summary": "Somos la primera, única y verdadera radio estación urbana en Toronto Canada."
+  },
+  {
+    "name": "Kilimandjaro Radio",
+    "url": "http://s1.voscast.com:8336/;",
+    "website": "http://kilimandjaroradio.com/",
+    "summary": "La meilleure radio de la Diaspora émettant 24 h/24 de Toronto au Canada."
+  },
+  {
+    "name": "Frequency5 - MX",
+    "url": "http://usa11.fastcast4u.com/proxy/frequency5fm3?mp=/1",
+    "website": "http://www.frequency5fm.com/",
+    "summary": "Frequency5fm - Mx Radio Te Trae La Mejor Musica Mexica Desde Toronto Para El Resto Del Mundo."
+  },
+  {
+    "name": "Come To The Market - CTTM",
+    "url": "http://samcloud.spacial.com/api/listen?sid=68218&m=sc",
+    "website": "http://www.martintrainor.com/",
+    "summary": "Bringing farmers and food-lovers together. Talks with shoppers, vendors and guests at the South Market and The Farmer's Market in Toronto."
+  },
+  {
+    "name": "Rangla Punjab Toronto",
+    "url": "http://shout.audionow.com:8000/ANPunjab",
+    "website": "http://www.ranglapunjab.com/",
+    "summary": "Contact us at 416.716.7794."
+  },
+  {
+    "name": "Radio Pakistan Toronto",
+    "url": "https://s3.radio.co/s3b10a57ef/listen",
+    "website": "http://radiopakistanfm.com/",
+    "summary": "Contact us at 416.300.5600."
+  },
+  {
+    "name": "Frequency 5 - Salsa",
+    "url": "http://usa13.fastcast4u.com/proxy/frequency5fm5?mp=/1",
+    "website": "http://www.frequency5fm.com/",
+    "summary": "Frequency 5 - Salsa Te Trae La Mejor Salsa De Todos Los Tiempos Desde Toronto Para El Resto Del Mundo."
+  },
+  {
+    "name": "i-LifeRadio",
+    "url": "http://stream.radio.co/s2589c1659/listen",
+    "website": "http://www.i-liferadio.com/",
+    "summary": "i-LifeRadio based out of Toronto, Canada is devoted to African classics with bias for highlife music variants and contemporary Afro hip-hop."
+  },
+  {
+    "name": "Say Radio",
+    "url": "http://stream1.senecacollege.ca:8000/CSCA.aac",
+    "website": "http://www.sayradio.ca/",
+    "summary": "As part of the Radio Broadcasting program at Seneca College in Toronto, this student run radio station in a training ground for students in the Radio and Journalism program at Seneca College."
+  },
+  {
+    "name": "Frequency 5 - Tropical",
+    "url": "http://usa8.fastcast4u.com/proxy/frequency5fm2?mp=/1",
+    "website": "http://www.frequency5fm.com/",
+    "summary": "Frequency 5 - Tropical : Te Brinda La Mejor Musica Tropical : Merengue , Salsa,bachata,cumbia, Reggaeton, Y Mas. Las 24 Horas Al Diua Desde Toronto Para El Resto Del Mundo."
+  },
+  {
+    "name": "Radio Voz De Restauracion",
+    "url": "https://streaming.radio.co/sfc9fd60a2/listen",
+    "website": "http://miradiorestauracion.com/",
+    "summary": "Somos una radio en linea, transmitiendo en vivo desde la ciudad de Toronto, Canada; alcanzando al mundo entero con la Palabra Viva de Dios."
+  },
+  {
+    "name": "TROID Radio",
+    "url": "http://troidradio.out.airtime.pro:8000/troidradio_a",
+    "website": "http://radio.troid.ca/",
+    "summary": "Broadcasting live from TROID Events in Toronto and beyond. Alternatively, serving as a AutoDJ of all audio on www.troid.ca, 560 audio and growing all the time, playing in random order."
+  },
+  {
+    "name": "107.1 Juice FM",
+    "url": "http://s1.hotdogradio.com/CJCS",
+    "website": "http://www.mystratfordnow.com/",
+    "summary": "We're the AM radio station in Stratford with all your News, Sports, Weather, school and road closures. We also carry the Toronto Blue Jays and the Stratford Cullitons games live. Monday to Friday, from 6:00am-9:00am, tune in for the Eddie Matthews Show. We're all of that and a whole lot more."
+  },
+  {
+    "name": "Scotland69am",
+    "url": "http://eu7.fastcast4u.com:6259/1/",
+    "website": "http://www.scotland69am4u.com/",
+    "summary": "Every show is prime time somewhere in the world. We are an independent, free to access, global internet radio station offering a music only listening experience to worldwide audiences The station has 5 programme studios in Edinburgh, London, New York, Toronto and Sydney As a truly global music only station, our programming is free from commercials, news, weather, traffic or other interruptions."
+  },
+  {
+    "name": "1470 CFOX",
+    "url": "http://playerservices.streamtheworld.com/api/livestream-redirect/CKWWAMAAC.aac?tdtok=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6ImZTeXA4In0.eyJpc3MiOiJ0aXNydiIsInN1YiI6IjIxMDY0IiwiaWF0IjoxNTgyNTk5ODM2LCJ0ZC1yZWciOmZhbHNlfQ.x59p-fiTBi-X-qGSa-pWNBn8s6zeXPl-pxcqR2OI6HY",
+    "website": "http://www.1470cfox.com/",
+    "summary": "With studios based at 203 Hymus Blvd. in Pointe-Claire, the station went on air on March 15, 1960 as CFOX with an adult contemporary format with 1,000 watts of power, but was changed on February 5, 1963 to 10,000 watts. In 1964 the station format changed to country, and in 1965 to a Top 40 station. The station was originally operated by Lakeshore Broadcasting, which was owned by noted Montreal radio journalist Gord Sinclair Jr. (the son of Toronto radio/TV journalist Gordon Sinclair)."
+  },
+  {
+    "name": "W2klradio",
+    "url": "http://shaincast.caster.fm:12859/listen.mp3",
+    "website": "https://w2klradio.com/",
+    "summary": "W2kl radio is a Toronto based online radio station aimed to provide a platform for showcasing various talents, skills and an echo for community voices via online stream! Your opinion matters, tune in and also share your views on this radio platform followed with entertainments news, global news, sports, advertisements read more....... Shout for joy today! Don't throw your visions in the closet! W2kl Radio does not own any rights to its streaming media unless specified otherwise. W2kl Radio proudly presents this international platform to those who dream big."
+  },
+  {
+    "name": "ROCK 95",
+    "url": "https://cob-ais.leanstream.co/CFJBFM-MP3?args=tunein_01",
+    "website": "http://www.rock95.com/",
+    "summary": "We are on your FM dial at 95.7 and on Rogers Cable in Barrie and Orillia.ROCK 95 FM is a 100,000-watt regional station that covers a wide area of Central Ontario. The station, Barrie’s Rock Station, ROCK 95 plays the best rock for our approximately quarter million listeners. Our coverage area stretches from Parry Sound and Huntsville south to Highway 7 near Toronto, east to Lindsay and west to near Owen Sound.Our signal serves all major cities in this region such as Barrie, Orillia, Midland, Collingwood, Penetang, Newmarket, Bradford, Alliston and many more. ROCK 95 has been broadcasting since October 1988 and is a local, independently owned station."
+  },
+  {
+    "name": "NAISA Radio",
+    "url": "http://50.7.129.122:8404/stream",
+    "website": "http://www.naisa.ca/",
+    "summary": "NAISA Radio features experimental radio and sound art works created by artists from around the world and curated by New Adventures in Sound Art (NAISA) in Toronto. NAISA Radio includes special interview features and live broadcasts. For a full schedule go to: http://www.naisa.ca/naisa-radio/ NAISA also presents performances, installation exhibits, and workshops and international symposia. NAISA produces a monthly radio program for WGXC Wave Farm called Making Waves that is available as podcasts. Making Waves is comprised of interviews with sound artists about their work."
+  },
+  {
+    "name": "Radio Italia Canada",
+    "url": "https://streaming.radiostreamlive.com/radioitaliacanada_devices",
+    "website": "http://www.radioitaliacanada.com/",
+    "summary": "From the very heart of Toronto, the real Italian sound. Dal cuore di Toronto, la vera musica Italiana."
+  },
+  {
+    "name": "Jazzy Lounge",
+    "url": "http://agnes.torontocast.com:8106/stream",
+    "website": "http://www.jazzylounge.com/",
+    "summary": "Jazzy Lounge radio was created December 13, 2003 for the sole purpose of introducing the general public to the fascinating world of electronica music and more specifically the following sub-genres: Nu Jazz, Lounge, Down Tempo, Chill Out, House, Dance, World and more. The Jazzy Lounge web site and radio station is currently manned by DJ Jazzy L and is streamed from Toronto Cast's servers. Jazzy Lounge focuses on the top artists in the electronic, downtempo, nu jazz genres like- Bonobo, Thievery Corporation, Zero 7, Parov Stelar, Nightmares on Wax, Quantic, Morcheeba, Tosca, Waldeck, Emancipator, De-Phazz, Boozoo Bajou, The Cinematic Orchestra, Sia, Funki Porcini, Wax Tailor- as well as new independent artists and labels."
+  },
+  {
+    "name": "Time FM Tamil Radio",
+    "url": "http://192.184.9.158:8087/stream",
+    "website": "http://timefm.ca/",
+    "summary": "Time FM Toronto, Ontario Canada."
+  },
+  {
+    "name": "Masala Beats Radio",
+    "url": "http://38.107.243.220:8654/;",
+    "website": "http://www.masalabeats.ca/",
+    "summary": "Broadcasting Online Internet Radio from Toronto, Canada Latest Bollywood Music , Songs and News 24 Hours."
+  },
+  {
+    "name": "ATBC - Australia's Tamil Radio",
+    "url": "http://s7.viastreaming.net:7920/;",
+    "website": "http://www.atbc.net.au/",
+    "summary": "ATBC is a radio station broadcasting programs primarily in Tamil language 24 hours a day. It is Australia’s only 24 hour Tamil Community Radio serving the community for over ten years as a not-for-profit organisation. ATBC’s Principle Studio is in Sydney and we have production studios in Melbourne and Toronto."
+  },
+  {
+    "name": "All the Hits",
+    "url": "https://ice23.securenetsystems.net/CIDC?at=0&birthYear=null&clientType=web&fb_broadcast=0&host=webapp.CA&init_id=8169&modTime=1582225512594&pname=OrganicWeb&profileid=1325378390&territory=CA&uid=1582224462803&age=null&gender=null&aw_0_1st.playerid=iHeartRadioWebPlayer&aw_0_1st.skey=1582225512&terminalid=163&companionAds=true&playedFrom=60&dist=iheart&devicename=web-desktop&stationid=7757",
+    "website": "https://z1035.com/",
+    "summary": "The Evanov Radio Group is looking for an ambitious and motivated sales professional for Z103.5, 103.9 Proud FM, Jewel 88.5, and AM530."
+  },
+  {
+    "name": "Bloomberg",
+    "url": "https://20803.live.streamtheworld.com:443/TV_BNNAAC_SC?gender=null&companionAds=true&dist=iheart&init_id=8169&aw_0_1st.playerid=iHeartRadioWebPlayer&uid=1582224462803&clientType=web&profileid=1325378390&host=webapp.CA&pname=OrganicWeb&fb_broadcast=0&terminalid=163&at=0&birthYear=null&modTime=1582225158070&aw_0_1st.skey=1582225158&devicename=web-desktop&playedFrom=60&age=null&territory=CA&stationid=7797",
+    "website": "https://www.bloomberg.com/audio",
+    "summary": "Insight and analysis of top stories from our award winning magazine Bloomberg Businessweek."
+  },
+  {
+    "name": "CP24",
+    "url": "https://17523.live.streamtheworld.com:443/TV_CP24AAC_SC?gender=null&companionAds=true&dist=iheart&init_id=8169&aw_0_1st.playerid=iHeartRadioWebPlayer&uid=1582224462803&clientType=web&profileid=1325378390&host=webapp.CA&pname=OrganicWeb&fb_broadcast=0&terminalid=163&at=0&birthYear=null&modTime=1582224464838&aw_0_1st.skey=1582224464&devicename=web-desktop&playedFrom=60&age=null&territory=CA&stationid=7796",
+    "website": "https://www.iheart.com/live/cp24-7796/",
+    "summary": "Toronto’s Breaking News."
+  },
+  {
+    "name": "Jewel",
+    "url": "https://ice7.securenetsystems.net/CIRR?at=0&birthYear=null&clientType=web&fb_broadcast=0&host=webapp.CA&init_id=8169&modTime=1582225512594&pname=OrganicWeb&profileid=1325378390&territory=CA&uid=1582224462803&age=null&gender=null&aw_0_1st.playerid=iHeartRadioWebPlayer&aw_0_1st.skey=1582225512&terminalid=163&companionAds=true&playedFrom=60&dist=iheart&devicename=web-desktop&stationid=7758",
+    "website": "https://885thejewel.com/",
+    "summary": "Jewel 88 Overnight."
+  },
+  {
+    "name": "Multilingual",
+    "url": "https://ice7.securenetsystems.net/CIRR?at=0&birthYear=null&clientType=web&fb_broadcast=0&host=webapp.CA&init_id=8169&modTime=1582225512594&pname=OrganicWeb&profileid=1325378390&territory=CA&uid=1582224462803&age=null&gender=null&aw_0_1st.playerid=iHeartRadioWebPlayer&aw_0_1st.skey=1582225512&terminalid=163&companionAds=true&playedFrom=60&dist=iheart&devicename=web-desktop&stationid=7758",
+    "website": "https://www.chinradio.com/chin-radio-toronto",
+    "summary": "CHIN AM 1540 is the first multicultural/multilingual radio station to be established in Ontario. CHIN AM started broadcasting on June 6, 1966, followed a year later by CHIN FM 100.7 in 1967. CHIN is the pioneer in multicultural radio broadcasting and has led the way for similar broadcast operations to be established in other communities."
+  },
+  {
+    "name": "Radio Regent",
+    "url": "https://streamer.radio.co/se3e1e3815/listen?at=0&birthYear=null&clientType=web&fb_broadcast=0&host=webapp.CA&init_id=8169&modTime=1582225512594&pname=OrganicWeb&profileid=1325378390&territory=CA&uid=1582224462803&age=null&gender=null&aw_0_1st.playerid=iHeartRadioWebPlayer&aw_0_1st.skey=1582225512&terminalid=163&companionAds=true&playedFrom=60&dist=iheart&devicename=web-desktop&stationid=8119",
+    "website": "https://www.radioregent.com/",
+    "summary": "Operating since 2011, Radio Regent is a unique internet radio station based in downtown Toronto."
+  },
+  {
+    "name": "The Pride of Toronto",
+    "url": "https://ice7.securenetsystems.net/CIRR?at=0&birthYear=null&clientType=web&fb_broadcast=0&host=webapp.CA&init_id=8169&modTime=1582225512594&pname=OrganicWeb&profileid=1325378390&territory=CA&uid=1582224462803&age=null&gender=null&aw_0_1st.playerid=iHeartRadioWebPlayer&aw_0_1st.skey=1582225512&terminalid=163&companionAds=true&playedFrom=60&dist=iheart&devicename=web-desktop&stationid=7758",
+    "website": "https://proudfm.com/",
+    "summary": "Pearse Murray and more."
+  }
+]

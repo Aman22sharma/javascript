@@ -1,0 +1,43 @@
+@import url("https://kristopolous.github.io/BOOTSTRA.386/assets/css/bootstrap.css");
+@import url("https://kristopolous.github.io/BOOTSTRA.386/assets/css/bootstrap-responsive.css");
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"); */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+}
+
+.page-header p {
+  color: black;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.name {
+  margin: 0 0 5px;
+}
+
+.title {
+  line-height: 1;
+  margin: 0 0 15px;
+}
+
+a:first-of-type {
+  margin-right: 15px;
+}
+
+nav {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.disabled {
+  color: gray;
+}

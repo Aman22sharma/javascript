@@ -1,0 +1,8 @@
+.add-station .card-body {
+  display: none;
+}
+
+.add-station .card,
+.add-station .card-header {
+  border: 0;
+}

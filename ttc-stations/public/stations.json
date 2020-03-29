@@ -1,0 +1,527 @@
+[
+  {
+    "id": 1,
+    "name": "Bathurst Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/bathurst.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Bathurst%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 2,
+    "name": "Bay Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/bay.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Bay%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 3,
+    "name": "Bayview Station",
+    "line": "Sheppard",
+    "thumb": "https://www.ttc.ca/images/Stations/bayview.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Bayview%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 4,
+    "name": "Bessarion Station",
+    "line": "Sheppard",
+    "thumb": "https://www.ttc.ca/images/Stations/bessarion.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Bessarion%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 5,
+    "name": "Bloor-Yonge Station",
+    "line": ["Yonge-University", "Bloor-Danforth"],
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/blooryonge.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Bloor-Yonge%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 6,
+    "name": "Broadview Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/broadview.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Broadview%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 7,
+    "name": "Castle Frank Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/castlefrank.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Castle%20Frank%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 8,
+    "name": "Chester Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/chester.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Chester%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 9,
+    "name": "Christie Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/christie.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Christie%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 10,
+    "name": "College Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/college.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=College%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 11,
+    "name": "Coxwell Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/coxwell.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Coxwell%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 12,
+    "name": "Davisville Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/davisville.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Davisville%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 13,
+    "name": "Don Mills Station",
+    "line": "Sheppard",
+    "thumb": "https://www.ttc.ca/images/Stations/donmills.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Don%20Mills%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 14,
+    "name": "Donlands Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/donlands.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Donlands%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 15,
+    "name": "Downsview Park Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/Downsview%20Park.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Downsview%20Park%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 16,
+    "name": "Dufferin Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/dufferin.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Dufferin%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 17,
+    "name": "Dundas Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/dundas.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Dundas%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 18,
+    "name": "Dundas West Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/dundaswest.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Dundas%20West%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 19,
+    "name": "Dupont Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/dupont.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Dupont%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 20,
+    "name": "Eglinton Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/eglinton.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Eglinton%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 21,
+    "name": "Eglinton West Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/eglintonwest.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Eglinton%20West%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 22,
+    "name": "Ellesmere Station",
+    "line": "Scarborough",
+    "thumb": "https://www.ttc.ca/images/Stations/ellesmere.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Ellesmere%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 23,
+    "name": "Finch Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/finch.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Finch%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 24,
+    "name": "Finch West Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/Finch%20West.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Finch%20West%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 25,
+    "name": "Glencairn Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/glencairn.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Glencairn%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 26,
+    "name": "Greenwood Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/greenwood.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Greenwood%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 27,
+    "name": "High Park Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/highpark.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=High%20Park%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 28,
+    "name": "Highway 407 Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/Highway%20407.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Highway%20407%20Subway%20Station,%20Vaughan,%20ON"
+  },
+  {
+    "id": 29,
+    "name": "Islington Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/islington.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Islington%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 30,
+    "name": "Jane Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/jane.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Jane%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 31,
+    "name": "Keele Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/keele.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Keele%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 32,
+    "name": "Kennedy Station",
+    "line": ["Bloor-Danforth", "Scarborough"],
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/kennedy.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Kennedy%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 33,
+    "name": "King Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/king.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=King%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 34,
+    "name": "Kipling Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/kipling.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Kipling%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 35,
+    "name": "Lansdowne Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/lansdowne.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Lansdowne%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 36,
+    "name": "Lawrence Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/lawrence.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Lawrence%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 37,
+    "name": "Lawrence East Station",
+    "line": "Scarborough",
+    "thumb": "https://www.ttc.ca/images/Stations/lawrenceeast.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Lawrence%20East%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 38,
+    "name": "Lawrence West Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/lawrencewest.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Lawrence%20West%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 39,
+    "name": "Leslie Station",
+    "line": "Sheppard",
+    "thumb": "https://www.ttc.ca/images/Stations/leslie.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Leslie%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 40,
+    "name": "Main Street Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/mainstreet.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Main%20Street%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 41,
+    "name": "McCowan Station",
+    "line": "Scarborough",
+    "thumb": "https://www.ttc.ca/images/Stations/mccowan.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=McCowan%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 42,
+    "name": "Midland Station",
+    "line": "Scarborough",
+    "thumb": "https://www.ttc.ca/images/Stations/midland.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Midland%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 43,
+    "name": "Museum Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/museum.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Museum%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 44,
+    "name": "North York Centre Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/northyork.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=North%20York%20Centre%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 45,
+    "name": "Old Mill Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/oldmill.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Old%20Mill%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 46,
+    "name": "Osgoode Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/osgoode.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Osgoode%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 47,
+    "name": "Ossington Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/ossignton.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Ossington%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 48,
+    "name": "Pape Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/Pape_Station_2013.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Pape%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 49,
+    "name": "Pioneer Village Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/Pioneer%20Village.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Pioneer%20Village%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 50,
+    "name": "Queen Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/queen.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Queen%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 51,
+    "name": "Queen's Park Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/queenspark.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Queen%27s%20Park%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 52,
+    "name": "Rosedale Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/rosedale.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Rosedale%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 53,
+    "name": "Royal York Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/royalyork.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Royal%20York%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 54,
+    "name": "Runnymede Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/runnymede.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Runnymede%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 55,
+    "name": "Scarborough Centre Station",
+    "line": "Scarborough",
+    "thumb": "https://www.ttc.ca/images/Stations/scarboroughcentre.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Scarborough%20Centre%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 56,
+    "name": "Sheppard-Yonge Station",
+    "line": ["Yonge-University", "Sheppard"],
+    "thumb": "https://www.ttc.ca/images/Stations/sheppard.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Sheppard-Yonge%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 57,
+    "name": "Sheppard West Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/downsview.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Sheppard%20West%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 58,
+    "name": "Sherbourne Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/sherbourne.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Sherbourne%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 59,
+    "name": "Spadina Station",
+    "line": ["Yonge-University", "Bloor-Danforth"],
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/spadina.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Spadina%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 60,
+    "name": "St Andrew Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/standrew.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=St%20Andrew%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 61,
+    "name": "St Clair Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/stclair.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=St%20Clair%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 62,
+    "name": "St Clair West Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/stclairwest.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=St%20Clair%20West%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 63,
+    "name": "St George Station",
+    "line": ["Yonge-University", "Bloor-Danforth"],
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/stgeorge.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=St%20George%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 64,
+    "name": "St Patrick Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/stpatrick.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=St%20Patrick%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 65,
+    "name": "Summerhill Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/summerhill.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Summerhill%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 66,
+    "name": "Union Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/union.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Union%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 67,
+    "name": "Vaughan Metropolitan Centre Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/VMC.JPG",
+    "location": "https://www.google.com/maps/search/?api=1&query=Vaughan%20Metropolitan%20Centre%20Subway%20Station,%20Vaughan,%20ON"
+  },
+  {
+    "id": 68,
+    "name": "Victoria Park Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/Victoria_Park_2011.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Victoria%20Park%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 69,
+    "name": "Warden Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/updated_station_images/warden.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Warden%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 70,
+    "name": "Wellesley Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/wellesley.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Wellesley%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 71,
+    "name": "Wilson Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/wilson.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Wilson%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 72,
+    "name": "Woodbine Station",
+    "line": "Bloor-Danforth",
+    "thumb": "https://www.ttc.ca/images/Stations/woodbine.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Woodbine%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 73,
+    "name": "York Mills Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/yorkmills.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=York%20Mills%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 74,
+    "name": "York University Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/York%20University.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=York%20University%20Subway%20Station,%20Toronto,%20ON"
+  },
+  {
+    "id": 75,
+    "name": "Yorkdale Station",
+    "line": "Yonge-University",
+    "thumb": "https://www.ttc.ca/images/Stations/yorkdale.jpg",
+    "location": "https://www.google.com/maps/search/?api=1&query=Yorkdale%20Subway%20Station,%20Toronto,%20ON"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "name": "cwc19-team-directory",
+  "version": "0.0.1",
+  "description": "Sample project based on AngularJS.",
+  "homepage": "https://tpkahlon.github.io/cwc19-team-directory",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tpkahlon/cwc19-team-directory.git"
+  },
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "author": "Ray Villalobos",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "angular": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "bootstrap": "^4.3.1",
+    "fibers": "^4.0.1",
+    "gh-pages": "^2.0.1",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-webserver": "^0.9.1",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "popper.js": "^1.15.0"
+  }
+}

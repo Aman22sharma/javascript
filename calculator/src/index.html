@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link href="./public/favicon.png" rel="icon" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+  <div class="d-flex justify-content-center align-items-center app flex-column mx-auto">
+    <h1 class="text-center h3 text-white text-break px-3">Calculator v1.0.0</h1>
+    <div class="container-fluid my-1 no-gutters">
+      <div class="row">
+        <div class="col">
+          <input type="text" placeholder="0" value="0" class="form-control text-right screen" disabled>
+        </div>
+      </div>
+      <div class="row my-1 no-gutters">
+        <div class="col">
+          <div>
+            <a href="#" class="btn btn-block btn-danger">C</a>
+          </div>
+        </div>
+        <div class="col mx-1">
+          <div>
+            <a href="#" class="btn btn-block btn-warning"><i class="fa fa-arrow-left" aria-hidden="true"><span class="sr-only">D</span></i></a>
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <a href="#" class="btn btn-block btn-warning"><i class="fa fa-divide" aria-hidden="true"><span class="sr-only">/</span></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row my-1 no-gutters">
+        <div class="col">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">7</a>
+          </div>
+        </div>
+        <div class="col ml-1 mr-0">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">8</a>
+          </div>
+        </div>
+        <div class="col mx-1">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">9</a>
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <a href="#" class="btn btn-block btn-warning"><i class="fa fa-times" aria-hidden="true"><span class="sr-only">x</span></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row my-1 no-gutters">
+        <div class="col">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">4</a>
+          </div>
+        </div>
+        <div class="col ml-1 mr-0">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">5</a>
+          </div>
+        </div>
+        <div class="col mx-1">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">6</a>
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <a href="#" class="btn btn-block btn-warning"><i class="fa fa-minus" aria-hidden="true"><span class="sr-only">-</span></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row my-1 no-gutters">
+        <div class="col">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">1</a>
+          </div>
+        </div>
+        <div class="col ml-1 mr-0">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">2</a>
+          </div>
+        </div>
+        <div class="col mx-1">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">3</a>
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <a href="#" class="btn btn-block btn-warning"><i class="fa fa-plus" aria-hidden="true"><span class="sr-only">+</span></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row my-1 no-gutters">
+        <div class="col">
+          <div>
+            <a href="#" class="btn btn-block btn-primary">0</a>
+          </div>
+        </div>
+        <div class="col ml-1">
+          <div>
+            <a href="#" class="btn btn-block btn-success"><i class="fa fa-equals" aria-hidden="true"><span class="sr-only">=</span></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-secondary fixed-bottom m-3 ml-auto help" data-toggle="modal" data-target="#exampleModal">
+    Help
+    <span class="ml-1"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+  </button>
+  <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">About Calculator v1.0.0</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Please feel free to fork this project and make your own custom version of this calculator. If you would like to add features to this calculator or open a bug report, you are encouraged to do so!</p>
+          <p>Please check Brian Holt's course on Frontendmasters regarding this project.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

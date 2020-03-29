@@ -1,0 +1,17 @@
+$body-color: #000;
+
+body {
+  color: $body-color;
+}
+
+.app {
+  min-height: 100vh;
+  @media screen and (min-width: 720px) {
+    max-width: 640px;
+  }
+}
+
+.help {
+  max-width: 8rem;
+}
+

@@ -1,0 +1,192 @@
+[
+  {
+    "title": "News",
+    "key": "news",
+    "children": [
+      {
+        "title": "Business",
+        "key": "business"
+      },
+      {
+        "title": "Canada",
+        "key": "canada"
+      },
+      {
+        "title": "City Hall",
+        "key": "city-hall"
+      },
+      {
+        "title": "Education",
+        "key": "education"
+      },
+      {
+        "title": "Ontario",
+        "key": "ontario"
+      },
+      {
+        "title": "Transit",
+        "key": "transit"
+      },
+      {
+        "title": "Sunday Reads",
+        "key": "sunday-reads"
+      },
+      {
+        "title": "Technology",
+        "key": "technology"
+      },
+      {
+        "title": "Ureport",
+        "key": "ureport"
+      },
+      {
+        "title": "World",
+        "key": "world"
+      }
+    ]
+  },
+  {
+    "title": "Crime",
+    "key": "crime"
+  },
+  {
+    "title": "Autos",
+    "key": "autos"
+  },
+  {
+    "title": "Sports",
+    "key": "sports",
+    "children": [
+      {
+        "title": "Baseball",
+        "key": "baseball"
+      },
+      {
+        "title": "Basketball",
+        "key": "basketball"
+      },
+      {
+        "title": "Football",
+        "key": "football"
+      },
+      {
+        "title": "Hockey",
+        "key": "hockey"
+      },
+      {
+        "title": "Soccer",
+        "key": "soccer"
+      },
+      {
+        "title": "Ureport",
+        "key": "ureport"
+      }
+    ]
+  },
+  {
+    "title": "What's On",
+    "key": "whatson",
+    "children": [
+      {
+        "title": "Arts & Entertainment",
+        "key": "artsentertainment"
+      },
+      {
+        "title": "Celebrity",
+        "key": "celebrity"
+      },
+      {
+        "title": "Explore Toronto",
+        "key": "explore"
+      },
+      {
+        "title": "Music",
+        "key": "music"
+      },
+      {
+        "title": "Ureport",
+        "key": "ureport"
+      }
+    ]
+  },
+  {
+    "title": "Events",
+    "key": "events",
+    "children": [
+      {
+        "title": "Arts",
+        "key": "arts"
+      },
+      {
+        "title": "Attractions",
+        "key": "attractions"
+      },
+      {
+        "title": "Community",
+        "key": "community"
+      },
+      {
+        "title": "Family",
+        "key": "family"
+      },
+      {
+        "title": "Festival and Fairs",
+        "key": "festival-and-fairs"
+      },
+      {
+        "title": "Music",
+        "key": "music"
+      },
+      {
+        "title": "Seasonal",
+        "key": "seasonal"
+      },
+      {
+        "title": "Sports",
+        "key": "sports"
+      }
+    ]
+  },
+  {
+    "title": "Community",
+    "key": "community",
+    "children": [
+      {
+        "title": "Canada 150",
+        "key": "canada-150"
+      },
+      {
+        "title": "Environment",
+        "key": "environment"
+      },
+      {
+        "title": "Family",
+        "key": "family"
+      },
+      {
+        "title": "Home and Garden",
+        "key": "home-and-garden"
+      },
+      {
+        "title": "Life",
+        "key": "life"
+      },
+      {
+        "title": "Money Matters",
+        "key": "money-matters"
+      },
+      {
+        "title": "Pets and Animals",
+        "key": "pets-and-animals"
+      },
+      {
+        "title": "Ureport",
+        "key": "ureport"
+      },
+      {
+        "title": "Wellness",
+        "key": "wellness"
+      }
+    ]
+  }
+]

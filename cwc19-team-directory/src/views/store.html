@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <h1 class="m-0 p-0 mb-3">CWC19 World XI Team Directory</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-12">
+      <div class="form-group mb-0">
+        <label for="search">Search a Player: <span ng-if="query">{{ query }}</span></label>
+        <input id="search" type="text" class="form-control" placeholder="Search..." ng-model="query" autofocus>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col col-12">
+      <form>
+        <div class="form-group">
+          <select class="custom-select" ng-model="playerOrder">
+            <option value="name">Name</option>
+            <option value="team">Team</option>
+          </select>
+        </div>
+        <div class="form-group"><hr></div>
+        <div class="form-group">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="asc" name="filter" class="custom-control-input" value="" ng-model="direction">
+            <label class="custom-control-label" for="asc">Ascending</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="desc" name="filter" class="custom-control-input" value="reverse" ng-model="direction">
+            <label class="custom-control-label" for="desc">Descending</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-12 col-sm-4 mb-3" ng-if="players" ng-repeat="player in players | filter: query | orderBy:playerOrder:direction">
+      <div class="card w-100 h-100">
+        <img ng-src={{player.picture}} class="card-img-top h-100" alt={{player.name}}>
+        <div class="card-body">
+          <a href="#!/player/{{players.indexOf(player)}}">
+            <h5 class="card-title"><i class="mr-2 fa fa-arrow-right"></i>{{player.name}}</h5>
+          </a>
+          <p class="card-text">{{player.team}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

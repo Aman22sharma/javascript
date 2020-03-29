@@ -1,0 +1,29 @@
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+.header {
+  padding: 1.25rem 1.25rem 2rem;
+  color: var(--white);
+  background: var(--primary);
+  text-align: center;
+  align-self: start;
+}
+
+.header__title {
+  margin: 0;
+}
+
+.header__icon {
+  max-height: 3rem;
+  margin-right: .5rem;
+}
+
+.nav__text {
+  margin: 0;
+  padding: 0;
+}

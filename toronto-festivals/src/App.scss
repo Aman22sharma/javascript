@@ -1,0 +1,8 @@
+.card {
+  cursor: pointer;
+  transition: all .4s ease;
+  &:hover {
+    background: var(--white) !important;
+    color: var(--dark) !important;
+  }
+}

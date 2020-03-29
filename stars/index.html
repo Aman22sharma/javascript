@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Github Time Machine</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="https://cdn.svgporn.com/logos/javascript.svg" type="image/svg">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="page-header">
+          <h1 class="title">Github Time Machine</h1>
+          <p>
+            When I was building this piece, I faced a <code>monster</code> named <code>window.localStorage</code>. If by chance, you happen to be browsing around this piece and you discovered a weird bug or the pagination of this application behaves erratic, press the button below to restart the machine.
+          </p>
+          <button class="btn" id="reset">Reset</button>
+        </div>
+        <p>See people who were the first ones to join <code>GitHub</code> revolution. Imagine owning a phone number <code>6470000001</code> or a car with number plate like <code>CBJ 0001</code>, pretty cool, right? These account holders own cool ID numbers.</p>
+        <hr>
+        <div id="app">
+          <nav id="nav">
+            <a id="prev" href="#">Previous</a>
+            <a id="next" href="#">Next</a>
+          </nav>
+          <div id="users"></div>
+        </div>
+      </div>
+      <div class="span12">
+        <p>Piece coded in <span id="year"></span>, revisions/improvements added on consistent basis. The objective of this piece is to visualize workings of vanilla <code>JavaScript</code>.</p>
+        <p>Thanks to <code>kristopolous</code> for building <code>Bootstrap 386</code>. See, if you can find him in first few pages...</p>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+:root {
+  --morning: 'https://i.imgur.com/gAIiSzT.jpg';
+  --afternoon: 'https://i.imgur.com/KA6VpIm.jpg';
+  --evening: 'https://i.imgur.com/iPGnRiO.jpg';
+  --night: 'https://i.imgur.com/T1J6z8J.jpg';
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  padding: 1.25rem;
+  font-size: 1rem;
+  font-family: 'Libre Baskerville', serif;
+}
+
+#root {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-gap: 1.25rem;
+}
+
+section {
+  display: grid;
+  grid-template: auto 1fr auto / 1fr;
+  grid-gap: 1.25rem;
+  justify-items: center;
+  align-items: center;
+}
+
+header {
+  align-self: start;
+}
+
+main {
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 480px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+footer {
+  align-self: end;
+}
+
+img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+
+.card__title {
+  align-self: end;
+
+  padding: 1rem;
+}
+
+.header {
+  font-size: 1.75rem;
+}
+
+.footer {
+  font-size: 0.875rem;
+}

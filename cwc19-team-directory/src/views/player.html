@@ -1,0 +1,25 @@
+<div class="container" ng-if="players">
+  <div class="row">
+    <div class="col col-12">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#!/player/{{nextPlayer}}">Next</a></li>
+          <li class="breadcrumb-item"><a href="#/">Home</a></li>
+          <li class="breadcrumb-item"><a href="#!/player/{{previousPlayer}}">Previous</a></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-12 col-sm-6">
+      <div class="d-block mb-3"><img ng-src={{players[whichPlayer].picture}} class="card-img-top h-100 mb-md-0" alt={{players[whichPlayer].name}}></div>
+    </div>
+    <div class="col col-12 col-sm-6">
+      <h1>{{players[whichPlayer].name}}</h1>
+      <hr>
+      <h2>{{players[whichPlayer].team}}</h2>
+      <hr>
+      <p>{{players[whichPlayer].content}}</p>
+    </div>
+  </div>
+</div>

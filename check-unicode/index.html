@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unicode value of a string in JS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/2626/2626061.svg" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="container my-3">
+      <div class="row">
+        <div class="col col-12">
+          <h2 class="mb-0">Get Unicode Value</h2>
+          <small>Fun fact: Try to run conversion on an
+            <a href="https://getemoji.com/" target="_blank" class="text-decoration-none text-info">Emoji</a>, takes up
+            two bits at a time.</small>
+          <hr />
+          <div class="form-group">
+            <label for="input-unicode" class="label">Enter a String:</label>
+            <input id="input-unicode" class="form-control" type="text" placeholder="Enter a String" value="Hello World 😀" />
+          </div>
+          <hr />
+          <div class="form-group">
+            <button id="btn-unicode" class="btn btn-primary">
+              Get Unicode
+            </button>
+            <a id="btn-unicode" class="btn btn-secondary"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt"
+              target="_blank">Docs</a>
+          </div>
+          <h1 class="m-0 p-3 jumbotron" id="unicode"></h1>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12">
+            <p class="m-0 text-white py-3">
+              Other topics covered in Chapter 1 include types of values,
+              operators, string concatenation, unary/binary/ternary operator,
+              comparison, logic.
+              <a href="https://eloquentjavascript.net/01_values.html" target="_blank"
+                class="text-decoration-none text-info">Check here</a>
+              for more info.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

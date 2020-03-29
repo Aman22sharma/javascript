@@ -1,0 +1,18 @@
+$body-color: #000;
+
+body {
+  color: $body-color;
+}
+
+.loading--parent,
+.container {
+  min-height: 100vh;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}

@@ -1,0 +1,28 @@
+.add-reporter fieldset {
+  display: none;
+}
+
+.img-reporter {
+  max-height: 15rem;
+}
+
+.btn-delete {
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.position-sticky {
+  top: 1rem;
+}
+
+.card-header {
+  flex: 1;
+}
+
+.card-body {
+  flex: 0;
+}
+
+.card-footer {
+  flex: 0;
+}

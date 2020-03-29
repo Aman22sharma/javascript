@@ -1,0 +1,99 @@
+.main {
+  margin: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  transition: all .5s ease;
+  box-shadow: 0 0 .5rem .25rem rgba(0,0,0,0.25);
+}
+
+.card:hover,
+.card:active,
+.card:focus {
+  box-shadow: 0 0 .75rem .5rem rgba(0,0,0,0.5);
+}
+
+.card__header {
+  flex: 1;
+}
+
+.card__content {
+  flex: 1;
+  margin: 0 -1.25rem;
+}
+
+.card__title {
+  margin: 0 0 1rem;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.card__thumb {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.card__link {
+  border: 0;
+  display: block;
+  padding: 1.25rem;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--black);
+  transition: all .6s ease;
+  background: var(--secondary);
+}
+
+.card__link:hover,
+.card__link:active,
+.card__link:focus {
+  background: var(--secondary-dark);
+}
+
+.more {
+  justify-self: center;
+  margin: 0 0 1.25rem;
+  padding: 1.25rem 2rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: none;
+  appearance: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background: var(--secondary);
+}
+
+.more:hover,
+.more:focus,
+.more:active {
+  cursor: pointer;
+  background: var(--secondary-dark);
+}
+
+@media screen and (min-width: 480px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

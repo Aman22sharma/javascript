@@ -1,0 +1,112 @@
+$bb: #155190;
+$ct: #146b3a;
+$d: #670000;
+$ew: #0892d0;
+$g: #32334f;
+$gb: #168d44;
+$hhw: #ffa500;
+$mi: #7b9095;
+$na: #f00;
+$o: #8b5a2b;
+$yw: #ff7518;
+$white: #fff;
+
+.box {
+  &__title,
+  &__keywords,
+  &__category {
+    text-transform: capitalize;
+  }
+
+  &--bb {
+    color: $bb;
+  }
+
+  &--ct {
+    color: $ct;
+  }
+
+  &--d {
+    color: $d;
+  }
+
+  &--ew {
+    color: $ew;
+  }
+
+  &--g {
+    color: $g;
+  }
+
+  &--gb {
+    color: $gb;
+  }
+
+  &--hhw {
+    color: $hhw;
+  }
+
+  &--mi {
+    color: $mi;
+  }
+
+  &--na {
+    color: $na;
+  }
+
+  &--o {
+    color: $o;
+  }
+
+  &--yw {
+    color: $yw;
+  }
+}
+
+.list-group-item {
+  color: $white;
+
+  &--bb {
+    background: $bb;
+  }
+
+  &--ct {
+    background: $ct;
+  }
+
+  &--d {
+    background: $d;
+  }
+
+  &--ew {
+    background: $ew;
+  }
+
+  &--g {
+    background: $g;
+  }
+
+  &--gb {
+    background: $gb;
+  }
+
+  &--hhw {
+    background: $hhw;
+  }
+
+  &--mi {
+    background: $mi;
+  }
+
+  &--na {
+    background: $na;
+  }
+
+  &--o {
+    background: $o;
+  }
+
+  &--yw {
+    background: $yw;
+  }
+}

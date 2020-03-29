@@ -1,0 +1,12 @@
+{
+  "name": "javascript20",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "browser-sync start --server --files '*.css, *.html, *.js'"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Structure Examples</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/2626/2626061.svg" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="container my-3">
+      <div class="row">
+        <div class="col col-12">
+          <a id="t" href="#t" tabindex="-1" role="presentation" class="text-decoration-none">
+            <h2 class="mb-0">Looping a Triangle</h2>
+          </a>
+          <hr />
+          <div class="form-group">
+            <label for="input-symbol" class="label">Enter a symbol:</label>
+            <input id="input-symbol" class="form-control" type="text" placeholder="Enter a symbol" />
+          </div>
+          <hr />
+          <div class="form-group">
+            <button id="btn-symbol" class="btn btn-primary">
+              Make Triangle
+            </button>
+          </div>
+          <h1 class="m-0 p-3 jumbotron" id="symbol"></h1>
+          <hr>
+          <a id="f" href="#f" tabindex="-1" role="presentation" class="text-decoration-none">
+            <h2 class="mb-0">Fizzbuzz</h2>
+          </a>
+          <hr>
+          <h1 class="m-0 p-3 jumbotron" id="fizzbuzz"></h1>
+          <hr>
+          <a id="c" href="#c" tabindex="-1" role="presentation" class="text-decoration-none">
+            <h2 class="mb-0">ChessBoard</h2>
+          </a>
+          <hr />
+          <div class="form-group">
+            <label for="input-grid" class="label">Enter a grid size between 2 and 100:</label>
+            <input id="input-grid" class="form-control" type="number" min="2" max="100" required
+              placeholder="Enter a grid size" />
+          </div>
+          <hr />
+          <div class="form-group">
+            <button id="btn-grid" class="btn btn-primary">
+              Make Grid
+            </button>
+          </div>
+          <h1 class="overflow-auto m-0 p-3 jumbotron" id="grid"></h1>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12">
+            <p class="m-0 text-white py-3">
+              Other topics covered in Chapter 2 include bindings, functions, control flow, conditional execution,
+              comments etc.
+              <a href="https://eloquentjavascript.net/02_program_structure.html" target="_blank"
+                class="text-decoration-none text-info">Check here</>
+                for more info.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+:root {
+  --color-primary: #db2727;
+  --color-primary-dark: #c12222;
+  --color-primary-darkest: #a81e1e;
+  --color-white: #fff;
+  --color-black: #000;
+  --line-one: #ffc41e;
+  --line-two: #2b720a;
+  --line-three: #0a6797;
+  --line-four: #8b1962;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+* {
+  transition: all .25s ease;
+}
+
+.line-one {
+  color: var(--color-black);
+  background: var(--line-one);
+}
+
+.line-two {
+  color: var(--color-white);
+  background: var(--line-two);
+}
+
+.line-three {
+  color: var(--color-white);
+  background: var(--line-three);
+}
+
+.line-four {
+  color: var(--color-white);
+  background: var(--line-four);
+}
+
+.line-multiple {
+  color: var(--color-white);
+  background: var(--color-black);
+}

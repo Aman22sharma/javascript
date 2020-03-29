@@ -1,0 +1,96 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext,vietnamese");
+
+@import url("https://fonts.googleapis.com/css?family=Jaldi:400,700&display=swap&subset=devanagari,latin-ext");
+
+@import url("https://fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800&display=swap&subset=gurmukhi,latin-ext");
+
+@import url('https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap&subset=latin-ext');
+
+$fontStack: "Nunito", "Arial", sans-serif;
+$fontStackEN: "Heebo", "Arial", sans-serif;
+$fontStackPB: "Mukta Mahee", "Arial", sans-serif;
+$fontStackHI: "Jaldi", "Arial", sans-serif;
+$fontStackSP: "Courgette", "Arial", sans-serif;
+$orange: #d6710e;
+
+#root {
+  font-family: $fontStack !important;
+  background: $orange;
+  padding-top: 6.125rem;
+}
+
+.english {
+  font-family: $fontStackEN !important;
+}
+
+.spanish {
+  font-family: $fontStackSP !important;
+}
+
+.punjabi {
+  font-family: $fontStackPB !important;
+}
+
+.hindi {
+  font-family: $fontStackHI !important;
+}
+
+.loading {
+  min-height: calc(100vh - 11rem);
+}
+
+.fixed-top {
+  background: $orange;
+}
+
+header {
+  section {
+    &:first-child {
+      background: darken($orange, 5%);
+    }
+
+    &:last-child {
+      background: darken($orange, 10%);
+    }
+  }
+}
+
+main {
+  section {
+    &:first-child {
+      background: darken($orange, 15%);
+    }
+
+    &:first-child + section {
+      background: darken($orange, 20%);
+    }
+
+    &:first-child + section + section {
+      background: darken($orange, 25%);
+    }
+
+    &:last-child {
+      background: darken($orange, 30%);
+    }
+  }
+}
+
+input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

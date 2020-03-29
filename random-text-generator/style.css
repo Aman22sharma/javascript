@@ -1,0 +1,63 @@
+:root {
+  --font-primary: 'Ubuntu', sans-serif;
+  --color-primary: #afbbf2;
+  --color-primary-dark: #96a2d9;
+  --color-secondary: #292e1e;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  background: var(--color-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__thumbnail {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  height: auto;
+  border-radius: 0.3rem;
+  border: 0.3rem solid var(--color-primary-dark);
+}
+
+.card__button {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  -webkit-appearance: button;
+  padding: 1rem 1.75rem;
+  background: var(--color-primary-dark);
+}
+
+.card__button .fa-copy {
+  padding: 0 0.5rem 0 0;
+}

@@ -1,0 +1,68 @@
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+
+* {
+  box-sizing: border-box;
+
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input {
+  font-weight: 100;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.artist-list {
+  line-height: 100%;
+
+  .list-group-item {
+    padding: .3rem 1.5rem;
+
+    &:first-child {
+      border-top: none;
+      border-radius: 0;
+    }
+
+    img {
+      width: 70px;
+    }
+
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.view-cart {
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+}
+
+.meal-img {
+  max-height: 200px;
+  object-fit: cover;
+}

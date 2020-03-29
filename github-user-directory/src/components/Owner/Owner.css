@@ -1,0 +1,36 @@
+.card {
+	color: var(--color-primary-dark) !important;
+	background: var(--color-primary-light) !important;
+	border-color: var(--color-primary-medium) !important;
+}
+
+.card:hover {
+	box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
+}
+
+.thumb {
+	overflow: hidden;
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+.thumb .card-title {
+	text-transform: capitalize;
+}
+
+.card-img-top {
+  max-width: 120px;
+	border-radius: 0;
+	object-fit: cover;
+}
+
+.card:hover .card-img-top {
+	transform: scale(1.1);
+}
+
+.table thead tr th,
+.table thead tr td,
+.table tbody tr th,
+.table tbody tr td {
+	vertical-align: middle;
+}

@@ -1,0 +1,113 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(12vh, 1fr) auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  padding: 1.25rem;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+
+  color: white;
+  background: red;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    align-items: center;
+  }
+}
+
+.header-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-group * {
+  margin-bottom: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header-group {
+    flex-direction: row;
+  }
+  .header-group * {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  line-height: 1;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.item {
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.item:first-of-type {
+  padding-top: 2.5rem;
+}
+
+.item:last-of-type {
+  padding-bottom: 2.5rem;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.words {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.surname {
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.icon {
+  font-size: 4rem;
+}
