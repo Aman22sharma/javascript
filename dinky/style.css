@@ -1,7 +1,5 @@
-$body-color: #000;
-
 body {
-  color: $body-color;
+  color: #000;
 }
 
 .loading--parent,

@@ -3,36 +3,36 @@
 ## Vanilla
 
 - Project 1: Angular: *Download repository locally*
-- Project 2: Basic Fetch API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/basic-fetch-api).
-- Project 3: Calculator: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/calculator).
-- Project 4: CWC19 Team Directory: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/cwc19-team-directory).
-- Project 5: Dinky: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/dinky).
-- Project 6: YouTube Channel API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/jaanmahal-vlogs).
-- Project 7: News Fetch API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/news-fetch-api).
-- Project 8: Random Text Generator!: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/random-text-generator).
-- Project 9: Blog: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/satrangi).
-- Project 10: Radio Stations: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/toronto-stations).
-- Project 11: Check Unicode of a String: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/check-unicode).
-- Project 12: Program Structure: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/program-structure).
-- Project 13: Functions: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/functions).
-- Project 14: Cat Me: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/cat-gallery).
-- Project 15: Toronto: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/toronto).
-- Project 16: Stars: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/stars).
-- Project 16: Daylight Saving Timezone: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/1).
-- Project 17: Happy Birthday Playlist Tracker: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/2).
-- Project 18: One Month Weather Tracker: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/3).
-- Project 19: News: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/4).
-- Project 20: Windows XP Screensaver: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/5).
-- Project 21: Basic Web Crawler: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/6).
-- Project 22: Checkout page: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/7).
-- Project 23: Editable Text page: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/8).
-- Project 24: Local Library page using Object Prototypes: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/9).
-- Project 25: Regular Expressions: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/10).
-- Project 26: Iterators in JS: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/11).
-- Project 27: Wall Clock: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/12).
-- Project 28: CoronaVirus Cases Tracker: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/13).
-- Project 29: Firebase Intro: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/14).
-- Project 30: Firebase Sign Up: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/15).
+- Project 2: Basic Fetch API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/basic-fetch-api)
+- Project 3: Calculator: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/calculator)
+- Project 4: CWC19 Team Directory: *Download repository locally*
+- Project 5: Dinky: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/dinky)
+- Project 6: YouTube Channel API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/jaanmahal-vlogs)
+- Project 7: News Fetch API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/news-fetch-api)
+- Project 8: Random Text Generator!: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/random-text-generator)
+- Project 9: Blog: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/satrangi)
+- Project 10: Radio Stations: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/toronto-stations)
+- Project 11: Check Unicode of a String: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/check-unicode)
+- Project 12: Program Structure: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/program-structure)
+- Project 13: Functions: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/functions)
+- Project 14: Cat Me: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/cat-gallery)
+- Project 15: Toronto: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/toronto)
+- Project 16: Stars: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/stars)
+- Project 16: Daylight Saving Timezone: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/1)
+- Project 17: Happy Birthday Playlist Tracker: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/2)
+- Project 18: One Month Weather Tracker: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/3)
+- Project 19: News: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/4)
+- Project 20: Windows XP Screensaver: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/5)
+- Project 21: Basic Web Crawler: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/6)
+- Project 22: Checkout page: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/7)
+- Project 23: Editable Text page: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/8)
+- Project 24: Local Library page using Object Prototypes: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/9)
+- Project 25: Regular Expressions: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/10)
+- Project 26: Iterators in JS: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/11)
+- Project 27: Wall Clock: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/12)
+- Project 28: CoronaVirus Cases Tracker: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/13)
+- Project 29: Firebase Intro: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/14)
+- Project 30: Firebase Sign Up: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/15)
 
 ## React
 
