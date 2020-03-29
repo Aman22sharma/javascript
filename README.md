@@ -2,7 +2,7 @@
 
 ## Vanilla
 
-- Project 1: Angular: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/angular).
+- Project 1: Angular: *Download repository locally*
 - Project 2: Basic Fetch API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/basic-fetch-api).
 - Project 3: Calculator: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/calculator).
 - Project 4: CWC19 Team Directory: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/cwc19-team-directory).

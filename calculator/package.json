@@ -1,56 +1,15 @@
 {
-  "name": "webpack-starter",
+  "name": "1",
   "version": "1.0.0",
-  "description": "A light foundation for your next frontend project based on webpack.",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack/webpack.config.prod.js  --colors",
-    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
-    "homepage": "https://tpkahlon.github.io/calculator",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "test": "browser-sync start --server --files '*.css, *.html, *.js'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wbkd/webpack-starter.git"
-  },
-  "keywords": [
-    "webpack",
-    "startkit",
-    "frontend",
-    "es6",
-    "javascript",
-    "webdev"
-  ],
-  "author": "webkid.io",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wbkd/webpack-starter/issues"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
-    "babel-loader": "^8.0.6",
-    "clean-webpack-plugin": "^2.0.2",
-    "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.4.2",
-    "eslint": "^5.16.0",
-    "eslint-loader": "^2.2.1",
-    "file-loader": "^4.3.0",
-    "html-webpack-plugin": "^4.0.0-beta.11",
-    "mini-css-extract-plugin": "^0.8.2",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^7.3.1",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
-  },
-  "dependencies": {
-    "@babel/polyfill": "^7.8.3",
-    "core-js": "^3.6.4",
-    "gh-pages": "^2.2.0"
+    "browser-sync": "^2.26.7"
   }
 }
