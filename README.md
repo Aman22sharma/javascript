@@ -11,7 +11,7 @@
 - Project 7: News Fetch API: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/news-fetch-api)
 - Project 8: Random Text Generator!: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/random-text-generator)
 - Project 9: Blog: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://quirky-benz-c762ef.netlify.com/)
-- Project 10: Radio Stations: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://goofy-heisenberg-6c54ca.netlify.com/)
+- Project 10: Radio Stations: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/radio-app)
 - Project 11: Check Unicode of a String: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/check-unicode)
 - Project 12: Program Structure: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/program-structure)
 - Project 13: Functions: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/functions)
