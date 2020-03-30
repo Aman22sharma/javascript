@@ -317,6 +317,8 @@ button.name:focus {
 }
 
 .modal-body > div {
+  height: 100%;
+  min-height: 8rem;
   max-height: 8rem;
   overflow: auto;
   margin: 4.5rem 0 0;
@@ -348,7 +350,6 @@ button.name:focus {
     max-height: 100%;
     overflow: hidden;
   }
-
 }
 @media screen and (min-width: 70rem) {
   .modal {
