@@ -18,45 +18,67 @@ document.getElementById("form").addEventListener("submit", e => {
   const inputValue = e.target[0].value;
   makeCall(inputValue)
     .then(status => {
-      if (!inputValue && inputValue.trim() === "") {
-        let el = document.querySelector(".modal");
-        el.querySelector("h4").textContent = `Error!`;
-        el.querySelector(
-          "p"
-        ).textContent = `Please verify all information before proceeding!`;
-        let instance = M.Modal.init(el);
-        instance.open();
-        return;
-      }
-      if (status === 200) {
-        const autoId = rootRef.push().key;
-        rootRef
-          .child(autoId)
-          .set({
-            message: inputValue
-          })
-          .then(() => {
-            let el = document.querySelector(".modal");
-            el.querySelector("h4").textContent = `Thank You!`;
-            el.querySelector(
-              "p"
-            ).textContent = `Your link has been successfully added!`;
-            let instance = M.Modal.init(el);
-            instance.open();
-            document.getElementById("form").reset();
-          })
-          .catch(error => console.log(error));
-      }
-      if (status !== 200) {
-        let el = document.querySelector(".modal");
-        el.querySelector("h4").textContent = `Error!`;
-        el.querySelector(
-          "p"
-        ).textContent = `Please verify all information before proceeding!`;
-        let instance = M.Modal.init(el);
-        instance.open();
-        return;
-      }
+      rootRef.on("value", snapshot => {
+        if (snapshot.val() == null) {
+          app.innerHTML = `<a href='#' class='collection-item none'>No links available yet.</a>`;
+        } else {
+          let isRepeated = _.map(snapshot.val(), (value, key) => {
+            if (_.includes(value, inputValue)) {
+              let el = document.querySelector(".modal");
+              el.querySelector("h4").textContent = `Sorry!`;
+              el.querySelector(
+                "p"
+              ).textContent = `Interesting, Someone already posted this link!`;
+              let instance = M.Modal.init(el);
+              instance.open();
+              return key;
+            } else {
+              return;
+            }
+          }).filter(el => el != null);
+          if (isRepeated.length === 0) {
+            if (!inputValue && inputValue.trim() === "") {
+              let el = document.querySelector(".modal");
+              el.querySelector("h4").textContent = `Error!`;
+              el.querySelector(
+                "p"
+              ).textContent = `Please verify all information before proceeding!`;
+              let instance = M.Modal.init(el);
+              instance.open();
+              return;
+            }
+            if (status === 200) {
+              const autoId = rootRef.push().key;
+              rootRef
+                .child(autoId)
+                .set({
+                  message: inputValue
+                })
+                .then(() => {
+                  let el = document.querySelector(".modal");
+                  el.querySelector("h4").textContent = `Thank You!`;
+                  el.querySelector(
+                    "p"
+                  ).textContent = `Your link has been successfully added!`;
+                  let instance = M.Modal.init(el);
+                  instance.open();
+                  document.getElementById("form").reset();
+                })
+                .catch(error => console.log(error));
+            }
+            if (status !== 200) {
+              let el = document.querySelector(".modal");
+              el.querySelector("h4").textContent = `Error!`;
+              el.querySelector(
+                "p"
+              ).textContent = `Please verify all information before proceeding!`;
+              let instance = M.Modal.init(el);
+              instance.open();
+              return;
+            }
+          }
+        }
+      });
     })
     .catch(err => {
       console.log(err);
