@@ -31,8 +31,8 @@
 - Project 26: Iterators in JS: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/24)
 - Project 27: Wall Clock: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/25)
 - Project 28: CoronaVirus Cases Tracker: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/29)
-- Project 29: Firebase Intro: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/26)
-- Project 30: Firebase Sign Up: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/27A)
+- Project 29: Dark Internet: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/26)
+- Project 30: Humans: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/27A)
 - Project 31: Alarm: [View Source](https://github.com/tpkahlon/javascript) | [View Demo](https://tpkahlon.github.io/javascript/23)
 
 ## React
