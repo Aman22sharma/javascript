@@ -44,7 +44,11 @@ document.getElementById("form").addEventListener("submit", e => {
               el.querySelector(
                 "p"
               ).textContent = `Interesting, Someone already posted this link!`;
-              let instance = M.Modal.init(el);
+              let instance = M.Modal.init(el, {
+                onCloseEnd: () => {
+                  document.querySelector("body").style.overflow = "auto";
+                }
+              });
               instance.open();
               return key;
             } else {
@@ -58,7 +62,11 @@ document.getElementById("form").addEventListener("submit", e => {
               el.querySelector(
                 "p"
               ).textContent = `Please verify all information before proceeding!`;
-              let instance = M.Modal.init(el);
+              let instance = M.Modal.init(el, {
+                onCloseEnd: () => {
+                  document.querySelector("body").style.overflow = "auto";
+                }
+              });
               instance.open();
               return;
             }
@@ -91,7 +99,11 @@ document.getElementById("form").addEventListener("submit", e => {
               el.querySelector(
                 "p"
               ).textContent = `Please verify all information before proceeding!`;
-              let instance = M.Modal.init(el);
+              let instance = M.Modal.init(el, {
+                onCloseEnd: () => {
+                  document.querySelector("body").style.overflow = "auto";
+                }
+              });
               instance.open();
               return;
             }
