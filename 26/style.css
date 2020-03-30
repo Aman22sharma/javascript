@@ -1,29 +1,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-:root {
-  --white: #eee;
-  --black: #100e17;
-  --black-light: #3f3e45;
-}
-
-* {
-  transition: all 1s ease;
-}
-
-html {
-  font-size: 16px;
-}
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 
 body {
-  color: var(--white);
-  background: var(--black);
-  font-size: 1rem;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
+html .card {
+  margin-top: 2rem;
+}
+
+html button {
+  margin-top: 1rem;
+}
