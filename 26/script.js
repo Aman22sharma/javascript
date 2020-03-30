@@ -70,14 +70,18 @@ document.getElementById("form").addEventListener("submit", e => {
                   message: inputValue
                 })
                 .then(() => {
+                  document.getElementById("form").reset();
                   let el = document.querySelector(".modal");
                   el.querySelector("h4").textContent = `Thank You!`;
                   el.querySelector(
                     "p"
                   ).textContent = `Your link has been successfully added!`;
-                  let instance = M.Modal.init(el);
+                  let instance = M.Modal.init(el, {
+                    onCloseEnd: () => {
+                      document.querySelector("body").style.overflow = "auto";
+                    }
+                  });
                   instance.open();
-                  document.getElementById("form").reset();
                 })
                 .catch(error => console.log(error));
             }
@@ -108,7 +112,7 @@ const handleData = data => {
           app.innerHTML = `<a href='#' class='collection-item none'>No links available yet.</a>`;
         } else {
           data.forEach(i => {
-            const check = _.filter(sites, (value) => {
+            const check = _.filter(sites, value => {
               return getHostname(i.val()).includes(value.parent_domain);
             });
             if (check.length === 0) {
@@ -135,19 +139,19 @@ const handleData = data => {
               explicit.appendChild(link);
             }
           });
-          document.querySelector('.none').style.display = `none`;
+          document.querySelector(".none").style.display = `none`;
         }
       });
     })
     .catch(err => console.log(err));
 };
 
-rootRef.on("child_added", (data) => {
+rootRef.on("child_added", data => {
   app.innerHTML = ``;
   explicit.innerHTML = ``;
   handleData(data);
 });
-rootRef.on("child_changed", (data) => {
+rootRef.on("child_changed", data => {
   app.innerHTML = ``;
   explicit.innerHTML = ``;
   handleData(data);
