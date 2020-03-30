@@ -350,7 +350,7 @@ const handleEmojis = () => {
     const handleClick = (currentButton, selectedCountry) => {
       if (currentButton.classList.contains("dove")) {
         let html = ``;
-        html += `<button id="addMessage" class="confirmed">Send your Message</button><h1>Messages:</h1>`;
+        html += `<button id="addMessage" class="confirmed">Send your Message</button><div><h1>Messages:</h1>`;
         let getMessages = firebase.database().ref(`${newPostKey}/messages`);
         getMessages.on("value", snap => {
           snap.val() === null ||
@@ -359,6 +359,7 @@ const handleEmojis = () => {
             ? (html += "<p>No messages available.</p>")
             : snap.val().map(i => (html += `<p>${i}</p>`));
         });
+        html += `</div>`;
         modal.style.display = "block";
         modal.querySelector(".modal-body").innerHTML = html;
         modal.querySelector("button").addEventListener("click", e => {

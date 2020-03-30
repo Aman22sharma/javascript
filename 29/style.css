@@ -296,14 +296,14 @@ button.name:focus {
   color: #333;
   background-color: #fefefe;
   margin: 15% auto;
-  padding: 20px;
+  padding: 1rem;
   border: 1px solid #888;
   width: 80%;
   position: relative;
 }
 
 .modal-body h1 {
-  margin: 1rem 0;
+  margin: 0 0 1rem;
   padding: 0;
   font-size: 1.25rem;
 }
@@ -316,22 +316,40 @@ button.name:focus {
   margin-bottom: 0;
 }
 
-.close {
+.modal-body > div {
+  max-height: 8rem;
+  overflow: auto;
+  margin: 4.5rem 0 0;
+}
+
+.modal-body button {
   position: absolute;
-  top: .75rem;
-  right: 1rem;
+  top: 1rem;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: .2rem;
+  right: .5rem;
   color: #aaa;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.modal-content .close:hover,
+.modal-content .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
+@media screen and (min-width: 60rem) {
+  .modal-body > div {
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+}
 @media screen and (min-width: 70rem) {
   .modal {
     top: 0;
