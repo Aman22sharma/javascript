@@ -114,14 +114,14 @@ const handleData = data => {
             });
             if (check.length === 0) {
               let link = document.createElement("a");
-              link.classList.add("collection-item");
+              link.classList.add("collection-item", "light-blue-text", "text-darken-4");
               link.textContent = `${i.val()}`;
               link.setAttribute("href", `${i.val()}`);
               link.setAttribute("target", `_blank`);
               app.appendChild(link);
             } else {
               let link = document.createElement("a");
-              link.classList.add("collection-item");
+              link.classList.add("collection-item", "red-text", "text-accent-4");
               link.textContent = `${i.val()}`;
               link.setAttribute("href", `${i.val()}`);
               link.setAttribute("target", `_blank`);

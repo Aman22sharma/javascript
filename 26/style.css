@@ -9,10 +9,18 @@ html .card {
   margin-top: 2rem;
 }
 
+html .card-title {
+  margin-top: 0;
+}
+
 html button {
   margin-top: 1rem;
 }
 
 html .collapsible-body {
   padding: 0;
+}
+
+input::placeholder {
+  color: #263238;
 }

@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dark Internet</title>
-  <link rel="stylesheet" href="./style.css" />
   <link rel="icon" href="https://image.flaticon.com/icons/svg/541/541509.svg" type="image/svg" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
@@ -17,7 +17,7 @@
       <div class="col s12">
         <div class="card hoverable">
           <div class="card-content">
-            <span class="card-title">Dark Internet</span>
+            <h1 class="card-title">Dark Internet</h1>
             <p>Share any mysterious links you know!</p>
           </div>
         </div>
@@ -29,7 +29,7 @@
         <label for="url">Enter a URL</label>
       </div>
       <div class="col s12">
-        <button class="aves-effect waves-light btn-large pulse" type="submit" name="action">
+        <button class="aves-effect waves-light btn-large pulse light-blue darken-4" type="submit" name="action">
           Submit
         </button>
       </div>
@@ -43,8 +43,12 @@
       <div class="col s12">
         <ul class="collapsible">
           <li>
-            <div class="collapsible-header">Explicit Content</div>
-            <div class="collapsible-body"><div class="collection" id="explicit"></div></div>
+            <div class="collapsible-header red lighten-3 black-text">
+              Explicit Content
+            </div>
+            <div class="collapsible-body">
+              <div class="collection" id="explicit"></div>
+            </div>
           </li>
         </ul>
       </div>
