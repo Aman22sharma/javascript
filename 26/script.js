@@ -18,6 +18,16 @@ document.getElementById("form").addEventListener("submit", e => {
   const inputValue = e.target[0].value;
   makeCall(inputValue)
     .then(status => {
+      if (!inputValue && inputValue.trim() === "") {
+        let el = document.querySelector(".modal");
+        el.querySelector("h4").textContent = `Error!`;
+        el.querySelector(
+          "p"
+        ).textContent = `Please verify all information before proceeding!`;
+        let instance = M.Modal.init(el);
+        instance.open();
+        return;
+      }
       if (status === 200) {
         const autoId = rootRef.push().key;
         rootRef
@@ -45,7 +55,6 @@ document.getElementById("form").addEventListener("submit", e => {
         ).textContent = `Please verify all information before proceeding!`;
         let instance = M.Modal.init(el);
         instance.open();
-        return;
         return;
       }
     })
