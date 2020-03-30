@@ -332,7 +332,7 @@ button.name:focus {
   cursor: pointer;
 }
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 70rem) {
   .modal {
     top: 0;
   }
