@@ -72,6 +72,7 @@ main {
   right: 0;
   padding: 1rem;
   background: var(--water);
+  z-index: 2;
 }
 
 .total {
