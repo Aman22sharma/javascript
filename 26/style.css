@@ -12,3 +12,7 @@ html .card {
 html button {
   margin-top: 1rem;
 }
+
+html .collapsible-body {
+  padding: 0;
+}
