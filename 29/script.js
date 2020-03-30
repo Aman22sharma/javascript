@@ -3,6 +3,17 @@ const URL = `https://pomber.github.io/covid19/timeseries.json`;
 const TOTAL_STAT = `https://corona.lmao.ninja/all`;
 let data;
 
+let modal = document.getElementById("myModal");
+let span = document.getElementsByClassName("close")[0];
+span.onclick = () => {
+  modal.style.display = "none";
+};
+window.onclick = event => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
 const handleForm = () => {
   const form = document.createElement("buttons");
   const confirmedButton = document.createElement("button");
@@ -163,6 +174,17 @@ const handleEmojis = () => {
     let countRef = firebase.database().ref(newPostKey);
     let box = document.createElement("div");
     box.classList.add("emojis");
+    // DOVE
+    let doveBox = document.createElement("div");
+    let doveButton = document.createElement("a");
+    let doveCounter = document.createElement("p");
+    doveBox.classList.add("dove");
+    doveButton.classList.add("dove__button");
+    doveCounter.classList.add("dove__count");
+    doveButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/1530/1530844.svg" alt="Dove">`;
+    doveButton.setAttribute("href", "#");
+    doveBox.appendChild(doveButton);
+    doveBox.appendChild(doveCounter);
     // CRY
     let cryingBox = document.createElement("div");
     let cryingButton = document.createElement("a");
@@ -224,6 +246,7 @@ const handleEmojis = () => {
     box.appendChild(sickBox);
     box.appendChild(ninjaBox);
     box.appendChild(boredBox);
+    box.appendChild(doveBox);
     place.appendChild(box);
     place.querySelectorAll(".emojis a").forEach(item => {
       item.addEventListener("click", e => {
@@ -236,6 +259,9 @@ const handleEmojis = () => {
       });
     });
     countRef.on("child_added", data => {
+      if (data.key === "messages") {
+        doveCounter.textContent = data.val().length;
+      }
       if (data.key === "crying") {
         cryingCounter.textContent = data.val();
       }
@@ -253,6 +279,9 @@ const handleEmojis = () => {
       }
     });
     countRef.on("child_changed", data => {
+      if (data.key === "messages") {
+        doveCounter.textContent = data.val().length;
+      }
       if (data.key === "crying") {
         cryingCounter.textContent = data.val();
       }
@@ -274,7 +303,12 @@ const handleEmojis = () => {
       .then(snapshot => {
         originalCounter = snapshot.val()
           ? snapshot.val()
-          : { crying: 0, angry: 0, sick: 0, ninja: 0, bored: 0 };
+          : { messages: [], crying: 0, angry: 0, sick: 0, ninja: 0, bored: 0 };
+        doveCounter.textContent =
+          originalCounter.messages === undefined ||
+          originalCounter.messages.length === 0
+            ? 0
+            : originalCounter.messages.length;
         cryingCounter.textContent = originalCounter.crying;
         angryCounter.textContent = originalCounter.angry;
         sickCounter.textContent = originalCounter.sick;
@@ -282,8 +316,51 @@ const handleEmojis = () => {
         boredCounter.textContent = originalCounter.bored;
       })
       .catch(err => alert(err.message));
+    const handleAddMessageClick = selectedCountry => {
+      const message = prompt("Send your message!");
+      if (!message || message.trim() === "") {
+        alert("Please add a valid message.");
+        return;
+      }
+      let getMessages = firebase.database().ref(`${newPostKey}/messages`);
+      getMessages.on("value", snap => {
+        const originalMessages = snap.val() === undefined ? [] : snap.val();
+        postData = {
+          ...originalCounter,
+          messages: originalMessages.concat(message)
+        };
+      });
+      firebase
+        .database()
+        .ref(selectedCountry)
+        .set(postData, error => {
+          if (error) {
+            alert(error.message);
+          }
+        });
+      modal.style.display = "none";
+    };
     const handleClick = (currentButton, selectedCountry) => {
       let postData;
+      if (currentButton.classList.contains("dove")) {
+        let html = ``;
+        html += `<button id="addMessage" class="confirmed">Send your Message</button><h1>Messages:</h1>`;
+        let getMessages = firebase.database().ref(`${newPostKey}/messages`);
+        getMessages.on("value", snap => {
+          snap.val() === null ||
+          snap.val() === undefined ||
+          snap.val().length === 0
+            ? (html += "<p>No messages available.</p>")
+            : snap.val().map(i => (html += `<p>${i}</p>`));
+        });
+        modal.style.display = "block";
+        modal.querySelector(".modal-body").innerHTML = html;
+        modal.querySelector("button").addEventListener("click", e => {
+          e.preventDefault();
+          handleAddMessageClick(selectedCountry);
+        });
+        return;
+      }
       if (currentButton.classList.contains("crying")) {
         postData = {
           ...originalCounter,
