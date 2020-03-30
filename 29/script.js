@@ -180,6 +180,7 @@ const handleEmojis = () => {
     let doveCounter = document.createElement("p");
     doveBox.classList.add("dove");
     doveButton.classList.add("dove__button");
+    doveButton.setAttribute("title", "Send a Message");
     doveCounter.classList.add("dove__count");
     doveButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/1530/1530844.svg" alt="Dove">`;
     doveButton.setAttribute("href", "#");
@@ -191,6 +192,7 @@ const handleEmojis = () => {
     let cryingCounter = document.createElement("p");
     cryingBox.classList.add("crying");
     cryingButton.classList.add("happy__button");
+    cryingButton.setAttribute("title", "Crying Reaction");
     cryingCounter.classList.add("happy__count");
     cryingButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187150.svg" alt="Crying">`;
     cryingButton.setAttribute("href", "#");
@@ -202,6 +204,7 @@ const handleEmojis = () => {
     let angryCounter = document.createElement("p");
     angryBox.classList.add("angry");
     angryButton.classList.add("angry__button");
+    angryButton.setAttribute("title", "Angry Reaction");
     angryCounter.classList.add("angry__count");
     angryButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187140.svg" alt="Angry">`;
     angryButton.setAttribute("href", "#");
@@ -213,6 +216,7 @@ const handleEmojis = () => {
     let sickCounter = document.createElement("p");
     sickBox.classList.add("sick");
     sickButton.classList.add("sick__button");
+    sickButton.setAttribute("title", "Sick Reaction");
     sickCounter.classList.add("sick__count");
     sickButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187165.svg" alt="Sick">`;
     sickButton.setAttribute("href", "#");
@@ -224,6 +228,7 @@ const handleEmojis = () => {
     let ninjaCounter = document.createElement("p");
     ninjaBox.classList.add("ninja");
     ninjaButton.classList.add("ninja__button");
+    ninjaButton.setAttribute("title", "Keeping Safe Reaction");
     ninjaCounter.classList.add("ninja__count");
     ninjaButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187164.svg" alt="Ninja">`;
     ninjaButton.setAttribute("href", "#");
@@ -235,6 +240,7 @@ const handleEmojis = () => {
     let boredCounter = document.createElement("p");
     boredBox.classList.add("bored");
     boredButton.classList.add("bored__button");
+    boredButton.setAttribute("title", "Bored Reaction");
     boredCounter.classList.add("bored__count");
     boredButton.innerHTML = `<img src="https://image.flaticon.com/icons/svg/187/187157.svg" alt="Bored">`;
     boredButton.setAttribute("href", "#");
