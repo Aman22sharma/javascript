@@ -323,6 +323,7 @@ const handleEmojis = () => {
       })
       .catch(err => alert(err.message));
     const handleAddMessageClick = selectedCountry => {
+      let postData;
       const message = prompt("Send your message!");
       if (!message || message.trim() === "") {
         alert("Please add a valid message.");
@@ -330,7 +331,7 @@ const handleEmojis = () => {
       }
       let getMessages = firebase.database().ref(`${newPostKey}/messages`);
       getMessages.on("value", snap => {
-        const originalMessages = snap.val() === undefined ? [] : snap.val();
+        const originalMessages = snap.val() === null || snap.val() === undefined ? [] : snap.val();
         postData = {
           ...originalCounter,
           messages: originalMessages.concat(message)
@@ -347,7 +348,6 @@ const handleEmojis = () => {
       modal.style.display = "none";
     };
     const handleClick = (currentButton, selectedCountry) => {
-      let postData;
       if (currentButton.classList.contains("dove")) {
         let html = ``;
         html += `<button id="addMessage" class="confirmed">Send your Message</button><h1>Messages:</h1>`;
