@@ -107,51 +107,45 @@ document.getElementById("form").addEventListener("submit", e => {
 const handleData = data => {
   fetchCall("./data.json")
     .then(sites => {
-      rootRef.on("value", snapshot => {
-        if (snapshot.val() == null) {
-          app.innerHTML = `<a href='#' class='collection-item none'>No links available yet.</a>`;
-        } else {
-          data.forEach(i => {
-            const check = _.filter(sites, value => {
-              return getHostname(i.val()).includes(value.parent_domain);
-            });
-            if (check.length === 0) {
-              let link = document.createElement("a");
-              link.classList.add(
-                "collection-item",
-                "light-blue-text",
-                "text-darken-4"
-              );
-              link.textContent = `${i.val()}`;
-              link.setAttribute("href", `${i.val()}`);
-              link.setAttribute("target", `_blank`);
-              app.appendChild(link);
-            } else {
-              let link = document.createElement("a");
-              link.classList.add(
-                "collection-item",
-                "red-text",
-                "text-accent-4"
-              );
-              link.textContent = `${i.val()}`;
-              link.setAttribute("href", `${i.val()}`);
-              link.setAttribute("target", `_blank`);
-              explicit.appendChild(link);
-            }
+      if (data.val() == null) {
+        app.innerHTML = `<a href='#' class='collection-item none'>No links available yet.</a>`;
+      } else {
+        const sortedList = _.sortBy(data.val(), i => i.message);
+        sortedList.forEach(i => {
+          const check = _.filter(sites, value => {
+            return getHostname(i.message).includes(value.parent_domain);
           });
-          document.querySelector(".none").style.display = `none`;
-        }
-      });
+          if (check.length === 0) {
+            let link = document.createElement("a");
+            link.classList.add(
+              "collection-item",
+              "light-blue-text",
+              "text-darken-4"
+            );
+            link.textContent = `${i.message}`;
+            link.setAttribute("href", `${i.message}`);
+            link.setAttribute("target", `_blank`);
+            app.appendChild(link);
+          } else {
+            let link = document.createElement("a");
+            link.classList.add(
+              "collection-item",
+              "red-text",
+              "text-accent-4"
+            );
+            link.textContent = `${i.message}`;
+            link.setAttribute("href", `${i.message}`);
+            link.setAttribute("target", `_blank`);
+            explicit.appendChild(link);
+          }
+        });
+        document.querySelector(".none").style.display = `none`;
+      }
     })
     .catch(err => console.log(err));
 };
 
-rootRef.on("child_added", data => {
-  app.innerHTML = ``;
-  explicit.innerHTML = ``;
-  handleData(data);
-});
-rootRef.on("child_changed", data => {
+rootRef.on("value", data => {
   app.innerHTML = ``;
   explicit.innerHTML = ``;
   handleData(data);
