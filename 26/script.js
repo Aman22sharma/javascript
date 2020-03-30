@@ -5,7 +5,6 @@ const database = firebase.database();
 const rootRef = database.ref("/messages");
 
 const getHostname = url => {
-  // use URL constructor and return hostname
   return new URL(url).hostname;
 };
 
@@ -109,36 +108,52 @@ const handleData = data => {
           app.innerHTML = `<a href='#' class='collection-item none'>No links available yet.</a>`;
         } else {
           data.forEach(i => {
-            const check = _.filter(sites, (value, key) => {
+            const check = _.filter(sites, (value) => {
               return getHostname(i.val()).includes(value.parent_domain);
             });
             if (check.length === 0) {
               let link = document.createElement("a");
-              link.classList.add("collection-item", "light-blue-text", "text-darken-4");
+              link.classList.add(
+                "collection-item",
+                "light-blue-text",
+                "text-darken-4"
+              );
               link.textContent = `${i.val()}`;
               link.setAttribute("href", `${i.val()}`);
               link.setAttribute("target", `_blank`);
               app.appendChild(link);
             } else {
               let link = document.createElement("a");
-              link.classList.add("collection-item", "red-text", "text-accent-4");
+              link.classList.add(
+                "collection-item",
+                "red-text",
+                "text-accent-4"
+              );
               link.textContent = `${i.val()}`;
               link.setAttribute("href", `${i.val()}`);
               link.setAttribute("target", `_blank`);
               explicit.appendChild(link);
-              // return;
             }
           });
+          document.querySelector('.none').style.display = `none`;
         }
       });
     })
     .catch(err => console.log(err));
 };
 
-rootRef.on("child_added", handleData);
-rootRef.on("child_changed", handleData);
+rootRef.on("child_added", (data) => {
+  app.innerHTML = ``;
+  explicit.innerHTML = ``;
+  handleData(data);
+});
+rootRef.on("child_changed", (data) => {
+  app.innerHTML = ``;
+  explicit.innerHTML = ``;
+  handleData(data);
+});
 
-document.addEventListener('DOMContentLoaded', function() {
-  let elem = document.querySelectorAll('.collapsible');
+document.addEventListener("DOMContentLoaded", function() {
+  let elem = document.querySelectorAll(".collapsible");
   let instances = M.Collapsible.init(elem);
 });
