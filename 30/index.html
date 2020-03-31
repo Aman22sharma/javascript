@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AntiChat</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/742/742774.svg" type="image/svg" />
+</head>
+
+<body>
+  <h1>AntiChat</h1>
+  <div id="root"></div>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-database.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyBsTKadcNxCHGPyPgStaD6zQ0e_KE-8oQ0",
+      authDomain: "antichat-fa3c8.firebaseapp.com",
+      databaseURL: "https://antichat-fa3c8.firebaseio.com",
+      projectId: "antichat-fa3c8",
+      storageBucket: "antichat-fa3c8.appspot.com",
+      messagingSenderId: "970685732594",
+      appId: "1:970685732594:web:7e6d79f88d8fff5009e26b",
+      measurementId: "G-4W8Y42FZ8K"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
