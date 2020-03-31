@@ -81,7 +81,7 @@ const handleHead = data => {
   const headArea = document.createElement("header");
   let html = ``;
   for (let key in data) {
-    if (key === "updated") {
+    if (key === "updated" || key === "affectedCountries") {
       continue;
     }
     html += `
