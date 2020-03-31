@@ -1,22 +1,15 @@
 const app = document.getElementById("root");
 const db = firebase.database();
 
-const sendMessage = newMessage => {
-  let newId = db
-    .ref()
-    .child("rooms")
-    .push().key;
-  db.ref(`rooms/${newId}`).set(newMessage);
-};
+// VIEW
 
-const setupMessage = message => {
+const handleMessageView = message => {
+  let html = ``;
+  const messages = document.querySelector(".messages");
   if (!message) {
-    const messages = document.querySelector(".messages");
     messages.innerHTML = `Looks Empty! Please start a conversation in this room.`;
     return;
   }
-  const messages = document.querySelector(".messages");
-  let html = ``;
   for (let item in message) {
     const key = item;
     const value = message[item];
@@ -32,40 +25,62 @@ const setupMessage = message => {
   messages.innerHTML = html;
 };
 
-const getMessages = () => {
+const handleAppView = () => {
   let roomsRef = db.ref(`/rooms`);
   roomsRef.on("value", data => {
     if (data.val() === null) {
-      setupMessage();
+      handleMessageView();
       return;
     } else {
-      setupMessage(data.val());
+      handleMessageView(data.val());
     }
   });
 };
 
-const handleForm = () => {
-  const form = document.createElement("form");
-  form.classList.add("form");
-  const inputMessage = document.createElement("input");
-  inputMessage.classList.add("input");
-  inputMessage.setAttribute("placeholder", "Send a Message");
-  inputMessage.setAttribute("type", "text");
-  form.appendChild(inputMessage);
-  const buttonSubmit = document.createElement("button");
-  buttonSubmit.classList.add("button");
-  buttonSubmit.setAttribute("type", "submit");
-  buttonSubmit.textContent = `Send Message`;
-  const messages = document.createElement("div");
-  messages.classList.add("messages");
-  form.appendChild(inputMessage);
-  form.appendChild(buttonSubmit);
-  app.appendChild(messages);
-  app.appendChild(form);
-  form.addEventListener("submit", e => {
+const handleButtons = () => {
+  const header = document.querySelector("header");
+  const buttons = document.createElement("div");
+  buttons.classList.add("buttons");
+  let html = `
+    <button type="button" id="button-modal">Test</button>
+  `;
+  buttons.innerHTML = html;
+  header.appendChild(buttons);
+};
+
+const handleButtonsEvents = () => {
+  const buttonModal = document.querySelector("header");
+  buttonModal.addEventListener("click", e => {});
+};
+
+const handleButtonsView = () => {
+  handleButtons();
+  handleButtonsEvents();
+}
+
+const handleFormView = () => {
+  let html = `
+    <div class="messages"></div>
+    <form id="form" class="form">
+      <input type="text" placeholder="Send a Message" id="form__input">
+      <button type="submit" id="form__button">Send Message</button>
+    </form>
+  `;
+  app.innerHTML = html;
+  document.getElementById("form").addEventListener("submit", e => {
     e.preventDefault();
-    handleSubmit(e, inputMessage);
+    handleSubmit(e);
   });
+};
+
+// CONTROLLER
+
+const sendMessage = newMessage => {
+  let newId = db
+    .ref()
+    .child("rooms")
+    .push().key;
+  db.ref(`rooms/${newId}`).set(newMessage);
 };
 
 const handleSubmit = e => {
@@ -82,5 +97,8 @@ const handleSubmit = e => {
   sendMessage(newMessage);
 };
 
-handleForm();
-getMessages();
+// INIT
+
+handleButtonsView();
+handleFormView();
+handleAppView();
