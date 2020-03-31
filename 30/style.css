@@ -1,5 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/css/vex.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/css/vex-theme-os.min.css");
 
 :root {
   --primary: #7a58cb;
@@ -52,8 +54,9 @@ body {
 }
 
 header {
+  padding: 1rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   position: sticky;
   top: 0;
@@ -115,4 +118,11 @@ header h1 {
   color: var(--white);
   background: var(--primary);
   border-radius: 0.25rem;
+}
+
+@media screen and (min-width: 50rem) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

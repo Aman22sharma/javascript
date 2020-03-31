@@ -12,8 +12,14 @@
 <body>
   <header>
     <h1>AntiChat</h1>
+    <div class="buttons">
+      <button id="button-login" class="button">Login</button>
+      <button id="button-subscribe" class="button">Subscribe</button>
+      <button id="button-reset" class="button">Reset Password</button>
+    </div>
   </header>
   <div id="root"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-database.js"></script>
@@ -33,6 +39,8 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/js/vex.combined.min.js"></script>
+  <script>vex.defaultOptions.className = 'vex-theme-os'</script>
   <script src="./script.js"></script>
 </body>
 

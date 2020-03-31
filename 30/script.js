@@ -37,26 +37,90 @@ const handleAppView = () => {
   });
 };
 
-const handleButtons = () => {
-  const header = document.querySelector("header");
-  const buttons = document.createElement("div");
-  buttons.classList.add("buttons");
-  let html = `
-    <button type="button" id="button-modal">Test</button>
-  `;
-  buttons.innerHTML = html;
-  header.appendChild(buttons);
-};
-
 const handleButtonsEvents = () => {
-  const buttonModal = document.querySelector("header");
-  buttonModal.addEventListener("click", e => {});
+  const loginButton = document.getElementById("button-login");
+  const subscribeButton = document.getElementById("button-subscribe");
+  const resetButton = document.getElementById("button-reset");
+  loginButton.addEventListener("click", () => {
+    vex.dialog.open({
+      message:
+        "Welcome to AntiChat! Please enter your Email address you registered with us and given password for that account.",
+      input: [
+        '<input name="loginEmail" type="email" placeholder="Enter Email Address" required />',
+        '<input name="loginPassword" type="password" placeholder="Enter Password" required />'
+      ].join(""),
+      buttons: [
+        $.extend({}, vex.dialog.buttons.YES, { text: "Login" }),
+        $.extend({}, vex.dialog.buttons.NO, { text: "Cancel" })
+      ],
+      callback: data => {
+        if (!data) {
+          console.log("Cancelled");
+        } else {
+          console.log(
+            "Username",
+            data.loginEmail,
+            "Password",
+            data.loginPassword
+          );
+        }
+      }
+    });
+  });
+  subscribeButton.addEventListener("click", () => {
+    vex.dialog.open({
+      message:
+        "Would you like to join AntiChat community? We will help you with signing up at AntiChat.Please enter your desired Email address and  choose password of choice for that account.",
+      input: [
+        '<input name="subscribeEmail" type="email" placeholder="Enter Email Address" required />',
+        '<input name="subscribePassword" type="password" placeholder="Create Password" required />'
+      ].join(""),
+      buttons: [
+        $.extend({}, vex.dialog.buttons.YES, { text: "Subscribe" }),
+        $.extend({}, vex.dialog.buttons.NO, { text: "Cancel" })
+      ],
+      callback: data => {
+        if (!data) {
+          console.log("Cancelled");
+        } else {
+          console.log(
+            "Username",
+            data.subscribeEmail,
+            "Password",
+            data.subscribePassword
+          );
+        }
+      }
+    });
+  });
+  resetButton.addEventListener("click", () => {
+    vex.dialog.open({
+      message:
+        "Did you forget your account password? We will help you with that at AntiChat. Please enter your registered Email address and check your inbox to proceed.",
+      input: [
+        '<input name="resetEmail" type="email" placeholder="Enter Email Address" required />',
+      ].join(""),
+      buttons: [
+        $.extend({}, vex.dialog.buttons.YES, { text: "Reset Password" }),
+        $.extend({}, vex.dialog.buttons.NO, { text: "Cancel" })
+      ],
+      callback: data => {
+        if (!data) {
+          console.log("Cancelled");
+        } else {
+          console.log(
+            "Username",
+            data.resetEmail
+          );
+        }
+      }
+    });
+  });
 };
 
 const handleButtonsView = () => {
-  handleButtons();
   handleButtonsEvents();
-}
+};
 
 const handleFormView = () => {
   let html = `
