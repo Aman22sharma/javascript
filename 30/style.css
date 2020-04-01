@@ -71,6 +71,12 @@ header h1 {
   padding: 0;
 }
 
+.buttons,
+.profile-buttons {
+  display: flex;
+  align-items: center;
+}
+
 .messages {
   display: grid;
   grid-template-columns: 1fr;
